@@ -8,9 +8,9 @@ authors:
 
 **TL;DR:** From 2023 to 2025, Swiss institutions wrote 2.1% of the main-track papers at the top 11 AI conferences, 138 per million residents. Among places with more than a million residents, only Singapore and Hong Kong produce more. Israel attracts 7.5 times as much private AI investment per AI author, and 34 of 40 documented acquisitions of Swiss AI startups went to foreign buyers. Since 2010, Swiss master's students in the exact sciences have more than doubled, while Swiss doctoral students fell by 15%.
 
-In the [AI Index 2026](https://hai.stanford.edu/ai-index), Switzerland has the most AI authors and inventors per capita of the 21 countries in Zeki's data (which excludes China): about 110 per 100,000 residents, essentially tied with Singapore. I wanted to know how much of that output Switzerland keeps. I collected every main-track paper and best-paper award since 2010 at the top 11 AI conferences (CVPR, ICCV, ECCV, ACL, EMNLP, NAACL, COLM, NeurIPS, ICML, ICLR and AAAI) and compared them with investment, acquisition and enrolment data. The research holds up, while the companies and the people leak away.
+In the [AI Index 2026](https://hai.stanford.edu/ai-index), Switzerland has the most AI authors and inventors per capita of the 21 countries in Zeki's data (which excludes China): about 110 per 100,000 residents, essentially tied with Singapore. I wanted to know how much of that output Switzerland keeps. I collected every main-track paper and best-paper award since 2010 at the top 11 AI conferences (CVPR, ICCV, ECCV, ACL, EMNLP, NAACL, COLM, NeurIPS, ICML, ICLR and AAAI) and compared them with investment, acquisition and enrolment data. The research output is as strong as that ranking suggests. Less of it stays in Switzerland: the country attracts far less private AI investment per AI researcher than Israel or the US, its AI startups are mostly sold to foreign buyers, and fewer Swiss students go on to a doctorate than in 2010.
 
-## The research holds up
+## Swiss AI research is strong per resident
 
 Figure 1 splits each paper's credit equally among its authors with a known country, using OpenReview profiles and OpenAlex affiliations.
 
@@ -30,11 +30,11 @@ Awards are a weaker signal. I compare each award with the country's paper share 
 
 Swiss institutions appear on 35 award papers where their paper share predicts 19.7, a ratio of 1.8 (95% interval 1.2 to 2.5). With fractional credit, as in Figure 1, the ratio is 1.5 (0.9 to 2.5). Ryan Cotterell's group at ETH Zurich has 8 of the 35 papers, and without it both intervals include 1. Most Western countries also sit above 1, because China wins far fewer awards than its paper share predicts (0.5). The Swiss award record is suggestive rather than established.
 
-European Research Council (ERC) grants show the strength more clearly. In the 2014 to 2020 calls, Swiss institutions hosted 52.0 grants per million residents, against 34.9 for Israel, 33.3 for the Netherlands and 14.0 for Germany (Starting, Consolidator, Advanced and Synergy Grants in [CORDIS](https://cordis.europa.eu/)). Swiss hosts were shut out of most 2021 to 2024 calls while Switzerland was not associated with Horizon Europe ([SERI](https://sbfi.admin.ch/en/funding-for-mono-beneficiary-projects-under-2021-2024-horizon-package)). In the 2025 calls, after re-association, they won 92 Starting, Consolidator and Advanced Grants, more than in any call year from 2015 to 2020 ([ERC](https://erc.europa.eu/news-events/news/erc-2025-advanced-grants-results)).
+European Research Council (ERC) grants show the strength more clearly. In the 2014 to 2020 calls, Swiss institutions hosted 52.0 grants per million residents, against 34.9 for Israel, 33.3 for the Netherlands and 14.0 for Germany (Starting, Consolidator, Advanced and Synergy Grants in [CORDIS](https://cordis.europa.eu/); Israel takes part in the EU research programmes as an associated country, as Switzerland did then). Swiss hosts were shut out of most 2021 to 2024 calls while Switzerland was not associated with Horizon Europe ([SERI](https://sbfi.admin.ch/en/funding-for-mono-beneficiary-projects-under-2021-2024-horizon-package)). In the 2025 calls, after re-association, they won 92 Starting, Consolidator and Advanced Grants, more than in any call year from 2015 to 2020 ([ERC](https://erc.europa.eu/news-events/news/erc-2025-advanced-grants-results)).
 
 The question is how much of that research turns into Swiss companies.
 
-## The companies leak away
+## Swiss AI startups raise little money and are often sold abroad
 
 Figure 3 takes both axes from the AI Index: AI authors and inventors from Zeki, and private AI investment from Quid divided by the number of AI authors.
 
@@ -55,7 +55,7 @@ Much of the remaining transfer happens inside US companies. Google, Microsoft an
 
 Swiss universities show the same pattern in who does the research.
 
-## The people leak away
+## Fewer Swiss students go on to a doctorate
 
 The Federal Statistical Office (BFS) does not publish computer science by degree level and citizenship, so Figure 4 uses the exact sciences (computer science, mathematics, physics and related fields; computer science is about half).
 
@@ -64,7 +64,7 @@ The Federal Statistical Office (BFS) does not publish computer science by degree
   <figcaption>Figure 4: Students in the exact sciences at Swiss universities by level and citizenship, indexed to 2010 (BFS). The legend gives the headcounts in 2010 and 2025. Dual citizens count as Swiss.</figcaption>
 </figure>
 
-From 2010 to 2025, Swiss master's students in these fields grew from 903 to 2,234, while Swiss doctoral students fell from 662 to 564 and foreign doctoral students grew from 1,240 to 2,253. The leak is between the master's degree and the doctorate: Swiss citizens are 36% of master's students and 20% of doctoral students, and 13% of doctoral students at EPFL. The OECD counts 84% of ICT doctoral students in Switzerland as internationally mobile (they moved there to study), against 59% in Sweden, 53% in the UK, 32% in Germany and 4% in Israel ([OECD](https://data-explorer.oecd.org/), 2024).
+From 2010 to 2025, Swiss master's students in these fields grew from 903 to 2,234, while Swiss doctoral students fell from 662 to 564 and foreign doctoral students grew from 1,240 to 2,253. The drop happens between the master's degree and the doctorate: Swiss citizens are 36% of master's students and 20% of doctoral students, and 13% of doctoral students at EPFL. The OECD counts 84% of ICT doctoral students in Switzerland as internationally mobile (they moved there to study), against 59% in Sweden, 53% in the UK, 32% in Germany and 4% in Israel ([OECD](https://data-explorer.oecd.org/), 2024).
 
 The same holds further up. Swiss citizens are 35% of professors at ETH Zurich and 29% at EPFL ([BFS](https://www.bfs.admin.ch/asset/de/36685357), 2025). Of the 511 ERC grantees at Swiss institutions in Horizon 2020, 155 were Swiss and 100 German ([SERI](https://www.sbfi.admin.ch/dam/en/sd-web/3ReL3QTTRQV7/ch_beteiligung_frp_e.pdf)).
 
