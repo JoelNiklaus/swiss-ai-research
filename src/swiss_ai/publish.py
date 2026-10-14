@@ -1,15 +1,17 @@
 """Upload `data/` (without the API caches) to the Hugging Face Hub as a dataset.
 
 `data/README.md` is the dataset card. A new dataset starts private. Re-uploads keep the current
-visibility unless `--visibility public` or `--visibility private` is passed.
+visibility unless `--visibility public` or `--visibility private` is passed. An `HF_TOKEN` in `.env`
+takes precedence over the token stored by `hf auth login`.
 """
 
 import argparse
 import logging
 
+from dotenv import load_dotenv
 from huggingface_hub import HfApi
 
-from swiss_ai.paths import DATA
+from swiss_ai.paths import DATA, ROOT
 
 log = logging.getLogger(__name__)
 
@@ -44,6 +46,7 @@ def publish(visibility: str | None = None) -> str:
 
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(message)s")
+    load_dotenv(ROOT / ".env")
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--visibility",
