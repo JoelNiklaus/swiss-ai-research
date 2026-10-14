@@ -1,7 +1,7 @@
 """Upload `data/` (without the API caches) to the Hugging Face Hub as a dataset.
 
-`data/README.md` is the dataset card. The dataset is created private; pass `--public` once
-the blog post is out.
+`data/README.md` is the dataset card. A new dataset starts private. Re-uploads keep the current
+visibility unless `--visibility public` or `--visibility private` is passed.
 """
 
 import argparse
@@ -17,15 +17,21 @@ REPO_ID = "joelniklaus/swiss-ai-research"
 IGNORE = ["cache/**", "**/.DS_Store"]
 
 
-def publish(public: bool) -> str:
-    """Create the dataset repo if needed, set its visibility and upload the tables.
+def publish(visibility: str | None = None) -> str:
+    """Create the dataset repo if needed, optionally set its visibility, and upload the tables.
+
+    Args:
+        visibility: "public" or "private" to change the visibility; None keeps it as it is.
 
     Returns:
         The URL of the dataset.
     """
     api = HfApi()
-    api.create_repo(REPO_ID, repo_type="dataset", private=not public, exist_ok=True)
-    api.update_repo_settings(REPO_ID, repo_type="dataset", private=not public)
+    api.create_repo(REPO_ID, repo_type="dataset", private=True, exist_ok=True)
+    if visibility is not None:
+        api.update_repo_settings(
+            REPO_ID, repo_type="dataset", private=visibility == "private"
+        )
     api.upload_folder(
         folder_path=DATA,
         repo_id=REPO_ID,
@@ -39,9 +45,13 @@ def publish(public: bool) -> str:
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(message)s")
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--public", action="store_true", help="make the dataset public")
+    parser.add_argument(
+        "--visibility",
+        choices=["public", "private"],
+        help="change the dataset visibility (default: keep it)",
+    )
     args = parser.parse_args()
-    log.info(f"Uploaded to {publish(args.public)} (public={args.public})")
+    log.info(f"Uploaded to {publish(args.visibility)} (visibility={args.visibility})")
 
 
 if __name__ == "__main__":

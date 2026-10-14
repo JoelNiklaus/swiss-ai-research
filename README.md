@@ -29,7 +29,7 @@ Run the modules in this order with `uv run python -m swiss_ai.<module>`:
 | `spinoffs`    | Venture Kick counts, ETH and EPFL 2025 reports  | `venture_kick_by_institution.csv`, `university_ventures_2025.csv` |
 | `crosscheck`  | Paper Copilot paper lists, `participation.csv`  | `papercopilot_crosscheck.csv`, `papercopilot_countries.csv`       |
 | `figures`     | outputs above                                   | `blog/figures/*.png`                                              |
-| `publish`     | `data/`                                         | private Hugging Face dataset `joelniklaus/swiss-ai-research` (`--public` to release) |
+| `publish`     | `data/`                                         | Hugging Face dataset [`joelniklaus/swiss-ai-research`](https://huggingface.co/datasets/joelniklaus/swiss-ai-research) (`--visibility public/private` to change visibility) |
 
 The DBLP dump needs `dblp.xml.gz` and `dblp.dtd` from https://dblp.org/xml/ in `data/cache/dblp/`.
 
