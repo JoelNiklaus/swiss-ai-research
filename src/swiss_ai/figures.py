@@ -269,11 +269,100 @@ def funnel_figure() -> go.Figure:
     )
 
 
+# Square layout for social posts, which are mostly read on phones.
+SOCIAL_LAYOUT = {
+    "template": "simple_white",
+    "font": {"family": "Inter, Arial", "size": 26},
+    "width": 1080,
+    "height": 1080,
+    "margin": {"t": 240, "b": 230, "l": 130, "r": 50},
+}
+SOCIAL_LABELS = {
+    "Switzerland": "bottom center",
+    "Israel": "top center",
+    "United States": "middle right",
+    "Singapore": "top center",
+    "United Kingdom": "top right",
+    "Canada": "bottom left",
+    "Germany": "bottom center",
+    "Sweden": "top center",
+}
+
+
+def social_figure() -> go.Figure:
+    """Papers per resident against private AI investment per resident, for a phone screen."""
+    papers = pd.read_csv(PER_CAPITA, keep_default_na=False)
+    papers = papers.assign(country=papers.country.map(name))
+    money = pd.read_csv(INVESTMENT).dropna(subset=["investment_per_capita_2013_2025"])
+    df = papers.merge(money, on="country")
+    labels = [
+        f"<b>{c}</b>" if c in ("Switzerland", "Israel") else c for c in df.country
+    ]
+    fig = go.Figure(
+        go.Scatter(
+            x=df.papers_per_million,
+            y=df.investment_per_capita_2013_2025,
+            mode="markers+text",
+            text=labels,
+            textposition=[
+                SOCIAL_LABELS[c] if c in SOCIAL_LABELS else "top center"
+                for c in df.country
+            ],
+            textfont={"size": 26},
+            marker={"size": 26, "color": colors(df.country.tolist())},
+            cliponaxis=False,
+        )
+    )
+    years = f"{PER_CAPITA_YEARS.start}-{PER_CAPITA_YEARS.stop - 1}"
+    return fig.update_layout(
+        **SOCIAL_LAYOUT,
+        title={
+            "text": "Switzerland writes top AI research<br>but attracts little AI money",
+            "font": {"size": 40},
+            "x": 0.03,
+            "y": 0.95,
+            "yanchor": "top",
+            "subtitle": {
+                "text": "Per resident, in Switzerland and seven comparison countries",
+                "font": {"size": 24},
+            },
+        },
+        xaxis={
+            "title": f"Top AI conference papers per million residents, {years}",
+            "range": [0, 320],
+        },
+        yaxis={
+            "title": "Private AI investment per resident,<br>2013-2025 (USD)",
+            "range": [0, 2400],
+            "dtick": 500,
+            "tickformat": ",",
+        },
+        showlegend=False,
+        annotations=[
+            {
+                "text": "Papers: top 11 AI conferences, main track (DBLP, OpenReview, OpenAlex). "
+                "Investment: AI Index 2026 (Quid).<br>Population: World Bank. "
+                "Code and data: github.com/JoelNiklaus/swiss-ai-research",
+                "xref": "paper",
+                "yref": "paper",
+                "x": 0,
+                "y": -0.17,
+                "xanchor": "left",
+                "yanchor": "top",
+                "showarrow": False,
+                "align": "left",
+                "font": {"size": 18, "color": GREY},
+            }
+        ],
+    )
+
+
 FIGURES_BY_NAME = {
     "participation_per_capita": participation_figure,
     "award_ratios": award_ratio_figure,
     "transfer": transfer_figure,
     "swiss_students": funnel_figure,
+    "social_research_vs_money": social_figure,
 }
 
 

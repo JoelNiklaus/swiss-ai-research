@@ -38,6 +38,7 @@ def inputs(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
             "country": ["Switzerland", "Germany"],
             "authors_per_100k": [110, 58],
             "investment_per_author_2013_2025": [474_000, 354_000],
+            "investment_per_capita_2013_2025": [523, 205],
         }
     ).to_csv(tmp_path / "investment.csv", index=False)
     funnel = pd.DataFrame(
@@ -104,3 +105,11 @@ def test_name_handles_groups() -> None:
     assert figures.name("HK") == "Hong Kong"
     assert figures.name(figures.SMALL_PEERS_LABEL).startswith("Other small peers (NL")
     assert figures.name("Pooled") == "Pooled"
+
+
+def test_social_figure_matches_countries_by_name(inputs: Path) -> None:
+    scatter = figures.social_figure().data[0]
+    assert list(scatter.x) == [134.2]
+    assert list(scatter.y) == [523]
+    assert list(scatter.text) == ["<b>Switzerland</b>"]
+    assert list(scatter.marker.color) == [figures.SWISS_RED]
