@@ -14,7 +14,7 @@ from scipy.stats import gamma, poisson
 
 from swiss_ai.attribution import FIRST_YEAR, country_credit, load_papers, match_awards
 from swiss_ai.awards import load_nationality, normalize, parse_authors
-from swiss_ai.countries import ALL_PLACES, COUNTRIES, population
+from swiss_ai.countries import ALL_PLACES, COUNTRIES, population, researchers
 from swiss_ai.paths import AWARDS, DATA
 
 log = logging.getLogger(__name__)
@@ -73,11 +73,12 @@ def venue_year_shares(papers: pd.DataFrame, credit: pd.DataFrame) -> pd.DataFram
 
 
 def per_capita(papers: pd.DataFrame, credit: pd.DataFrame) -> pd.DataFrame:
-    """Fractional main-track papers per million residents for the comparison places.
+    """Fractional main-track papers per million residents and per 1,000 researchers.
 
     Returns:
-        One row per place in ALL_PLACES with papers, share of all papers, and
-        papers_per_million, summed over PER_CAPITA_YEARS and all venues.
+        One row per place in ALL_PLACES with papers, share of all papers, papers_per_million
+        and papers_per_1k_researchers (OECD MSTI full-time equivalents; empty where MSTI has
+        no total), summed over PER_CAPITA_YEARS and all venues.
     """
     window = papers[papers.year.isin(PER_CAPITA_YEARS)]
     merged = credit.merge(window[["paper_id"]])
@@ -90,6 +91,8 @@ def per_capita(papers: pd.DataFrame, credit: pd.DataFrame) -> pd.DataFrame:
     )
     out["share"] = out.papers / total
     out["papers_per_million"] = out.papers / population()[out.index] * 1e6
+    out = out.join(researchers())
+    out["papers_per_1k_researchers"] = out.papers / out.researchers_fte * 1e3
     return out.sort_values("papers_per_million", ascending=False).reset_index()
 
 

@@ -1,0 +1,1146 @@
+call,last,first,host,country,acronym,panel
+ERC-2025-STG,BOR,Alexander,Central European University,AT,INFODEM,SH2
+ERC-2025-STG,BOSCH,Dorothea Maria,Austrian Academy of Sciences (AAS),AT,COPE,SH6
+ERC-2025-STG,DELIC,Uros,Vienna University of Technology,AT,HYQAP,PE2
+ERC-2025-STG,DOUGLASS,Amelia,Institute of Science and Technology Austria,AT,HypoAdapt,LS5
+ERC-2025-STG,GÖTBERG,Ylva,Institute of Science and Technology Austria,AT,2SStars,PE9
+ERC-2025-STG,GRILLOVA,Linda,Medical University of Vienna,AT,ASCEND,LS6
+ERC-2025-STG,HODAPP,Max,Materials Center Leoben,AT,MAD-TENSOR,PE11
+ERC-2025-STG,LANGELAAR,Reinier,Austrian Academy of Sciences (AAS),AT,FOUNT,SH5
+ERC-2025-STG,MUSCHIK,Eva-Maria,University of Vienna,AT,ShockAge,SH6
+ERC-2025-STG,OLING,Gerben,Vienna University of Technology,AT,TraBHolo,PE2
+ERC-2025-STG,PALACIOS,Patricia,University of Salzburg,AT,MACBeh,SH5
+ERC-2025-STG,RENDEIRO,Andre,Research Center for Molecular Medicine (CeMM),AT,QUANTAGE,LS2
+ERC-2025-STG,RIENMÜLLER,Theresa,Graz University of Technology,AT,NeuroVitalizer,PE7
+ERC-2025-STG,ROCKENSCHAUB,Patrick,Medical University of Innsbruck,AT,GPT-MEDIC,LS7
+ERC-2025-STG,SCHINDEWOLF,Andreas,Vienna University of Technology,AT,UltraMeDiQs,PE2
+ERC-2025-STG,SØRENSEN,Megan,University of Vienna,AT,TRANSITIONS,LS8
+ERC-2025-STG,TSCHANDL,Philipp,Medical University of Vienna,AT,AUTODIAL,LS7
+ERC-2025-STG,WINKLER,Robert,Graz University of Technology,AT,PRINTBOT,PE7
+ERC-2025-STG,ZACHE,Torsten,Austrian Academy of Sciences (AAS),AT,QS-Gauge,PE2
+ERC-2025-STG,ZYSIAK,Agata,University of Vienna,AT,CLASS-UP,SH6
+ERC-2025-STG,ALESSIO,Maristella,KU Leuven,BE,SPINOCCHIO,PE4
+ERC-2025-STG,CHOISEZ,Laurine,Catholic University of Louvain,BE,FeFES,PE8
+ERC-2025-STG,CLERBAUX,Laure-Alix,Catholic University of Louvain,BE,nanoBASH,LS7
+ERC-2025-STG,CLERMONT,Lionel,University of Liege,BE,nGHOST,PE9
+ERC-2025-STG,COGLIATI DEZZA,Irene,Free University of Brussels (ULB),BE,WiseSeek,SH4
+ERC-2025-STG,DE SCHEPPER,Sebastiaan,Flanders Institute for Biotechnology (VIB),BE,PRIME-PD,LS5
+ERC-2025-STG,DENDOOVEN,Tom,Flanders Institute for Biotechnology (VIB),BE,CentRed,LS1
+ERC-2025-STG,ELIA,Ilaria,KU Leuven,BE,SpaceMet,LS4
+ERC-2025-STG,FRANKE,Lisa,Ghent University,BE,HAIR,SH8
+ERC-2025-STG,GOVAERTS,Sander,Ghent University,BE,ECOLENT,SH6
+ERC-2025-STG,HAERYNCK,Filomeen,Ghent University,BE,LYNCID,LS7
+ERC-2025-STG,IANIRO,Alessandro,KU Leuven,BE,CHIMERA,PE11
+ERC-2025-STG,JURENAS,Dukas,Free University of Brussels (ULB),BE,Fun-ContRoll,LS8
+ERC-2025-STG,LEGANES FONTENEAU,Mateo,Catholic University of Louvain,BE,BodyCrave,SH4
+ERC-2025-STG,LIU,Yun,KU Leuven,BE,SustainCARE,SH8
+ERC-2025-STG,MARCHAL,Sarah,University of Antwerp,BE,VOLARE,SH3
+ERC-2025-STG,MARTENS,Chloe,Free University of Brussels (ULB),BE,DynamITE,LS9
+ERC-2025-STG,MILOSHEVICH,George,KU Leuven,BE,D-SURGE,PE9
+ERC-2025-STG,OUYANG,Yi,Ghent University,BE,e-CAPTURE,PE8
+ERC-2025-STG,PANIN,Amma,Catholic University of Louvain,BE,INVISIGODS,SH1
+ERC-2025-STG,PASTUSHENKO,Ievgeniia,Free University of Brussels (ULB),BE,COMPASS,LS3
+ERC-2025-STG,PINCÉ,Possum,Ghent University,BE,FROST,SH6
+ERC-2025-STG,REMSIK,Jan,Flanders Institute for Biotechnology (VIB),BE,CSFcheck,LS4
+ERC-2025-STG,SCHWAK,Juliette,Free University of Brussels (ULB),BE,PENEA,SH3
+ERC-2025-STG,SEVENANS,Julie,University of Antwerp,BE,TEMPER,SH2
+ERC-2025-STG,STACHURSKA,Juliana,Ghent University,BE,NuMass,PE2
+ERC-2025-STG,STAELS,Willem,Free University of Brussels (VUB),BE,IRON-BETA,LS4
+ERC-2025-STG,SWYNGEDOUW,Eva,Free University of Brussels (VUB),BE,EXPULSE,SH7
+ERC-2025-STG,VAN DE SANDE,Marie,Ghent University,BE,ASHES,PE9
+ERC-2025-STG,VELASQUEZ HERNANDEZ,Miriam De Jesus,KU Leuven,BE,IMMPACT,PE5
+ERC-2025-STG,WIENHUES,Anna,KU Leuven,BE,BIOTA,SH5
+ERC-2025-STG,AARRESTAD,Thea Klaeboe,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,LEAP-40,PE2
+ERC-2025-STG,AJIL,Ahmed,University of Neuchatel,CH,TRACES,SH3
+ERC-2025-STG,BAI,Hedan,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,ColorfulAct,PE8
+ERC-2025-STG,BELTRA,Jean- Christophe,University of Basel,CH,TREAT,LS6
+ERC-2025-STG,BLUWSTEIN,Jevgeniy,University of Bern,CH,LeGo,SH7
+ERC-2025-STG,BORSA,Mariana,University of Basel,CH,DAMAGED,LS6
+ERC-2025-STG,BOSSELUT,Antoine,Swiss Federal Institute of Technology Lausanne (EPFL),CH,RESPECT-LM,PE6
+ERC-2025-STG,BRÜCKNER,David,University of Basel,CH,InfoFate,LS3
+ERC-2025-STG,DEREKA,Bogdan,University of Zurich,CH,EFFICACY,PE4
+ERC-2025-STG,DIKOPOLTSEV,Alexander,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,LIQUIDLAT,PE7
+ERC-2025-STG,DRAGE,Harriet Bethany,University of Geneva,CH,RECO-ECO,LS8
+ERC-2025-STG,FELDMANN,Sascha,Swiss Federal Institute of Technology Lausanne (EPFL),CH,MACHIRO,PE4
+ERC-2025-STG,FESENFELD,Lukas,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,PolTech,SH2
+ERC-2025-STG,HUDSON,Thomas,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,IceDEST,PE10
+ERC-2025-STG,HUWILER,Simona,University of Bern,CH,BAC-MUNITY,LS9
+ERC-2025-STG,JAUME,Guillaume,Lausanne University Hospital,CH,DeepSPIM,LS7
+ERC-2025-STG,LA MANNO,Gioele,Swiss Federal Institute of Technology Lausanne (EPFL),CH,MOVIOLA,LS2
+ERC-2025-STG,LU,Zhengmo,Swiss Federal Institute of Technology Lausanne (EPFL),CH,DIAL,PE8
+ERC-2025-STG,NAKATSUKA,Nako,Swiss Federal Institute of Technology Lausanne (EPFL),CH,SYNAPTA,PE8
+ERC-2025-STG,PACESA,Martin,University of Zurich,CH,NAMPify,LS1
+ERC-2025-STG,PÖPPELMEIER,Frerk,University of Bern,CH,BGCTip,PE10
+ERC-2025-STG,RAMIREZ-SAN- JUAN,Guillermina,Swiss Federal Institute of Technology Lausanne (EPFL),CH,XtrmCells,LS3
+ERC-2025-STG,ROBINSON,Serina,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,CODE-PFAS,LS9
+ERC-2025-STG,RUMPF,Sabine,University of Basel,CH,GloNoMo,LS8
+ERC-2025-STG,SCHUHMACHER,Milena,Swiss Federal Institute of Technology Lausanne (EPFL),CH,LipID,LS1
+ERC-2025-STG,SEILER,Gregor,IBM Research-Zurich,CH,GLAZE,PE6
+ERC-2025-STG,SMOLENSKI,Tomasz,University of Basel,CH,OptoQuantTOP,PE3
+ERC-2025-STG,SQUAIR,Jordan,Lausanne University Hospital,CH,HemoPARK,LS5
+ERC-2025-STG,SUPPONEN,Outi,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,CAVIAR,PE8
+ERC-2025-STG,SYED,Ghazi Sarwat,IBM Research-Zurich,CH,INFUSED,PE7
+ERC-2025-STG,SZNURKOWSKA,Magdalena,University of Basel,CH,METspread,LS4
+ERC-2025-STG,TANG,Siyu,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,Human3D,PE6
+ERC-2025-STG,TCHERMALYKH,Nataliya,Graduate Institute of International and Development studies,CH,ICONS,SH8
+ERC-2025-STG,VIEBAHN,Konrad,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,PumpQIN,PE2
+ERC-2025-STG,WEISS,Tobias,University of Basel,CH,INCAR,LS7
+ERC-2025-STG,DEL GRANDE,Raffaele,Czech Technical University,CZ,HUNTING-3BFs,PE2
+ERC-2025-STG,DRÁPAL,Jakub,Charles University of Prague,CZ,RE-CON-SENT,SH2
+ERC-2025-STG,FIALA,Tomas,Masaryk University,CZ,PROTEOFORMER,PE5
+ERC-2025-STG,GÁLISOVÁ,Andrea,Charles University of Prague,CZ,PROVIDE,LS9
+ERC-2025-STG,ABENDROTH,John,Carl von Ossietzky University of Oldenburg,DE,Q-CISS,PE4
+ERC-2025-STG,AKKERMAN,Quinten,University of Munich (LMU),DE,CONTROL,PE5
+ERC-2025-STG,AZTEKIN,Can,Max Planck Society,DE,SigReg,LS3
+ERC-2025-STG,BALZER,Michael S.,Charité - University Hospital,DE,SINGuLAR,LS4
+ERC-2025-STG,BARAGLI,Beatrice,University of Wurzburg,DE,LASU,SH5
+ERC-2025-STG,BARNSTEDT,Oliver,University of Magdeburg,DE,LearnMamBo,LS5
+ERC-2025-STG,BARRA,Lena,University of Constance,DE,TAILOMET,PE5
+ERC-2025-STG,BASELLINI,Ugofilippo,Max Planck Society,DE,LONGFOR,SH7
+ERC-2025-STG,BASTIANELLO,Alvise,Technical University of Munich,DE,NonErgHydro,PE3
+ERC-2025-STG,BAUER MIKULOVIC,Sanja,Leibniz Institute for Neurobiology,DE,ProSocial,LS5
+ERC-2025-STG,BEETZ,Jerome,University of Wurzburg,DE,BeeSpace,LS5
+ERC-2025-STG,BOENISCH,Franziska,CISPA Helmholtz Center for Information Security,DE,Privacy4FMs,PE6
+ERC-2025-STG,BOESE- SCHLOSSER,Vanessa Alexandra,WZB Berlin Social Science Center,DE,WAVES,SH2
+ERC-2025-STG,BOHRDT,Annabelle,University of Regensburg,DE,QuaQuaMA,PE2
+ERC-2025-STG,BUCHEN,Johannes,University of Bayreuth,DE,HYDROSPHEAR,PE10
+ERC-2025-STG,CABRERA CÓRDOVA,Cesar Raymundo,University of Hamburg,DE,DIPOLAR_SF,PE2
+ERC-2025-STG,CHAPARRO PEDRAZA,Catalina,University of Constance,DE,PHENOTIPPING,LS8
+ERC-2025-STG,CLEMEN,Ramona,Leibniz Institute for Plasma Science and Technology (INP),DE,PriME,PE4
+ERC-2025-STG,CZARKWIANI,Anna,Technical University of Dresden,DE,OTOREG,LS3
+ERC-2025-STG,DE GRAAFF,Anna,Max Planck Society,DE,FIRST-GIANTS,PE9
+ERC-2025-STG,DEGEN,Jacqueline,University of Wurzburg,DE,LIGHTSTAR,LS8
+ERC-2025-STG,DORRITY,Michael,European Molecular Biology Laboratory,DE,TIMERR,LS3
+ERC-2025-STG,EBNER,Michael,Forschungsverbund Berlin e.V.,DE,LysoLogs,LS3
+ERC-2025-STG,ERZBERGER,Anna,European Molecular Biology Laboratory,DE,GOAL,PE3
+ERC-2025-STG,FLEK,Lucie,University of Bonn,DE,LLMpathy,PE6
+ERC-2025-STG,FLURY,Valentin,Max Planck Society,DE,EpiMoSis,LS2
+ERC-2025-STG,FREIRE DE ANDRADE NEVES,Marcos,Free University of Berlin,DE,MORTALMED,SH8
+ERC-2025-STG,FROHLICH,Joel,University of Tübingen,DE,FETAL-MIND,SH4
+ERC-2025-STG,GARVERT,Mona,University of Wurzburg,DE,CogFlex,SH4
+ERC-2025-STG,GERLT,Michael,University of Heidelberg,DE,TheraSonic,PE7
+ERC-2025-STG,GIESECKE-THIEL,Claudia,Charité - University Hospital,DE,TopBMemory,LS6
+ERC-2025-STG,GLASER,Juliane,Max Planck Society,DE,TEASEr,LS3
+ERC-2025-STG,GONZÁLEZ VÁZQUEZ,Mateo,Universität Trier,DE,NORMA,SH6
+ERC-2025-STG,GREENFIELD,Jake,University of Wurzburg,DE,HeliOS,PE5
+ERC-2025-STG,HABIG,Michael,The University of Kiel,DE,MobiChrom,LS8
+ERC-2025-STG,HÄFKER,Sören,Alfred Wegener Institute for Polar and Marine Research,DE,BICLOPS,LS8
+ERC-2025-STG,HAPSARI,K. Anggi,University of Gottingen,DE,SaLtedPeat,PE10
+ERC-2025-STG,HARTL,Johannes,Charité - University Hospital,DE,FungalPath,LS2
+ERC-2025-STG,HEINRICH,Lukas,Technical University of Munich,DE,LEGO,PE2
+ERC-2025-STG,HELBIG,Christoph,University of Bayreuth,DE,SEMPATHY,SH7
+ERC-2025-STG,HILLEBRANDT,Sabina,University of Cologne,DE,OdiN,PE7
+ERC-2025-STG,HÖR,Jens,Helmholtz Centre for Infection Research,DE,RIBO-PHAGE,LS6
+ERC-2025-STG,HUBER,Marie,Centre Marc Bloch,DE,MAGIC,SH6
+ERC-2025-STG,ILG,Eddy,University of Technology Nuremberg,DE,4DLang,PE6
+ERC-2025-STG,IMBACH,Jessica,Albert-Ludwigs-University Freiburg,DE,SINOFANTASY,SH5
+ERC-2025-STG,KILBERTUS,Niki,Helmholtz Munich - German Research Centre for Environmental Health,DE,DYNAMICAUS,PE6
+ERC-2025-STG,KOCHER,Arthur,Max Planck Society,DE,EpidemioCene,LS8
+ERC-2025-STG,KRANNICH,Manuel,Karlsruhe Institute of Technology,DE,MaFC,PE1
+ERC-2025-STG,KÜNNETH,Christopher,University of Bayreuth,DE,genPI,PE11
+ERC-2025-STG,KUZHELEV,Andrei,Goethe University Frankfurt am Main,DE,LiquidStateDNP,PE4
+ERC-2025-STG,LANGE BASSANI,Carlos,University of Erlangen- Nuremberg (FAU),DE,kineticSHAPES,PE11
+ERC-2025-STG,LI,Shuangyang,Technical University of Berlin,DE,FUNDOCS,PE7
+ERC-2025-STG,LÜRIG,Moritz,University of Bonn,DE,EWINCOL,LS8
+ERC-2025-STG,MADER,Marius,University Medical Center Hamburg-Eppendorf,DE,REPLACE-TAM,LS7
+ERC-2025-STG,MARCHAL,Clemence,University of Tübingen,DE,CooPAIRation,LS9
+ERC-2025-STG,MAZZOLA,Marianna,University of Munich (LMU),DE,MASLAB,SH6
+ERC-2025-STG,MCCORMACK,Jeremy Michael,Goethe University Frankfurt am Main,DE,SHARKS,PE10
+ERC-2025-STG,MEIER,Adrian,University of Erlangen- Nuremberg (FAU),DE,HYIHY,SH3
+ERC-2025-STG,MILLES,Lukas,University of Munich (LMU),DE,PHENOMECHANI CAL,LS1
+ERC-2025-STG,MITTNENZWEIG,Markus,Max Delbrück Center for Molecular Medicine in the Helmholtz Association,DE,EmbryoAxes,LS2
+ERC-2025-STG,MÖNCH,Stefan,University of Stuttgart,DE,TolleConverter,PE7
+ERC-2025-STG,MOTZKI,Paul,Saarland University,DE,DEAcool,PE8
+ERC-2025-STG,MÜLLNER,Fiona,University Medical Center Göttingen,DE,ActiVisTha,LS5
+ERC-2025-STG,NEPOMUCENO,Marilia,Max Planck Society,DE,LONGEVOUS,SH7
+ERC-2025-STG,PEEKEN,Jan Caspar,University Hospital Rechts der Isar,DE,AI-PIONEER,LS7
+ERC-2025-STG,PETERS,Richard L.,Technical University of Munich,DE,STEMCELL,PE10
+ERC-2025-STG,PLAJER,Alex,University of Bayreuth,DE,PolyMetal,PE5
+ERC-2025-STG,PREINER,Martina,Max Planck Society,DE,CoBeEn,LS1
+ERC-2025-STG,QIU,Guanqi,Max Planck Institute for Coal Research,DE,IntrinsicR,PE5
+ERC-2025-STG,REBOLLO,Ignacio,German Institute of Human Nutrition Potsdam-Rehbruecke,DE,GUT-FEEL,SH4
+ERC-2025-STG,RENGGLI,Christian J.,Max Planck Society,DE,ELMO,PE10
+ERC-2025-STG,REZNIK,Daniel,German Centre for Neurodegenerative Diseases - Helmholtz Centre,DE,ENTONET,SH4
+ERC-2025-STG,SARVASY,Hannah,Max Planck Society,DE,PNGLang,SH4
+ERC-2025-STG,SAUR,Isabel Marie- Luise,University of Cologne,DE,noDisease,LS9
+ERC-2025-STG,SCHIPROWSKI,Amelie,University of Bonn,DE,ENTRYHIRE,SH1
+ERC-2025-STG,SCHOLTISSEK,Arne,Technical University of Darmstadt,DE,ProtoMan,PE8
+ERC-2025-STG,SCHRADER,Julian,University of Halle,DE,Isl-Traits,LS8
+ERC-2025-STG,SINGHAL,Mahak,University of Heidelberg,DE,Vascular-Rhythm,LS4
+ERC-2025-STG,SOBCHUK,Oleg,Max Planck Society,DE,MELT,SH5
+ERC-2025-STG,SOTNIKOV,Vasily,University of Mainz,DE,HiNPrecise,PE2
+ERC-2025-STG,STEIN,Christopher,Technical University of Munich,DE,HeliECat,PE4
+ERC-2025-STG,STRATMANN,Tanja,University of Bremen,DE,SPYCLING,PE10
+ERC-2025-STG,TONEVA,Mariya,Max Planck Society,DE,BrainAlign,PE6
+ERC-2025-STG,TRIVEDI,Rahul,Max Planck Society,DE,ToNQS,PE2
+ERC-2025-STG,TROTTER,Philipp,University of Wuppertal,DE,IntegrateEnergy,SH7
+ERC-2025-STG,TRUHN,Daniel,The Uniklinikum Aachen,DE,SAGMA,LS7
+ERC-2025-STG,VALK,Sofie,Max Planck Society,DE,SOCO,SH4
+ERC-2025-STG,VANDERHEYDEN,Lorelei,University of Heidelberg,DE,RSVP,SH5
+ERC-2025-STG,VU NGOC,Khiêm,RWTH Aachen University,DE,PolyFun,PE8
+ERC-2025-STG,WAITKUS,Nora,University of Heidelberg,DE,SOCDEBT,SH3
+ERC-2025-STG,WANIE,Vincent,DESY,DE,KEBAB,PE4
+ERC-2025-STG,WIESENFELDT,Mario,Ruhr University Bochum,DE,orthocat,PE5
+ERC-2025-STG,WIETEK,Alexander,Max Planck Society,DE,MoNiKa,PE3
+ERC-2025-STG,WILMING,Henrik,Leibniz University Hannover,DE,LargEnt,PE2
+ERC-2025-STG,WINKLER,Alexander,Max Planck Society,DE,PostPeak,PE10
+ERC-2025-STG,WOHLFART,Johannes,University of Cologne,DE,MODES,SH1
+ERC-2025-STG,WURTHMANN,L. Constantin,University of Mannheim,DE,VisibleQueers,SH2
+ERC-2025-STG,ZHANG,Li,Technical University of Darmstadt,DE,LogiNet,PE7
+ERC-2025-STG,ZOTT,Benedikt,University Hospital Rechts der Isar,DE,MONSil-AD,LS5
+ERC-2025-STG,BRASSART OLSEN,Céline E J L,University of Copenhagen,DK,MaMas,SH2
+ERC-2025-STG,GRØNBÆK,Jens Emil Sloth,Aarhus University,DK,BRIDGE,PE6
+ERC-2025-STG,HELTBERG,Mathias Luidor,University of Copenhagen,DK,PHOSCIL,PE3
+ERC-2025-STG,LI,Elizabeth,University of Copenhagen,DK,REEXIST,SH5
+ERC-2025-STG,NASERI,Farshid,Aalborg University,DK,REVIVE,PE7
+ERC-2025-STG,NIELSEN,Michael,University of Copenhagen,DK,BEYOND,PE5
+ERC-2025-STG,PAESANI,Stefano,University of Copenhagen,DK,ASPEQT,PE2
+ERC-2025-STG,ROHWEDDER,Lars,University of Southern Denmark,DK,PARAMLP,PE6
+ERC-2025-STG,SUN,Chao,Aarhus University,DK,SYNDAM,LS5
+ERC-2025-STG,VOGLER,Jan,Aarhus University,DK,EQUILIBRIUM,SH2
+ERC-2025-STG,LAURI,Triin,Tallinn University,EE,EDUMERIT,SH3
+ERC-2025-STG,LEHTO,Kelli,University of Tartu,EE,AT-TENSION,SH4
+ERC-2025-STG,NTALAMPEKOS,Dimitrios,Aristotle University of Thessaloniki,EL,GRComPaS,PE1
+ERC-2025-STG,AMOROS ELORDUY,Nerea,UIC Barcelona,ES,CAMPS,SH7
+ERC-2025-STG,BEJARANO BOSQUE,Leire,Biodonostia Health Research Institute,ES,METAVASC,LS4
+ERC-2025-STG,BUSTO ULLOA,Saray,University of Santiago de Compostela,ES,SUPREMUM,PE1
+ERC-2025-STG,CANO,Pablo A.,University of Barcelona,ES,EFTGrav,PE2
+ERC-2025-STG,CASADEVALL,Carla,University Rovira I Virgili,ES,BIOPOLE,PE11
+ERC-2025-STG,CASANOVA SALAS,Irene,Vall d'Hebron Institute of Oncology,ES,EVOLVE,LS7
+ERC-2025-STG,CUETO GOMEZ,Ana Rosario,Autonomous University of Madrid,ES,PLUSPHOTON,PE2
+ERC-2025-STG,DE LUCA,Gabriele,Spanish National Research Council (CSIC),ES,TOPOLOGIQ,PE11
+ERC-2025-STG,FERNÁNDEZ RUIZ,M. Rosario,University of Alcala,ES,SENSE,PE7
+ERC-2025-STG,GIANOLI,Francesco,"University Charles III, Madrid",ES,ActivEAR,LS5
+ERC-2025-STG,GONZÁLEZ- GARCÍA,Ismael,University of Santiago de Compostela,ES,HypoPause,LS4
+ERC-2025-STG,HERRAEZ,Irene,Spanish National Research Council (CSIC),ES,DECODEM,LS2
+ERC-2025-STG,HÖPFLER,Markus,Centre for Genomic Regulation,ES,DECODE-PMD,LS1
+ERC-2025-STG,LIGUORI,Nicoletta,The Institute of Photonic Sciences,ES,MARIONETTE,PE4
+ERC-2025-STG,LIN,Hsiu-Chuan,Centre for Genomic Regulation,ES,DECIPHER,LS2
+ERC-2025-STG,LORENZO,Guillermo,University of A Coruña,ES,DIGIPRO,PE8
+ERC-2025-STG,LORENZO MARTÍN,Luis Francisco,Foundation for Cancer Research - University of Salamanca,ES,NEXT-CRC,LS9
+ERC-2025-STG,MARTIN- FERNANDEZ,Mario,"University Charles III, Madrid",ES,ASTROCODE,LS5
+ERC-2025-STG,MOLPECERES DE DIEGO,Germán,Spanish National Research Council (CSIC),ES,ISOCOSMOS,PE9
+ERC-2025-STG,MORENO YRUELA,Carlos,Institute for Bioengineering of Catalonia,ES,CHEMTUBIO,PE5
+ERC-2025-STG,MORTIMER,Thomas,University of Barcelona,ES,CircTu-Age,LS4
+ERC-2025-STG,NADEU,Ferran,IDIBAPS,ES,CLL-STORY,LS4
+ERC-2025-STG,PARIS,Juan Luis,Andalusian Public Foundation for Health and Biomedicine Research,ES,CELL-NANO-REMOTE,LS9
+ERC-2025-STG,RUBIO VERDU,Carmen,The Institute of Photonic Sciences,ES,STMoire,PE3
+ERC-2025-STG,S. AGUADO,David,The Institute of Astrophysics of the Canary Islands (IAC),ES,OUTLIERS,PE9
+ERC-2025-STG,SANCHO ALBERO,María,University of Zaragoza,ES,SEVEN,PE11
+ERC-2025-STG,SERRANO,Ana,University of Zaragoza,ES,PROXIE,PE6
+ERC-2025-STG,ZABALETA LASARTE,Nerea,The Center for Applied Medical Research,ES,RENALGENE,LS7
+ERC-2025-STG,COUPETTE,Corinna,Aalto University,FI,CompLex,SH2
+ERC-2025-STG,GHOSH,Sumit,University of Oulu,FI,NewGenH2Steel,PE11
+ERC-2025-STG,KETONEN,Elina,University of Helsinki,FI,AI-EMOTION,SH3
+ERC-2025-STG,KOSUNEN,Sonja,University of Eastern Finland,FI,SegrEd,SH3
+ERC-2025-STG,PARANÁ,Edemilson,LUT University,FI,IMR,SH3
+ERC-2025-STG,VUCKOVAC,Maja,Aalto University,FI,STICKY,PE3
+ERC-2025-STG,WELSCH,Robin,Aalto University,FI,AmplifAI,PE6
+ERC-2025-STG,ALTIERI,Ada,University of Paris,FR,Saphyr,PE3
+ERC-2025-STG,ALVAREZ LAGUNA,Alejandro,National Center for Scientific Research (CNRS),FR,HiMomPlas,PE8
+ERC-2025-STG,ANTHORE-DALION,Lucile,National Center for Scientific Research (CNRS),FR,DECAF,PE5
+ERC-2025-STG,ASSOULINE,Alexandre,National Center for Scientific Research (CNRS),FR,ANYONBOX,PE3
+ERC-2025-STG,BAGHDADI,Meryem,National Center for Scientific Research (CNRS),FR,ENCODE,LS3
+ERC-2025-STG,BARIDO-SOTTANI,Joëlle,National Center for Scientific Research (CNRS),FR,MORPHOFBD,LS8
+ERC-2025-STG,BERNARD,Elsa,Institut Gustave Roussy,FR,CHIC,LS2
+ERC-2025-STG,BERTUCCI,Charles,National Center for Scientific Research (CNRS),FR,PaDiESeM,PE1
+ERC-2025-STG,BOUMENDIL,Charlene,National Center for Scientific Research (CNRS),FR,NCOre,LS1
+ERC-2025-STG,BOVENTER,Isabella,Thales,FR,ARXIMEDES,PE3
+ERC-2025-STG,BUCCHERI,Alessandro,EPHE - PSL,FR,POLYBOTA,SH5
+ERC-2025-STG,CODIS,Sandrine,National Center for Scientific Research (CNRS),FR,COLIBRI,PE9
+ERC-2025-STG,CREPEL,Valentin,Collège de France,FR,Twist2Braid,PE3
+ERC-2025-STG,DAVID,Grégoire,National Center for Scientific Research (CNRS),FR,BRUNCH,PE4
+ERC-2025-STG,DEBRIS,Thomas,National Institute for Research in Computer Science and Automatic Control (INRIA),FR,IQ-SCALe,PE6
+ERC-2025-STG,DOOSE,Katja,University Lumiere Lyon 2,FR,ENVIROSHIFT,SH6
+ERC-2025-STG,ESKENAZIS,Alexandros,National Center for Scientific Research (CNRS),FR,DiAnQuGe,PE1
+ERC-2025-STG,FARGUES,Emilien,University of Versailles Saint-Quentin-en- Yvelines,FR,POSTCOLCIT,SH7
+ERC-2025-STG,FERRIERE,Axelle,National Center for Scientific Research (CNRS),FR,RETTHINQ,SH1
+ERC-2025-STG,GIORGETTI,Carolina,National Center for Scientific Research (CNRS),FR,MEMENTO,PE10
+ERC-2025-STG,GOGL,Gergo,National Institute of Health and Medical Research (INSERM),FR,OrphanMotifs,LS1
+ERC-2025-STG,HAN,Junsoo,Sorbonne University,FR,URANUS,PE4
+ERC-2025-STG,HOU,Renyou,National Center for Scientific Research (CNRS),FR,DOUMOTHERCHI NA,SH8
+ERC-2025-STG,KANNAN,Vignesh,Ecole Polytechnique,FR,MultiPhaseXtrM,PE8
+ERC-2025-STG,KEISER,Ludovic,National Center for Scientific Research (CNRS),FR,EMBIOMO,PE3
+ERC-2025-STG,KEPINSKA,Olga,Aix-Marseille University,FR,DiverseSounds,SH4
+ERC-2025-STG,KORBA,Anna,GENES,FR,OptInfinite,PE6
+ERC-2025-STG,LAIDI,Charles,University of Paris XII Val de Marne,FR,CLOVIS,LS7
+ERC-2025-STG,MARRA,Marleen,SciencesPo,FR,APCAP,SH1
+ERC-2025-STG,MECÊ,Pedro,National Center for Scientific Research (CNRS),FR,MIRACLE-AD,LS7
+ERC-2025-STG,MIZES,James Christopher,The French National Research Institute for Sustainable Development,FR,InsubordinateFINA NCE,SH7
+ERC-2025-STG,O'SULLIVAN,James,French Alternative Energies and Atomic Energy Commission (CEA),FR,nQUICHE,PE3
+ERC-2025-STG,PARRA MARTINEZ,Julio,Institute of Advanced Scientific Studies (IHES),FR,GravitaS,PE2
+ERC-2025-STG,PORQUERES,Natalia,French Alternative Energies and Atomic Energy Commission (CEA),FR,OCAPi,PE9
+ERC-2025-STG,REYNOLDS,Lauren,National Institute of Health and Medical Research (INSERM),FR,DeMARRe,LS5
+ERC-2025-STG,ROUSSET,François,National Center for Scientific Research (CNRS),FR,CODA,LS2
+ERC-2025-STG,RUIZ SOTO,Hector,CY Cergy Paris University,FR,JestArt,SH8
+ERC-2025-STG,SCIPIONI,Lorenzo,National Institute of Health and Medical Research (INSERM),FR,ESPRESSO-Omics,PE3
+ERC-2025-STG,UTTERBACK,James,National Center for Scientific Research (CNRS),FR,InSituDynamics,PE4
+ERC-2025-STG,VILLEMAIN,Olivier,University Hospitals of Bordeaux,FR,5D ULTRAFAST-HCM,LS7
+ERC-2025-STG,WYCHOWANIEC,Jacek,Nantes University,FR,DeCodeGels,PE11
+ERC-2025-STG,ŠESTAN,Marko,MEDRI,HR,MemoSniff,LS6
+ERC-2025-STG,DOBÓ,Gábor,Kassák Foundation,HU,ProletGard,SH6
+ERC-2025-STG,GILYÉN,András,Alfréd Rényi Institute of Mathematics,HU,QuanThermal,PE6
+ERC-2025-STG,BENHAM,Graham,University College Dublin,IE,SurFSUP,PE8
+ERC-2025-STG,CASSIDY,Lara,Trinity College Dublin,IE,LIFETIMES,SH6
+ERC-2025-STG,DALY,Kevin,University College Dublin,IE,HERDPATH,LS8
+ERC-2025-STG,MAHER,Paul,University of Limerick,IE,IDENTITY-ERROR,SH3
+ERC-2025-STG,MURPHY,Gillian,"University College Cork, National University of Ireland",IE,FRAME,SH4
+ERC-2025-STG,O'KEEFFE,Mary,University College Dublin,IE,PainSupportLink,LS7
+ERC-2025-STG,RODRIGUES DE OLIVEIRA,Thiago,Trinity College Dublin,IE,AsgOx,LS8
+ERC-2025-STG,TISCORNIA,Lucia,University College Dublin,IE,CRIMLATAM,SH2
+ERC-2025-STG,ARZI,Anat,The Hebrew University of Jerusalem,IL,DynamiConsciousn ess,SH4
+ERC-2025-STG,FRUMKIN,Idan,Tel Aviv University,IL,Genovation,LS8
+ERC-2025-STG,GOLDSTEIN,Ariel,The Hebrew University of Jerusalem,IL,WordOrigins,LS5
+ERC-2025-STG,HALLINAN,Blake,The Hebrew University of Jerusalem,IL,PAY4PLAY,SH3
+ERC-2025-STG,HAMEIRI,Boaz,Tel Aviv University,IL,INTERVENE,SH3
+ERC-2025-STG,JBARA,Muhammad,Tel Aviv University,IL,ProTailor,PE5
+ERC-2025-STG,LANSKY,Shifra,Weizmann Institute of Science,IL,OLIGOMERS,LS1
+ERC-2025-STG,MIRSKY,Yisroel,Ben-Gurion University of the Negev,IL,AGI-Safety,PE6
+ERC-2025-STG,RAPAPORT,Ariel,Technion - Israel Institute of Technology,IL,DIM-FRACTAL,PE1
+ERC-2025-STG,SHIMRON,Efrat,Technion - Israel Institute of Technology,IL,NEW-CONTRAST-MRI,PE7
+ERC-2025-STG,ABSINTA,Martina,Humanitas University,IT,MiST-MS,LS5
+ERC-2025-STG,ANDREANO,Emanuele,"Toscana Life Sciences, Siena",IT,PROTECTIVE,LS7
+ERC-2025-STG,BININI,Irene,University of Parma,IT,FICTA,SH5
+ERC-2025-STG,BRUÈ,Elia,Bocconi University,IT,MIND,PE1
+ERC-2025-STG,CHABAN,Antonina,National Research council of Italy,IT,HeRiDe,SH8
+ERC-2025-STG,CIAMEI,Alessio,National Metrology Institute of Italy,IT,COMPASS,PE2
+ERC-2025-STG,CIDONIO,Gianluca,Sapienza University of Rome,IT,BRIDGE,PE11
+ERC-2025-STG,CONCI,Claudio,Polytechnic of Milan,IT,ALFRED,PE8
+ERC-2025-STG,DE FILIPPIS,Cristiana,University of Parma,IT,NEW,PE1
+ERC-2025-STG,DEMATTEIS,Giovanni,University of Turin,IT,OPPIWaM,PE10
+ERC-2025-STG,DI TURO,Francesca,"Scuola Normale Superiore, Pisa",IT,SHADES,SH8
+ERC-2025-STG,FIORETTI,Michele,Bocconi University,IT,BALANCE,SH1
+ERC-2025-STG,FOLLONI,Davide,Vita-Salute San Raffaele University,IT,UltraDeepMood,SH4
+ERC-2025-STG,GIANNETTI,Vittorio,Sant'Anna School of Advanced Studies,IT,PHOENIX,PE8
+ERC-2025-STG,GIOVANNINI,Tommaso,"University of Rome ""Tor Vergata""",IT,CHOPIN,PE4
+ERC-2025-STG,GIUPPONI,Giulia,Bocconi University,IT,LIFT-UP,SH1
+ERC-2025-STG,IANIRO,Gianluca,Catholic University of the Sacred Heart,IT,MicroRestore,LS7
+ERC-2025-STG,MARINO,Emanuele,University of Palermo,IT,REFINE2LASE,PE11
+ERC-2025-STG,MILONIA,Stefano,Sapienza University of Rome,IT,MUSICA FRANCA,SH5
+ERC-2025-STG,NANNINI,Sofia,Polytechnic University of Turin,IT,AnimalFarm,SH8
+ERC-2025-STG,PAPALE,Paolo,University of Parma,IT,SteerMEM,LS5
+ERC-2025-STG,PIOL,Diana,University of Padua,IT,AR-NMJ,LS5
+ERC-2025-STG,PRIVITERA,Alberto,University of Florence,IT,LIGHT-QIS,PE4
+ERC-2025-STG,RIVA,Emanuele,Polytechnic of Milan,IT,LUMEN,PE8
+ERC-2025-STG,SCAGLIONI,Marta,University of Milan- Bicocca,IT,CHRoMa,SH8
+ERC-2025-STG,SLENDERS,Eli,Italian Institute of Technology,IT,MotionPicture,PE7
+ERC-2025-STG,TABARRINI,Lorenzo,University of Bologna,IT,RaESETfides,SH6
+ERC-2025-STG,TESO,Edoardo,Bocconi University,IT,STATE-DEV,SH1
+ERC-2025-STG,TUNINETTI,Marta,Polytechnic University of Turin,IT,TIP-FRESH,PE10
+ERC-2025-STG,ZANUT,Alessandra,University of Padua,IT,NANO-BOOST,PE4
+ERC-2025-STG,ALVAREZ PRADO,Angel Francisco,Luxembourg Institute of Health,LU,IMMUNAGENOMI CS,LS4
+ERC-2025-STG,ANTÓN BOLAÑOS,Noelia,University Medical Center Utrecht,NL,NEUROSYNC,LS5
+ERC-2025-STG,BELYY,Alexander,University of Groningen,NL,ACTIN in ACTION,LS1
+ERC-2025-STG,BIRK,Max,Eindhoven University of Technology,NL,GAMECHAR,PE6
+ERC-2025-STG,BRUSGAARD,Nathalie,Leiden University,NL,WILDERFARM,SH6
+ERC-2025-STG,CHUERI,Juliana,VU Amsterdam,NL,REPAIR,SH3
+ERC-2025-STG,DE MORREE,Cecile,Radboud University Nijmegen,NL,CONSENT,SH5
+ERC-2025-STG,DREISSEN,Laura,VU Amsterdam,NL,QuEST for APV,PE2
+ERC-2025-STG,DRIJVERS,Linda,Radboud University Nijmegen,NL,HANDWAVE,SH4
+ERC-2025-STG,ERRANDO HERRANZ,Carlos,Delft University of Technology,NL,DISQOVER,PE7
+ERC-2025-STG,HAIDER,Nadia,Delft University of Technology,NL,MCOPI,PE7
+ERC-2025-STG,KIRCHNER,Kristin,Delft University of Technology,NL,FunCalc4Stats,PE1
+ERC-2025-STG,KOTIŠOVÁ,Johana,University of Amsterdam,NL,BEfacts,SH3
+ERC-2025-STG,LERCH,Michael,University of Groningen,NL,TactoChem,PE11
+ERC-2025-STG,LICHTENBERG,Tim,University of Groningen,NL,MagmaWorlds,PE9
+ERC-2025-STG,MORETTI,Angelo,Utrecht University,NL,SAESDGs-EU,SH3
+ERC-2025-STG,MURUGAN,Rajagopal,Leiden University Medical Center (LUMC),NL,B-SELECT,LS6
+ERC-2025-STG,NIKOLIC,Milica,University of Amsterdam,NL,EMODEV,SH3
+ERC-2025-STG,PETTIT,Harry,Radboud University Nijmegen,NL,MONEYINFRA,SH7
+ERC-2025-STG,PEYROT,Wouter,VU Medical Centre Amsterdam,NL,PersonalRiskProfil e,LS7
+ERC-2025-STG,PFEILMEIER,Sebastian,University of Amsterdam,NL,XANTHORESIST,LS9
+ERC-2025-STG,PLEUNIS,Ziggy,University of Amsterdam,NL,EnviroFlash,PE9
+ERC-2025-STG,PROTESESCU,Loredana,University of Groningen,NL,BORNANO,PE11
+ERC-2025-STG,REN,Dongning,Maastricht University,NL,O-Causal,SH3
+ERC-2025-STG,RISTORI,Tommaso,Eindhoven University of Technology,NL,PRIMA,PE8
+ERC-2025-STG,RUIJTENBERG,Suzan,Utrecht University,NL,TRANS-CODE,LS3
+ERC-2025-STG,SEIBEL,Verena,Utrecht University,NL,SHADOW,SH7
+ERC-2025-STG,SIBGATULLINA,Gulnaz,University of Amsterdam,NL,IRInA,SH8
+ERC-2025-STG,STEFANSSON,Gudmundur,University of Amsterdam,NL,THOR,PE9
+ERC-2025-STG,TAGIURI,Giacomo,University of Amsterdam,NL,GovLoss-EU,SH2
+ERC-2025-STG,TANG,Yali,Eindhoven University of Technology,NL,EcoIron,PE8
+ERC-2025-STG,TRAN,Lisa,Utrecht University,NL,Bio-ReALM,PE3
+ERC-2025-STG,VAN DE HAAR,Alisa,Leiden University,NL,LangPro,SH6
+ERC-2025-STG,VAN DER KRUK,Eline,Delft University of Technology,NL,Diversity Outside In,PE8
+ERC-2025-STG,VAN DER SANDE,Masha,Wageningen University,NL,FiRes,LS8
+ERC-2025-STG,VAN DER VLEUTEN,Maaike,Royal Netherlands Academy of Arts and Sciences,NL,QPATHS,SH7
+ERC-2025-STG,VARDAR,Yasemin,Delft University of Technology,NL,SuperTouch,PE7
+ERC-2025-STG,VLAMING,Hanneke,Utrecht University,NL,STOP-OR-GO,LS2
+ERC-2025-STG,VUORRE,Matti,Tilburg University,NL,TRAD,SH4
+ERC-2025-STG,WATT,Gordon,Netherlands Cancer Institute,NL,Immuno-SBC,LS7
+ERC-2025-STG,WISCHNEWSKI,Miles,University of Groningen,NL,PRECHRON,SH4
+ERC-2025-STG,ZAC,Amit,University of Amsterdam,NL,Lex-Luthor,SH2
+ERC-2025-STG,ZHANG,Jianbo,University of Amsterdam,NL,NeoGutChip,LS4
+ERC-2025-STG,ZHELNINA,Anna,Utrecht University,NL,Care2Act,SH3
+ERC-2025-STG,ZUIDDAM,Jeroen,University of Amsterdam,NL,SPECTRA,PE6
+ERC-2025-STG,FRASER,Richard,UiT: The Arctic University of Norway,NO,ZOONOSIS,SH8
+ERC-2025-STG,JOHAIS,Eva,Chr. Michelsen Institute,NO,Hashtag-wars,SH3
+ERC-2025-STG,NYRUP,Jacob,University of Oslo,NO,GETGOV,SH2
+ERC-2025-STG,ØDEGÅRD,Øyvind,Norwegian University of Science and Technology Trondheim,NO,ARCHEOROBOTI CS,SH6
+ERC-2025-STG,PALIK,Julia,"Peace Research Institute, Oslo",NO,Com2Civ,SH2
+ERC-2025-STG,PALUMBO,Alessandro,University of Oslo,NO,EpiCentres,SH5
+ERC-2025-STG,SEICA,Alvaro,University of Oslo,NO,DESCENSURA,SH5
+ERC-2025-STG,BATIUK,Mykhailo,Łukasiewicz Research Network - Polish Center for Technology Development,PL,sc-PTSD,LS5
+ERC-2025-STG,DABROWSKI,Damian,"Institute of Mathematics, Polish Academy of Sciences",PL,QPROJECT,PE1
+ERC-2025-STG,KRAUZE,Wojciech,Warsaw University of Technology,PL,Re.HOT,PE7
+ERC-2025-STG,PAPROTNY,Dominik,University of Szczecin,PL,EuroSoHo,SH7
+ERC-2025-STG,PONCELET,Rene,"Institute of Nuclear Physics, PAS",PL,STAPLE,PE2
+ERC-2025-STG,SIEKIERKA,Anna,Wroclaw University of Science and Technology,PL,ReHeal4waste,PE8
+ERC-2025-STG,ALVES DA SILVA,Joaquim,Champalimaud Foundation,PT,DisSeCT,LS5
+ERC-2025-STG,COELHO SANTOS,Vanessa,University of Coimbra,PT,AngioArchitects,LS5
+ERC-2025-STG,NABAIS,Paula,NOVA University of Lisbon,PT,SCARLET,SH8
+ERC-2025-STG,PEREIRA,Ruben,i3S,PT,FibroRevert,PE11
+ERC-2025-STG,PESTANA LAGES,Joana,CVTT-ISCTE University Institute of Lisbon,PT,HOUSINGFREED OM,SH8
+ERC-2025-STG,RIBEIRO,Joao,Instituto de Telecomunicações (IT),PT,LESYNCH,PE7
+ERC-2025-STG,BENSON,Erik,Karolinska Institute,SE,SELECTDNA,LS1
+ERC-2025-STG,BOJAR,Daniel,University of Gothenburg,SE,SWEETSWAP,LS1
+ERC-2025-STG,BOJMAR,Linda,Linköping University,SE,SYST-E-MET,LS7
+ERC-2025-STG,CONSIGLIO,Camila,Lund University,SE,fertiliMMUNE,LS6
+ERC-2025-STG,DE BAERDEMAEKER,Siska,Stockholm University,SE,DECIDE,SH5
+ERC-2025-STG,DU PLESSIS,Marcel,University of Gothenburg,SE,SOFIA,PE10
+ERC-2025-STG,GUIBENTIF,Carolina,University of Gothenburg,SE,CatchTheWave,LS3
+ERC-2025-STG,GUTERSTAM,Arvid,Karolinska Institute,SE,MINDSIM,SH4
+ERC-2025-STG,LAHÉN,Natalia,Stockholm University,SE,ILMATAR,PE9
+ERC-2025-STG,LIND,Jacob,Malmo University,SE,GIVE RIGHTS,SH7
+ERC-2025-STG,LUNEAU,Mathilde,Chalmers University of Technology,SE,ReGenCAT,PE8
+ERC-2025-STG,MERCADO,Rocío,Chalmers University of Technology,SE,POLYGEN,PE11
+ERC-2025-STG,MIORNER,Johan,Lund University,SE,DECENT,SH7
+ERC-2025-STG,NORSTEDT,Gudrun,Umea University,SE,SESAME,SH6
+ERC-2025-STG,PERSKI,Olga,Stockholm University,SE,Time Matters,SH4
+ERC-2025-STG,QVARNSTRÖM,Martin,Uppsala University,SE,DINO-DIGEST,LS8
+ERC-2025-STG,SO,Florence,Lund University,SE,ECONENGAGE,SH2
+ERC-2025-STG,STEPHENSON,Jessica,Stockholm University,SE,EpiSex,LS8
+ERC-2025-STG,SVALLFORS,Signe,Stockholm University,SE,SeRO,SH7
+ERC-2025-STG,VOGEL,Jacob,Lund University,SE,TauTime,LS5
+ERC-2025-STG,YANG,Yizhou,Linköping University,SE,COFActiveCO2,PE11
+ERC-2025-STG,COSOVSCHI,Agustin,Institute for Contemporary History,SI,Brokers-of-NAM,SH6
+ERC-2025-STG,KOZJEK,Dominik,University of Ljubljana,SI,MeltingWell,PE8
+ERC-2025-STG,SEPETAVC,Jasmina,University of Ljubljana,SI,QEAST,SH8
+ERC-2025-STG,KILAVUZ,M. Tahir,Sabanci University,TR,DEMIG,SH2
+ERC-2025-STG,BALBONI,Clare,London School of Economics and Political Science,UK,EXTGROW,SH1
+ERC-2025-STG,BARADEL,Martina,University of Oxford,UK,CrimCross,SH3
+ERC-2025-STG,BATES,Kieran,Queen Mary University of London,UK,FROGMICRO,LS8
+ERC-2025-STG,BERNHARD,Rachel,University of Oxford,UK,COMPLEXPOL,SH2
+ERC-2025-STG,BOLET,Diane,University of Essex,UK,GREENLOSS,SH2
+ERC-2025-STG,BOYD,Rachael,University of Glasgow,UK,ModuLow,PE1
+ERC-2025-STG,BUSANI,Ofer,University of Edinburgh,UK,UnivKPZ,PE1
+ERC-2025-STG,BUXTON,Rebecca,University of Bristol,UK,LEAD,SH5
+ERC-2025-STG,CARTER- GARTSIDE,Jack,"Imperial College of Science, Technology and Medicine",UK,MORPHON,PE3
+ERC-2025-STG,CHEN,Yi-Ling,University of Oxford,UK,CReativeLipid,LS6
+ERC-2025-STG,CHEPIGA,Natalia,University of Oxford,UK,TRANGINEER,PE2
+ERC-2025-STG,CONGRAVE,Daniel,University of Oxford,UK,DISCOS,PE4
+ERC-2025-STG,DENG,Yansha,King's College London,UK,REACTION,PE7
+ERC-2025-STG,FERNÁNDEZ- YAGÜE,Marc,Queen Mary University of London,UK,DAPHNE,PE11
+ERC-2025-STG,FEWLASS,Helen,University of Bristol,UK,ARRIVAL,SH6
+ERC-2025-STG,FIELDEN,Stephen,University of Birmingham,UK,HORDE,PE5
+ERC-2025-STG,FINDLAY,Gregory,The Francis Crick Institute,UK,Seq2Func-NC,LS2
+ERC-2025-STG,GAN,Jiarui,University of Oxford,UK,ASPAC,PE6
+ERC-2025-STG,GANOSE,Alex,"Imperial College of Science, Technology and Medicine",UK,MATERIALISE,PE11
+ERC-2025-STG,GOTTFRIES,Axel,University of Edinburgh,UK,COLLABOR,SH1
+ERC-2025-STG,GRIFFITHS,Hannah,University of Bristol,UK,RECONNECT,LS8
+ERC-2025-STG,GUALDANI,Cristina,Queen Mary University of London,UK,REGIO,SH1
+ERC-2025-STG,HEARNE,Siobhán,University of Manchester,UK,LabHum,SH6
+ERC-2025-STG,HERMAN,Kyle,University of Sussex,UK,CLIMATE-edGE,SH7
+ERC-2025-STG,HIRSKYJ- DOUGLAS,Ilyena,University of Glasgow,UK,FUTUREFAUNA,PE6
+ERC-2025-STG,HOUCK,Hannes,University of Warwick,UK,DeCoDER,PE5
+ERC-2025-STG,HOWARD,Amy,"Imperial College of Science, Technology and Medicine",UK,GLIMMR,LS7
+ERC-2025-STG,HUMPHRIS,Rachel,Queen Mary University of London,UK,DigiWeB,SH3
+ERC-2025-STG,IRVING-PEASE,Evan,University of Oxford,UK,PaleoEvoMed,LS8
+ERC-2025-STG,JACOBSEN,Benjamin,University of York,UK,SYNDATA,SH3
+ERC-2025-STG,JOHN,Alison,University of Liverpool,UK,GREEKWEST,SH6
+ERC-2025-STG,JURIKOVA,Hana,University of St Andrews,UK,CarbonDIOs,PE10
+ERC-2025-STG,KAFSHDAR GOHARSHADY,Amir,University of Oxford,UK,SPES,PE6
+ERC-2025-STG,KANWAR,Gurtej,University of Edinburgh,UK,FoundLatt,PE2
+ERC-2025-STG,KARPUKHIN,Mikhail,University College London,UK,EOaMS,PE1
+ERC-2025-STG,KENNEDY,Patrick,University of Bristol,UK,SOCIALEARTH,LS8
+ERC-2025-STG,KOGIAS,Marios,"Imperial College of Science, Technology and Medicine",UK,CloudNG,PE6
+ERC-2025-STG,KOURELIS,Jiorgos,"Imperial College of Science, Technology and Medicine",UK,PREDESIGNX,LS9
+ERC-2025-STG,LEZMY,Jonathan,University College London,UK,RanvierNodes-WMUnits,LS5
+ERC-2025-STG,MANELICI,Isabela,London School of Economics and Political Science,UK,LINK4DEV,SH1
+ERC-2025-STG,MARTIN-SANCHO,Laura,"Imperial College of Science, Technology and Medicine",UK,ReThink,LS6
+ERC-2025-STG,MONTEIRO,Joao,University of Warwick,UK,ImmunoSynergy,LS6
+ERC-2025-STG,MÜLLER-CREPON,Carl,London School of Economics and Political Science,UK,BORDERS,SH2
+ERC-2025-STG,NAMBURETE,Ana,University of Oxford,UK,WOMB2COT,LS7
+ERC-2025-STG,OSWALD,Lucy,University of Southampton,UK,PulsarMAP,PE9
+ERC-2025-STG,PAGET,Dan,University of Sussex,UK,NEWREPUBLIC,SH2
+ERC-2025-STG,PONTI,Edoardo Maria,University of Edinburgh,UK,AToM-FM,PE6
+ERC-2025-STG,RICHARDS,Fred,"Imperial College of Science, Technology and Medicine",UK,Earth2Sea,PE10
+ERC-2025-STG,ROWLEY,Katherine,University College London,UK,TactileLang,SH4
+ERC-2025-STG,RUPPRECHT,Christian,University of Oxford,UK,Volute,PE6
+ERC-2025-STG,RÜTTENAUER,Tobias,University College London,UK,SOCIO-CLIMP,SH7
+ERC-2025-STG,SANDAL-WILSON,Chris,University of Exeter,UK,PSYPARTITIONS,SH6
+ERC-2025-STG,SCHREIER,Tina,University of Oxford,UK,CELL4,LS9
+ERC-2025-STG,SHAW,Liam,University of Bristol,UK,PLEIADES,LS8
+ERC-2025-STG,SHUKLA,Vinay,University of Nottingham,UK,BreathingUndergro und,LS9
+ERC-2025-STG,THEMENS,David,University of Birmingham,UK,I-C-GloRI,PE10
+ERC-2025-STG,TOLOMEO,Leonardo,University of Edinburgh,UK,CritPDEsRand,PE1
+ERC-2025-STG,WANG,Yan,University of Cambridge,UK,ATOMS,PE11
+ERC-2025-STG,WHITTINGTON,James,University of Oxford,UK,NARFB,LS5
+ERC-2025-STG,WISEMAN,Ashleigh,University of Cambridge,UK,STEPS,SH6
+ERC-2025-COG,HANNEZO,Edouard,Institute of Science and Technology Austria,AT,REFINE,LS3
+ERC-2025-COG,HASLINGER,Philipp,Vienna University of Technology,AT,ISDEM,PE2
+ERC-2025-COG,KURZBACH,Dennis,University of Vienna,AT,HypSurf,PE4
+ERC-2025-COG,LANGEN,Tim,Vienna University of Technology,AT,PRIME-MOL,PE2
+ERC-2025-COG,MORA GAMEZ,Fredy,University of Linz,AT,HANDigiCRAFT,SH3
+ERC-2025-COG,MOURÃO PERMOSER,Julia,University for Continuing Education Krems,AT,MIGSOL,SH7
+ERC-2025-COG,PLASCHKA,Clemens,The Research Institute of Molecular Pathology,AT,FATERNA,LS1
+ERC-2025-COG,PUSTOGOW,Andrej,Vienna University of Technology,AT,METHEL,PE3
+ERC-2025-COG,SERBYN,Maksym,Institute of Science and Technology Austria,AT,QMbeyondU,PE2
+ERC-2025-COG,BEETS,Isabel,KU Leuven,BE,NEUROPEPTALK,LS5
+ERC-2025-COG,DHONDT,Frederik,Free University of Brussels (VUB),BE,TREATYLAB,SH2
+ERC-2025-COG,JAGAU,Thomas,KU Leuven,BE,UNBOUND TWO,PE4
+ERC-2025-COG,LELIAERT,Jonathan,Ghent University,BE,THERMAGINE,PE11
+ERC-2025-COG,LENTACKER,Ine,Ghent University,BE,My-NANO,LS7
+ERC-2025-COG,NOZARADAN,Sylvie,Catholic University of Louvain,BE,HUMAN RHYTHM,SH4
+ERC-2025-COG,POTOCNIK,Anton,IMEC,BE,SuperQold,PE7
+ERC-2025-COG,SWOLFS,Yentl,KU Leuven,BE,CRACKAR,PE11
+ERC-2025-COG,VANDERSICKEL,Nele,Ghent University,BE,TOPOHEART,LS7
+ERC-2025-COG,VERHULST,Sarah,Ghent University,BE,InSilicoEars,PE7
+ERC-2025-COG,AGUIAR,Luis,University of Zurich,CH,RECODE,SH1
+ERC-2025-COG,BHATTACHARYYA,Debjani,University of Zurich,CH,FAIRFI,SH6
+ERC-2025-COG,CASABURI,Lorenzo,University of Zurich,CH,DEVOLAND,SH1
+ERC-2025-COG,DOKMANIC,Ivan,University of Basel,CH,PhaseShift,PE7
+ERC-2025-COG,DOMINGUEZ DIAZ,Marta,University of St. Gallen,CH,Maghrib-Bridges,SH8
+ERC-2025-COG,DONATO,Flavio,University of Basel,CH,MALLEABLE MEMORY,LS5
+ERC-2025-COG,DROZDOVSKAYA,Maria,Physikalisch- Meteorologisches Observatorium Davos/World Radiation Center,CH,PSII,PE9
+ERC-2025-COG,EDEN,Maya,University of Zurich,CH,NU-POPP,SH1
+ERC-2025-COG,FINK,Olga,Swiss Federal Institute of Technology Lausanne (EPFL),CH,HEROES,PE8
+ERC-2025-COG,GROSSIORD,Charlotte,Swiss Federal Institute of Technology Lausanne (EPFL),CH,COOL,LS8
+ERC-2025-COG,GYORGY,Bence,Institute of Molecular and Clinical Opthalmology Basel,CH,BaseVision,LS7
+ERC-2025-COG,HAUSSENER,Sophia,Swiss Federal Institute of Technology Lausanne (EPFL),CH,DREAM,PE8
+ERC-2025-COG,KAMGARPOUR,Maryam,Swiss Federal Institute of Technology Lausanne (EPFL),CH,CONCISE,PE7
+ERC-2025-COG,KELLER VALSECCHI,Claudia,University of Basel,CH,EMERGE,LS2
+ERC-2025-COG,MANSFIELD,John,University of Zurich,CH,CONCEVO,SH4
+ERC-2025-COG,MOOR,Andreas,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,META-CYCLE,LS4
+ERC-2025-COG,PANENI,Francesco,University of Zurich,CH,BETonSTRESS,LS4
+ERC-2025-COG,PLATT,Randall,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,ProteinPerturbomic s,LS9
+ERC-2025-COG,SCHNEIDER,Christoph,University of Zurich,CH,TuftID,LS6
+ERC-2025-COG,SENDOEL,Ataman,University of Zurich,CH,RIBOSCOPE,LS4
+ERC-2025-COG,SHIH,Chih-Jen,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,NANOLED-SIM,PE4
+ERC-2025-COG,SOMMET,Nicolas,University of Lausanne,CH,PERPETUATE,SH3
+ERC-2025-COG,TANG,Li,Swiss Federal Institute of Technology Lausanne (EPFL),CH,MechanoCAR,LS9
+ERC-2025-COG,THALMAYER,Amber Gayle,University of Zurich,CH,PALS,SH4
+ERC-2025-COG,ZOHNER,Constantin,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,CHILL-TIME,LS8
+ERC-2025-COG,NADAL,Deborah,Institute of Ethnology of The Academy of Sciences,CZ,INVANISH,SH8
+ERC-2025-COG,STEENBERG,Rune,Palacký University Olomouc,CZ,NEWXUAR,SH8
+ERC-2025-COG,ALIM,Karen,Technical University of Munich,DE,LearningMatters,PE3
+ERC-2025-COG,ALVES,Hans,Ruhr University Bochum,DE,AFM,SH3
+ERC-2025-COG,ANANDAKICHENIN,Suganya,University of Hamburg,DE,MIRA,SH5
+ERC-2025-COG,BAEDKE,Jan,Ruhr University Bochum,DE,BOTLEG,SH5
+ERC-2025-COG,BARTASH,Volha,Leibiz Institute for East and Southeast European Studies,DE,EMPOWER,SH6
+ERC-2025-COG,BOCK,Andreas,University Medical Centre Mainz,DE,CLARITY,LS1
+ERC-2025-COG,BÖTTCHER,Jan,University of Tübingen,DE,EICO-CODE,LS6
+ERC-2025-COG,BRKOVIC,Carna,University of Mainz,DE,Racial Socialism,SH8
+ERC-2025-COG,BROCHADO,Ana,University of Tübingen,DE,BacImmune-Decode,LS2
+ERC-2025-COG,CALÀ LESINA,Antonio,Leibniz University Hannover,DE,TEMPORE,PE11
+ERC-2025-COG,CARPENTIER,Alexandra,University of Postdam,DE,SOCE,PE1
+ERC-2025-COG,CASTRILLÓN MAZO,Jerónimo,Technical University of Dresden,DE,COMETH,PE6
+ERC-2025-COG,CORTES CIRIANO,Isidro,European Molecular Biology Laboratory,DE,BrokenChromosom es,LS4
+ERC-2025-COG,CUI,Jian,Helmholtz Munich - German Research Centre for Environmental Health,DE,PhotonSignaling,PE4
+ERC-2025-COG,DARVISHI KAMACHALI,Reza,BAM,DE,AMASE,PE11
+ERC-2025-COG,DE VRIES,Jan,University of Gottingen,DE,StreptoProgram,LS8
+ERC-2025-COG,DEMIR,Ihsan Ekin,University Hospital Rechts der Isar,DE,SYNAPSE-ON-CANCER,LS4
+ERC-2025-COG,DIMITROVA,Rayna,CISPA Helmholtz Center for Information Security,DE,SyReP,PE6
+ERC-2025-COG,EICHLER,Christopher,University of Erlangen- Nuremberg (FAU),DE,MultiCorreQCt,PE3
+ERC-2025-COG,FAIST,Philippe,Free University of Berlin,DE,QPhysComplex,PE2
+ERC-2025-COG,FERTL,Martin,University of Mainz,DE,NuLife,PE2
+ERC-2025-COG,FIEBIG,Timm,Hannover Medical School,DE,BESPOKE,LS1
+ERC-2025-COG,FINGERHUT,Joerg,Humboldt University of Berlin,DE,ACC_Wonder,SH4
+ERC-2025-COG,GALEJ,Wojciech,European Molecular Biology Laboratory,DE,SPRING,LS1
+ERC-2025-COG,GARSCHAGEN,Matthias,University of Munich (LMU),DE,GOALT,SH7
+ERC-2025-COG,GEIGER,Andreas,University of Tübingen,DE,CASIDO,PE6
+ERC-2025-COG,GERSCH,Malte,Technical University of Dortmund,DE,UbiPRO,PE5
+ERC-2025-COG,GERSTENBERGE R,Debora,University of Cologne,DE,WIRED,SH6
+ERC-2025-COG,GREB,Lutz,University of Heidelberg,DE,ConstrainoPhores,PE5
+ERC-2025-COG,GULDIN,Stefan,Technical University of Munich,DE,EngToTarget,PE11
+ERC-2025-COG,GUNKEL,Felix,Jülich Research Centre,DE,ScrambledOxs,PE11
+ERC-2025-COG,HAUSER,Tobias,University of Tübingen,DE,CoNbI-OCD,SH4
+ERC-2025-COG,HOPP,Christine,Bernhard Nocht Institute for Tropical Medicine,DE,AUTOIMMPRINT,LS6
+ERC-2025-COG,JAE,Lucas Tilmann,University of Munich (LMU),DE,mitoSCALES,LS3
+ERC-2025-COG,JÄRVINEN,Emma,University of Wuppertal,DE,CRYSTAL,PE10
+ERC-2025-COG,LIESZ,Arthur,University of Munich (LMU),DE,TRAINED,LS4
+ERC-2025-COG,LISCHKA,Juliane,University of Hamburg,DE,PSS4DEMOCRAC Y,SH3
+ERC-2025-COG,MEYER,Lars,Max Planck Society,DE,BALANG,SH4
+ERC-2025-COG,MOLLIÈRE,Paul,Max Planck Society,DE,VORTEX,PE9
+ERC-2025-COG,MOLTO PALLARES,Roger,The Uniklinikum Aachen,DE,AlphaTar,LS7
+ERC-2025-COG,MUNZ,Dominik,Saarland University,DE,Carb2Mol,PE5
+ERC-2025-COG,NEDIALKOVA,Danny Doncheva,Technical University of Munich,DE,QUALItRNA,LS1
+ERC-2025-COG,OGAWA,Yu,Max Planck Society,DE,ArCeS,PE11
+ERC-2025-COG,ORCHINI,Alessandro,Technical University of Berlin,DE,ECHO,PE8
+ERC-2025-COG,RIZZATO,Roberto,Technical University of Munich,DE,NMR-NANOTUBES,PE4
+ERC-2025-COG,ROTHEMUND,Philipp,University of Stuttgart,DE,PHASEBOT,PE8
+ERC-2025-COG,SAHIN MENCUTEK,Zeynep,Bonn International Centre for Conflict Studies,DE,MULTI-RES,SH7
+ERC-2025-COG,SALKER,Madhuri,University of Tübingen,DE,babyRADAR,LS7
+ERC-2025-COG,SAUER,Jonas- Frederic,Saarland University,DE,DRIFT-rules,LS5
+ERC-2025-COG,SCHÄFFNER,Karoline,Max Planck Society,DE,PIRATES,PE2
+ERC-2025-COG,SCHAFLECHNER,Jürgen,Free University of Berlin,DE,Con-SA,SH8
+ERC-2025-COG,SCHILLING,Christian,University of Munich (LMU),DE,beyondDFT,PE4
+ERC-2025-COG,SCHOPPMANN,Stefan,University of Mainz,DE,NuDoubt,PE2
+ERC-2025-COG,STOECKLEIN,Sophia,University of Munich (LMU),DE,CONNECT,LS7
+ERC-2025-COG,VER,Marton,University of Hamburg,DE,ReCent,SH6
+ERC-2025-COG,WIESEMANN,Marius,Max Planck Society,DE,UPGREAT-LHC,PE2
+ERC-2025-COG,ZILBERBERG,Oded,University of Constance,DE,IOSynDim,PE3
+ERC-2025-COG,ZUMALACARREG UI PEREZ,Miguel,Max Planck Society,DE,GLOW,PE9
+ERC-2025-COG,AARØE,Lene,Aarhus University,DK,FACTRES,SH2
+ERC-2025-COG,BERGSTRÖM,Joanna,University of Copenhagen,DK,MOVR,PE6
+ERC-2025-COG,DRAGICEVIC,Tomislav,Technical University of Denmark,DK,ARTEFACT,PE7
+ERC-2025-COG,FRANKEL,Lisa,The Danish Cancer Society,DK,TranscriptShape,LS3
+ERC-2025-COG,HOGGAN,Eve,Aarhus University,DK,MIRA,PE6
+ERC-2025-COG,MOLLERUP,Nina Grønlykke,University of Copenhagen,DK,Before the Image,SH8
+ERC-2025-COG,OUNANIAN,Kristen,Aalborg University,DK,AdjacenSEA,SH7
+ERC-2025-COG,RAFSANJANI ABBASI,Ahmad,University of Southern Denmark,DK,METABOA,PE8
+ERC-2025-COG,RASMUSSEN,Laura Vang,University of Copenhagen,DK,TRANSFORM-FARM,SH7
+ERC-2025-COG,HÕRAK,Hanna,University of Tartu,EE,LEAFSURF,LS3
+ERC-2025-COG,LAISK,Triin,University of Tartu,EE,UNDERwHER,LS4
+ERC-2025-COG,TOLL,Velle,University of Tartu,EE,CloudTracker,PE10
+ERC-2025-COG,TZAMOS,Christos,Athena - Research and Innovation Center,EL,COMFORMAL,PE6
+ERC-2025-COG,ABALDE-CELA,Sara,University of Santiago de Compostela,ES,OBSERVER,PE11
+ERC-2025-COG,ALONSO GONZALEZ,Pablo,Spanish National Research Council (CSIC),ES,FRONTCAT,SH3
+ERC-2025-COG,ÁLVAREZ,Zaida,Institute for Bioengineering of Catalonia,ES,SpineCraft,LS9
+ERC-2025-COG,ASRIYAN,Vladimir,CREi,ES,MACFRIC,SH1
+ERC-2025-COG,BECHER,Michael,IE University,ES,(DIS)EMPOWER,SH2
+ERC-2025-COG,BERGUEIRO ÁLVAREZ,Julián,University of Santiago de Compostela,ES,ChiroPore,PE5
+ERC-2025-COG,CHALA,Mikael,University of Granada,ES,PC-TP2,PE2
+ERC-2025-COG,CLEMENTS,Rebekah,Autonomous University of Barcelona,ES,J-NAT,SH6
+ERC-2025-COG,FERNANDEZ- GRANDE,Efren,Technical University of Madrid,ES,SONIFY,PE7
+ERC-2025-COG,GARCIA,Macarena,Pompeu Fabra University,ES,OPENLIB,SH8
+ERC-2025-COG,GARCIA BORRÀS,Marc,university of Girona,ES,BioReInt,PE4
+ERC-2025-COG,GLAUBERMAN,Phil,IPHES,ES,CHRONOPOP,SH6
+ERC-2025-COG,GONZALEZ ZALBA,Miguel Fernando,Quantum Motion Spain,ES,QuDos,PE7
+ERC-2025-COG,GUARNIERI,Marco,IMDEA Software Institute,ES,Primula,PE6
+ERC-2025-COG,KALASHNIKOVA,Marina,"Basque Center on Cognition, Brain and Language",ES,Bilingual-LENS,SH4
+ERC-2025-COG,MARTÍNEZ- JIMÉNEZ,Francisco,Vall d'Hebron Institute of Oncology,ES,tL-CHANCER,LS2
+ERC-2025-COG,MERINO MARTÍNEZ,Mario,"University Charles III, Madrid",ES,ROCINANTE,PE8
+ERC-2025-COG,NEU,Gergely,Pompeu Fabra University,ES,AUQuant,PE6
+ERC-2025-COG,PELLICO SAEZ,Juan,Spanish National Research Council (CSIC),ES,NanoFLOW,PE11
+ERC-2025-COG,PISANO,Libera,Pompeu Fabra University,ES,PHIL-TRAGEN,SH5
+ERC-2025-COG,QÜESTA,Julia,Centre for research in Agricultural Genomics,ES,tuneCHILL,LS9
+ERC-2025-COG,SARNAGO,Hector,University of Zaragoza,ES,SPEED,PE7
+ERC-2025-COG,SEOANE BARTOLOMÉ,Beatriz,University Complutense Madrid,ES,BeME,PE3
+ERC-2025-COG,SOLAS ZUBIAURRE,Maite,University of Navarra,ES,HyperAstroMet,LS5
+ERC-2025-COG,STUHLER,Jan,"University Charles III, Madrid",ES,EXKIN,SH1
+ERC-2025-COG,VIEZZER,Eleonora,University of Seville,ES,TURBO4ENERGY,PE2
+ERC-2025-COG,CORREIA,Ricardo,University of Turku,FI,NATURETIME,SH7
+ERC-2025-COG,KRATOCHWIL,Claudius Frank,University of Helsinki,FI,IntEvoCell,LS3
+ERC-2025-COG,LASONEN-AARNIO,Maria,University of Helsinki,FI,CONCEPT,SH5
+ERC-2025-COG,NAJUMUDEEN,Arafath,University of Helsinki,FI,UPTAKE,LS4
+ERC-2025-COG,PAATELAINEN,Risto,University of Helsinki,FI,ExPertQCD,PE2
+ERC-2025-COG,RÄSÄNEN,Okko,Tampere University,FI,EveryContext,SH4
+ERC-2025-COG,REIJULA,Samuli,University of Helsinki,FI,SCI-AI,SH5
+ERC-2025-COG,VAPAAVUORI,Jaana,Aalto University,FI,PAST-A-BOT,PE11
+ERC-2025-COG,BELOTTO DA SILVA,Andre,University of Paris,FR,DiffeRS,PE1
+ERC-2025-COG,BIARD,Tristan,ULCO,FR,ChORhizO,PE10
+ERC-2025-COG,BISSARO,Bastien,INRAE,FR,FOX,LS9
+ERC-2025-COG,BLEYER,Jérémy,Ecole Nationale des Ponts et Chaussées,FR,AUTOMATIX,PE8
+ERC-2025-COG,BUCA,Berislav,National Center for Scientific Research (CNRS),FR,EmPhaSys,PE3
+ERC-2025-COG,CAGÉ,Julia,SciencesPo,FR,ECOSOCIAL,SH1
+ERC-2025-COG,CHAUBET,Guilhem,National Center for Scientific Research (CNRS),FR,MuSyC,PE5
+ERC-2025-COG,DE JUAN-SANZ,Jaime,National Center for Scientific Research (CNRS),FR,MitoTransmitters,LS5
+ERC-2025-COG,DUGUE,Laura,University of Paris,FR,SAMPLING,SH4
+ERC-2025-COG,ETIENNE,Lucie,National Center for Scientific Research (CNRS),FR,FUNEVO,LS8
+ERC-2025-COG,GUENOLE,Julien,National Center for Scientific Research (CNRS),FR,AtomicPIE,PE11
+ERC-2025-COG,LEVITT,Antoine,University Paris-Saclay,FR,TENUMEL,PE1
+ERC-2025-COG,MAZAC,Dalimil,French Alternative Energies and Atomic Energy Commission (CEA),FR,HARMONICON,PE1
+ERC-2025-COG,MAZOYER,Johan,National Center for Scientific Research (CNRS),FR,ECHOES,PE9
+ERC-2025-COG,MOYON,Sarah,Aix-Marseille University,FR,EpiGlia,LS5
+ERC-2025-COG,PAKHOMOVA,Anna,National Center for Scientific Research (CNRS),FR,OCEAN,PE10
+ERC-2025-COG,PETRYK,Nataliya,National Center for Scientific Research (CNRS),FR,REGEM,LS1
+ERC-2025-COG,QUADRANA,Leandro,National Center for Scientific Research (CNRS),FR,HosTEome,LS2
+ERC-2025-COG,QUINTANA- URZAINQUI,Idoia,National Center for Scientific Research (CNRS),FR,EvoBrainShark,LS3
+ERC-2025-COG,RUA,Rejane,National Institute of Health and Medical Research (INSERM),FR,BAMneuro,LS5
+ERC-2025-COG,SCHRATZ,Katharina,Sorbonne University,FR,ReStruCt,PE1
+ERC-2025-COG,TERNON,Eva,National Center for Scientific Research (CNRS),FR,UNIVOC,PE10
+ERC-2025-COG,VALLET,Alexandra,Institut Mines-Telecom,FR,BRAINSOMNIA,PE8
+ERC-2025-COG,VILLATA,Serena,National Center for Scientific Research (CNRS),FR,PANDORA,PE6
+ERC-2025-COG,ZAFEIROPOULOS,Savvas,National Center for Scientific Research (CNRS),FR,HADaSTRaLS,PE2
+ERC-2025-COG,DOOLAN,Karin,Institute for Social Research in Zagreb,HR,RESADL,SH3
+ERC-2025-COG,MIHALIK,Béla Vilmos,Research Centre for Humanities,HU,PARISH,SH6
+ERC-2025-COG,VIDNYANSZKY,Zoltan,Eötvös Loránd University,HU,DEFINE,PE1
+ERC-2025-COG,BARRY,Brian,Trinity College Dublin,IE,JUDGEASSIST,SH2
+ERC-2025-COG,COSTELLO,Eugene,"University College Cork, National University of Ireland",IE,DeepCattle,SH6
+ERC-2025-COG,CURTIN,Caroline,Royal College of Surgeons in Ireland,IE,PANACEA,PE8
+ERC-2025-COG,ROGAN,Mary,Trinity College Dublin,IE,DOLI,SH2
+ERC-2025-COG,TAYLOR,Laura,University College Dublin,IE,GenEU,SH3
+ERC-2025-COG,WARD,Mark,Trinity College Dublin,IE,GLOMoL,SH7
+ERC-2025-COG,ARCAVI,Iair,Tel Aviv University,IL,BHFlares,PE9
+ERC-2025-COG,AVINOAM,Ori,Weizmann Institute of Science,IL,RegenerFuse,LS3
+ERC-2025-COG,BURSTEIN,David,Tel Aviv University,IL,DEFCONJ,LS2
+ERC-2025-COG,COHEN,Gil,Tel Aviv University,IL,LBPL,PE6
+ERC-2025-COG,EFREMENKO,Klim,Ben-Gurion University of the Negev,IL,InterCoding,PE6
+ERC-2025-COG,HABER,Eldar,University of Haifa,IL,RecodingJustice,SH2
+ERC-2025-COG,KATZ,Ori,The Hebrew University of Jerusalem,IL,FLASH,PE7
+ERC-2025-COG,LAHAV,Ori,Tel Aviv University,IL,FOCUS,PE6
+ERC-2025-COG,MANEKIN,Devorah,The Hebrew University of Jerusalem,IL,POLRES,SH2
+ERC-2025-COG,MILO,Anat,Ben-Gurion University of the Negev,IL,CATACOM,PE5
+ERC-2025-COG,PALMER,Benjamin,Ben-Gurion University of the Negev,IL,CRYST_ALGAE,PE5
+ERC-2025-COG,SASSON,Isaac,Tel Aviv University,IL,DEM-LOSS,SH7
+ERC-2025-COG,VIZEL,Yakir,Technion - Israel Institute of Technology,IL,StrongMC,PE6
+ERC-2025-COG,BRUSADELLI,Federico,The Oriental University of Naples,IT,SINOSELF,SH6
+ERC-2025-COG,CAFFARRA,Sendy,University of Modena and Reggio Emilia,IT,READy,SH4
+ERC-2025-COG,CAVALIERE,Viviana,University of Bologna,IT,ARTEMIS,PE2
+ERC-2025-COG,CERANTOLA,Valerio,University of Milan- Bicocca,IT,S-CAPE,PE10
+ERC-2025-COG,DEMI,Libertario,University of Trento,IT,LUMI,PE7
+ERC-2025-COG,GIOVANNELLI,Donato,University of Naples Federico II,IT,AQUA,PE10
+ERC-2025-COG,MARINO,Michele,"University of Rome ""Tor Vergata""",IT,VISTA,PE8
+ERC-2025-COG,MORI,Giuliano,University of Milan,IT,HumanLaw,SH5
+ERC-2025-COG,PEZZUTO,Simone,University of Trento,IT,CARDIORAMA,PE8
+ERC-2025-COG,POLI,Piero,University of Padua,IT,SODA,PE10
+ERC-2025-COG,PURGATO,Marianna,University of Verona,IT,PEACE,SH4
+ERC-2025-COG,ROSATO,Antonio,University of Naples Federico II,IT,BeliefsInfoMarkets,SH1
+ERC-2025-COG,RUSSO,Alessia,University of Padua,IT,RESTATE,SH1
+ERC-2025-COG,SHAFIR,Nir,University of Turin,IT,OttoManuEconomi es,SH6
+ERC-2025-COG,SICILIANO,Velia,Italian Institute of Technology,IT,TeaM,LS9
+ERC-2025-COG,SPANGENBERG YANES,Elena,Sapienza University of Rome,IT,CAVE,SH5
+ERC-2025-COG,VELICHKOV,Bozhidar,University of Pisa,IT,FiRM,PE1
+ERC-2025-COG,SENGUPTA,Anupam,University of Luxembourg,LU,MicroPAS,PE3
+ERC-2025-COG,AUKSZTULEWICZ,Ryszard,Maastricht University,NL,MemPred,SH4
+ERC-2025-COG,BOL,Thijs,University of Amsterdam,NL,FIRMS,SH3
+ERC-2025-COG,BOLT,Jutta,University of Groningen,NL,AWORK,SH6
+ERC-2025-COG,DE GROOT,Lennart,Utrecht University,NL,SPARK,PE10
+ERC-2025-COG,DE VISSER,Pieter,Dutch Research Organisation Institutes (NWO-I),NL,XSCOOPED,PE9
+ERC-2025-COG,DE VRIES,Jordy,University of Amsterdam,NL,CRUNS,PE2
+ERC-2025-COG,DE VRIES,Robert,Utrecht University,NL,Sugar-Viro,LS6
+ERC-2025-COG,DIAS CASTILHO,Miguel,Eindhoven University of Technology,NL,InfiniBlood,PE11
+ERC-2025-COG,FORKEL,Stephanie,Radboud University Nijmegen,NL,EMERGENCE,SH4
+ERC-2025-COG,GORIOUNOVA,Natalia,VU Amsterdam,NL,HumanCircuits,LS5
+ERC-2025-COG,GRAMMATICO,Sergio,Delft University of Technology,NL,ARGON,PE7
+ERC-2025-COG,HARAMBAM,Jaron,University of Amsterdam,NL,DISTRUST,SH3
+ERC-2025-COG,IHNAT,Kati,Radboud University Nijmegen,NL,REMMINIS,SH6
+ERC-2025-COG,JAKOBI,Arjen,Delft University of Technology,NL,INFLAMMAZOOM,LS1
+ERC-2025-COG,KARYOTAKI,Eirini,University of Amsterdam,NL,SYNTHESIS,SH4
+ERC-2025-COG,LEIJTEN,Patty,University of Amsterdam,NL,PARENTALHOPE,SH3
+ERC-2025-COG,LEVATO,Riccardo,Utrecht University,NL,SMART-AGENT,PE8
+ERC-2025-COG,LOERAKKER,Sandra,Eindhoven University of Technology,NL,Bio-DESIGN,PE8
+ERC-2025-COG,MARTINOVIĆ,Borja,Utrecht University,NL,INTER-MIN,SH3
+ERC-2025-COG,MATZKE,Dora,University of Amsterdam,NL,NextGenCogTest,SH4
+ERC-2025-COG,MULREY,Katharine,Radboud University Nijmegen,NL,SKA-CR,PE9
+ERC-2025-COG,MURATORE,Dante Gabriel,Delft University of Technology,NL,LOOK,PE7
+ERC-2025-COG,NUIJENS,Aloisia,Delft University of Technology,NL,QUASI,PE10
+ERC-2025-COG,ROODUIJN,Matthijs,University of Amsterdam,NL,IMMERSE,SH2
+ERC-2025-COG,SANDERSE,Benjamin,Dutch Research Organisation Institutes (NWO-I),NL,SYMBIOSIS,PE8
+ERC-2025-COG,SASTRAMIDJAJA,Yatun,University of Amsterdam,NL,AlterTech,SH3
+ERC-2025-COG,SCHIRHAGL,Romana,"Academic Medical Centre, Groningen",NL,FORSEE,PE3
+ERC-2025-COG,SCHREPEL,Thibault,VU Amsterdam,NL,ATLANTIS,SH2
+ERC-2025-COG,SHARIF AZADEH,Shadi,Delft University of Technology,NL,TRANSFORM,SH7
+ERC-2025-COG,SONNEN,Katharina,Royal Netherlands Academy of Arts and Sciences,NL,OscillatingSignals,LS3
+ERC-2025-COG,STEELE,Abbey,University of Amsterdam,NL,GRID,SH2
+ERC-2025-COG,TAYLOR,Linnet Taylor,Tilburg University,NL,PublicLab,SH3
+ERC-2025-COG,VAN DEN HURK,Katja,Sanquin Blood supply,NL,DONOR-PROTECT,LS7
+ERC-2025-COG,VAN DER MEEL,Roy,Eindhoven University of Technology,NL,REROUTING CAR,LS7
+ERC-2025-COG,VAN TRIGT,Paul,Leiden University,NL,DisFriend,SH6
+ERC-2025-COG,VINCK,Martin,Radboud University Nijmegen,NL,NONLIN,SH4
+ERC-2025-COG,VINKERS,Christiaan,VU Medical Centre Amsterdam,NL,RHYTHM,SH4
+ERC-2025-COG,WEBB,Peter,Leiden University,NL,GeoPo,SH5
+ERC-2025-COG,WELTE,Cornelia,Radboud University Nijmegen,NL,electroANME,LS8
+ERC-2025-COG,WOUTERS,Ruud,Tilburg University,NL,PROPEL,SH2
+ERC-2025-COG,AHMED,Nabil,Norwegian University of Science and Technology Trondheim,NO,SEECODE,SH8
+ERC-2025-COG,CHAIMANI,Anna,University of Oslo,NO,KaLeIDO-CARE,LS7
+ERC-2025-COG,MILKOREIT,Manjana,University of Oslo,NO,CAMELOT,SH7
+ERC-2025-COG,PEFTITSIS,Dimosthenis,Norwegian University of Science and Technology Trondheim,NO,PELCom,PE7
+ERC-2025-COG,ROTS,Aike Peter,University of Oslo,NO,MARGO,SH8
+ERC-2025-COG,STRØNEN,Iselin,University of Bergen,NO,GENMAR,SH8
+ERC-2025-COG,WIG,Tore,University of Oslo,NO,AutoKnow,SH2
+ERC-2025-COG,CZERWIŃSKI,Wojciech,University of Warsaw,PL,POLARIS,PE6
+ERC-2025-COG,NOWAK,Maria,University of Warsaw,PL,PeriPolis,SH6
+ERC-2025-COG,PILIPCZUK,Michał,University of Warsaw,PL,WYDRA,PE6
+ERC-2025-COG,PORADA,Slawomir,Wroclaw University of Science and Technology,PL,ION-TRACE,PE8
+ERC-2025-COG,ARAÚJO,Ricardo,Association of Instituto Superior Técnico for Research and Development,PT,DAEDALUS,LS8
+ERC-2025-COG,BOK,Michael,Lund University,SE,LegoEYES,LS8
+ERC-2025-COG,BOURGINE,Paul,Lund University,SE,ImmunhOss,LS6
+ERC-2025-COG,CHEN,Xingqi,Uppsala University,SE,ScaleMAP,LS9
+ERC-2025-COG,DELLMUTH,Lisa,Stockholm University,SE,PROTECT,SH2
+ERC-2025-COG,DORLO,Thomas,Uppsala University,SE,TRANSPHORM,LS7
+ERC-2025-COG,HAGBERG,Carolina,Karolinska Institute,SE,WATs-UP,LS4
+ERC-2025-COG,LEI,Qinghua,Uppsala University,SE,FORECAST,PE8
+ERC-2025-COG,MESSORI,Gabriele,Uppsala University,SE,DYCLEX,PE10
+ERC-2025-COG,MJÖSBERG,Jenny,Karolinska Institute,SE,TARGET-AIR-LAB,LS6
+ERC-2025-COG,NILSSON,Cecilia,Lund University,SE,MigDisrupt,LS8
+ERC-2025-COG,O'CONNOR,Evan,Stockholm University,SE,COMPACTARS,PE9
+ERC-2025-COG,OLSSON,Simon,Chalmers University of Technology,SE,SPETITO,PE4
+ERC-2025-COG,SIXT,Barbara,Umea University,SE,INCLUSION-INTEGRITY,LS6
+ERC-2025-COG,GOLEŽ,Denis,Jozef Stefan Institute,SI,META-QMS,PE3
+ERC-2025-COG,LJUBETIČ,Ajasja,National Institute of Chemistry in Ljubljana,SI,PROPEL,LS1
+ERC-2025-COG,TOKDEMIR,Efe,Bilkent University,TR,COUNSTER,SH2
+ERC-2025-COG,AGUIRRE GUTIÉRREZ,Jesús,University of Oxford,UK,ADAPTA,LS8
+ERC-2025-COG,BAHAJ,Saleem,University College London,UK,21CentLiq,SH1
+ERC-2025-COG,BAKSHI,Somenath,University of Cambridge,UK,PHYSIOPHAGE,LS2
+ERC-2025-COG,BATOVICI,Dan,University of Oxford,UK,CLAIM,SH5
+ERC-2025-COG,BERTINI,Bruno,University of Birmingham,UK,DREAM,PE2
+ERC-2025-COG,BLENCOWE,Claire,University of Warwick,UK,RAIDS,SH3
+ERC-2025-COG,BOYA,Radha,University of Manchester,UK,ANGEL,PE3
+ERC-2025-COG,BULL,Philip,University of Manchester,UK,UnifySky,PE9
+ERC-2025-COG,CARAIANI,Ana,"Imperial College of Science, Technology and Medicine",UK,IgStaGram,PE1
+ERC-2025-COG,CHO,Jungnam,Durham University,UK,MOBICODE,LS2
+ERC-2025-COG,CLARKE,Alexander,University of Oxford,UK,MicroMeta,LS6
+ERC-2025-COG,CURCHOD,Basile,University of Bristol,UK,ISPAMIA,PE4
+ERC-2025-COG,DE MENDOZA,Alex,Queen Mary University of London,UK,ENDOGIANT,LS8
+ERC-2025-COG,DI NUNZIO,Marco,University of Birmingham,UK,BLUEPRINTS,SH7
+ERC-2025-COG,DUARTE,Fernanda,University of Oxford,UK,ML4MetaLigM,PE5
+ERC-2025-COG,FALISSE,Jean-Benoit,University of Edinburgh,UK,AFTER-REP,SH2
+ERC-2025-COG,FRITH,Nicola,University of Edinburgh,UK,Re-PAIR,SH8
+ERC-2025-COG,GALLEGO,Juan Álvaro,"Imperial College of Science, Technology and Medicine",UK,SELECT,LS5
+ERC-2025-COG,HAWORTH,Christopher,University of Birmingham,UK,SYNCULTURE,SH8
+ERC-2025-COG,HEAZLEWOOD,Brianna,University of Liverpool,UK,TRICKY,PE4
+ERC-2025-COG,HONG,Soyon,University College London,UK,MicrogliaLysosome,LS5
+ERC-2025-COG,HUANG,Chun,"Imperial College of Science, Technology and Medicine",UK,3D-ZERO,PE8
+ERC-2025-COG,JOHNSTON,Susan,University of Edinburgh,UK,RECOSEX,LS8
+ERC-2025-COG,KABUKCU,Ceren,University of Liverpool,UK,Plant-Pro,SH6
+ERC-2025-COG,KATIC,Pamela,University of Greenwich,UK,IP-STATS,SH7
+ERC-2025-COG,KOK,Peter,University College London,UK,MemPercept,LS5
+ERC-2025-COG,LAK,Armin,University of Oxford,UK,LearningTrajectorie s,LS5
+ERC-2025-COG,LANGENBERG,Claudia,Queen Mary University of London,UK,D-MAPS,LS7
+ERC-2025-COG,LEVERINGHAUS,Nicola,King's College London,UK,Nuclear Echoes,SH2
+ERC-2025-COG,LINDNER,Attila Sandor,University College London,UK,GoodJobsEconomi cs,SH1
+ERC-2025-COG,LU,Xuekun,Queen Mary University of London,UK,TWIN-SiNERGY,PE11
+ERC-2025-COG,LUCA,Davide,University of Cambridge,UK,BRIDGE,SH7
+ERC-2025-COG,MAGEE,Michael,Durham University,UK,CONUREP,PE1
+ERC-2025-COG,MALIK,Mehul,Heriot-Watt University,UK,QUEST,PE7
+ERC-2025-COG,MANLEY,Ed,University of Leeds,UK,ReCoGNiSe,SH7
+ERC-2025-COG,MAYNARD,James,University of Oxford,UK,PraDa,PE1
+ERC-2025-COG,MELEN,Rebecca,Cardiff University,UK,RadicalCAT,PE5
+ERC-2025-COG,MITCHELL,Emily,University of Cambridge,UK,REVEAL,LS8
+ERC-2025-COG,NAEF,Patrick,University College London,UK,DIGICRIME,SH3
+ERC-2025-COG,ODENDALL,Charlotte,King's College London,UK,Calmodulation,LS6
+ERC-2025-COG,PALAMARA,Pier Francesco,University of Oxford,UK,ARGgen,LS2
+ERC-2025-COG,PANTIC,Natasa,University of Edinburgh,UK,RelatED,SH3
+ERC-2025-COG,PICH,Ján,University of Oxford,UK,ProCom,PE6
+ERC-2025-COG,RAFFAN,Eleanor,University of Cambridge,UK,DogToHumanObes ity,LS4
+ERC-2025-COG,RICHMOND,Rebecca,University of Bristol,UK,SCIRCLE,LS7
+ERC-2025-COG,RODRÍGUEZ FORTUÑO,Francisco José,King's College London,UK,ATLANTIS,PE3
+ERC-2025-COG,SALGUERO- GÓMEZ,Roberto,University of Oxford,UK,ResIntegrate,LS8
+ERC-2025-COG,SANTOS,Emilia,University of Cambridge,UK,PredictingSPOTS,LS8
+ERC-2025-COG,SAUPE,Erin,University of Oxford,UK,EXTINCT,LS8
+ERC-2025-COG,SHERWIN,Blake,University of Cambridge,UK,CosMicBacklight,PE9
+ERC-2025-COG,SONG,Qilei,"Imperial College of Science, Technology and Medicine",UK,IonPATH,PE5
+ERC-2025-COG,STEWART,Christopher,Newcastle University,UK,BIOMGUT,LS2
+ERC-2025-COG,STROEYMEYT,Nathalie,University of Bristol,UK,SMARTNESTS,LS8
+ERC-2025-COG,STUART,Michael,University of York,UK,PACE,SH5
+ERC-2025-COG,STUEEKEN,Eva,University of St Andrews,UK,QuantiPhox,PE10
+ERC-2025-COG,SYLVEST BERGHOLT,Mads,King's College London,UK,EPIC,LS7
+ERC-2025-COG,TAMBURINI,Diego,British Museum,UK,DYE-a-LOG,SH6
+ERC-2025-COG,TRENTACOSTE,Angela Claire,University of Cambridge,UK,FEROCI,SH6
+ERC-2025-COG,VASILOPOULOU,Sofia,King's College London,UK,INEQCHANGE,SH2
+ERC-2025-COG,VERBRUGGEN,Stefaan,Queen Mary University of London,UK,CONTRA,PE8
+ERC-2025-COG,WEATHERUP,Robert,University of Oxford,UK,OPERATE,PE4
+ERC-2025-COG,WOLFF,Johanna,University of Edinburgh,UK,DeMatS,SH5
+ERC-2025-COG,WOOLGAR,Alexandra,University of Cambridge,UK,Pingsight,SH4
+ERC-2025-COG,WOZNIAKIEWICZ,Penelope,University of Kent,UK,PROSPER,PE10
+ERC-2025-COG,ZNAMENSKIY,Petr,The Francis Crick Institute,UK,3DVISION,LS5
+ERC-2025-ADG,ADAMEYKO,Igor,Medical University of Vienna,AT,FATING-THE-CROWD,LS3
+ERC-2025-ADG,BOCK,Christoph,Research Center for Molecular Medicine (CeMM),AT,Solid-CART,LS7
+ERC-2025-ADG,BOOMGAARDEN,Hajo,University of Vienna,AT,SYNAPS,SH3
+ERC-2025-ADG,FITCH,W Tecumseh,University of Vienna,AT,METRA,SH4
+ERC-2025-ADG,FODOR,Éva,Central European University,AT,CAREFARE,SH3
+ERC-2025-ADG,FORSTNER- MÜLLER,Irene,Austrian Academy of Sciences (AAS),AT,BETWEEN,SH6
+ERC-2025-ADG,JESACHER,Alexander,Medical University of Innsbruck,AT,DeepVibes,PE7
+ERC-2025-ADG,KATSAROS,Georgios,Institute of Science and Technology Austria,AT,SPINSWAP,PE3
+ERC-2025-ADG,KNOBLICH,Juergen,Institute of Molecular Biotechnology,AT,CASCO,LS3
+ERC-2025-ADG,POCK,Thomas,Graz University of Technology,AT,EAGLE,PE6
+ERC-2025-ADG,RITSCH-MARTE,Monika,Medical University of Innsbruck,AT,SOFT,PE7
+ERC-2025-ADG,SCHUMM,Thorsten,Vienna University of Technology,AT,COCONUT,PE2
+ERC-2025-ADG,AHMED,Maaheen,Ghent University,BE,COPRINTS,SH5
+ERC-2025-ADG,BOECKXSTAENS,Guy,KU Leuven,BE,MACPAIN,LS7
+ERC-2025-ADG,CORTEN,Olivier,Free University of Brussels (ULB),BE,HWHL,SH2
+ERC-2025-ADG,DECIN,Leen,KU Leuven,BE,SOPHIA,PE9
+ERC-2025-ADG,DEHANT,Veronique,Catholic University of Louvain,BE,GEOSPIN,PE10
+ERC-2025-ADG,DERLUYN,Ilse,Ghent University,BE,TransParent,SH3
+ERC-2025-ADG,DEWIL,Raf,KU Leuven,BE,STELLAR,PE8
+ERC-2025-ADG,GRUBER,Judith,KU Leuven,BE,RECUR,SH8
+ERC-2025-ADG,KUHN,Simon,KU Leuven,BE,CrystalControl,PE8
+ERC-2025-ADG,NEYTS,Johan,KU Leuven,BE,ANTIVIRMAP,LS6
+ERC-2025-ADG,VAN CALSTER,Geert,KU Leuven,BE,CONJURERS,SH2
+ERC-2025-ADG,VAN DOORSSELAERE,Tom,KU Leuven,BE,WHiSKi,PE9
+ERC-2025-ADG,HÄUPLER,Bernhard,Sofia University,BG,FullScaleOPT,PE6
+ERC-2025-ADG,AVERMAETE,Tom,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,CO-OPOLIS,SH8
+ERC-2025-ADG,BARDOW,André,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,DISC3LAB,PE8
+ERC-2025-ADG,BARRAL,Yves,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,LEARNINGCELLS,LS3
+ERC-2025-ADG,BIERLAIRE,Michel,Swiss Federal Institute of Technology Lausanne (EPFL),CH,COBRA,SH7
+ERC-2025-ADG,CAPKUN,Srdjan,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,SWAP,PE6
+ERC-2025-ADG,CEJKA,Petr,Institute for Research in Biomedicine,CH,MISMATCH,LS1
+ERC-2025-ADG,CHAO,Jeffrey,Friedrich Miescher Institute for Biomedical Research,CH,ImagineRNAs,LS1
+ERC-2025-ADG,DE BOCK,Katrien,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,InterECt,LS4
+ERC-2025-ADG,DUMINIL-COPIN,Hugo,University of Geneva,CH,SPRaPaF,PE1
+ERC-2025-ADG,FLOOD,Finbarr Barry,University of Fribourg,CH,CASTCuRES,SH8
+ERC-2025-ADG,GABELICA,Valerie,University of Geneva,CH,CHIRAMASS,PE4
+ERC-2025-ADG,HEINIS,Christian,Swiss Federal Institute of Technology Lausanne (EPFL),CH,DRUGGABLE,LS7
+ERC-2025-ADG,IMAMOGLU,Atac,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,EXCELM,PE3
+ERC-2025-ADG,JABAUDON,Denis,University of Geneva,CH,ASSOCIATE,LS5
+ERC-2025-ADG,KIYAVASH,Negar,Swiss Federal Institute of Technology Lausanne (EPFL),CH,CIEL,PE6
+ERC-2025-ADG,LEUTHOLD,Juerg,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,BEACON,PE7
+ERC-2025-ADG,LIGNOS,Dimitrios,Swiss Federal Institute of Technology Lausanne (EPFL),CH,DARE,PE8
+ERC-2025-ADG,LOCHER,Kaspar,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,Glyco-Dive,LS1
+ERC-2025-ADG,LOEWITH,Robbie,University of Geneva,CH,BLASTOR,LS9
+ERC-2025-ADG,LYUBASHEVSKY,Vadim,IBM Research-Zurich,CH,SPOILER,PE6
+ERC-2025-ADG,MITRI,Sara,University of Lausanne,CH,EvoFunSynCom,LS8
+ERC-2025-ADG,NAEF,Felix,Swiss Federal Institute of Technology Lausanne (EPFL),CH,CircaSync,LS2
+ERC-2025-ADG,OXENIUS,Annette,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,T cell ROAD,LS6
+ERC-2025-ADG,PANÉ VIDAL,Salvador,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,PYROBOTS,PE7
+ERC-2025-ADG,PERRIG,Adrian,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,SOPHIA,PE6
+ERC-2025-ADG,PERSAT,Alexandre,Swiss Federal Institute of Technology Lausanne (EPFL),CH,MUCOID,LS3
+ERC-2025-ADG,RADENOVIC,Aleksandra,Swiss Federal Institute of Technology Lausanne (EPFL),CH,NEON,PE7
+ERC-2025-ADG,RAMDYA,Pavan,Swiss Federal Institute of Technology Lausanne (EPFL),CH,NeuroPRIME,LS5
+ERC-2025-ADG,SCHWANDER,Tanja,University of Lausanne,CH,SilentX,LS8
+ERC-2025-ADG,VAN DER GOOT,Françoise Gisou,Swiss Federal Institute of Technology Lausanne (EPFL),CH,ExpLORD,LS1
+ERC-2025-ADG,WAGNER,Andreas,University of Zurich,CH,Seascapes,LS8
+ERC-2025-ADG,WÖRNER,Hans Jakob,Swiss Federal Institute of Technology Zurich (ETH Zurich),CH,ATTOCHIRALITY,PE4
+ERC-2025-ADG,CONSTANTINOU,Stavroula,University of Cyprus,CY,HagioHealth,SH5
+ERC-2025-ADG,KAFETSIOS,Konstantinos,Palacký University Olomouc,CZ,CORESPOND,SH3
+ERC-2025-ADG,MYNÁŘOVÁ,Jana,Charles University of Prague,CZ,TENSION,SH6
+ERC-2025-ADG,ABELS- EISENLOHR,Birgit,University of Gottingen,DE,VibE,SH8
+ERC-2025-ADG,BARTOS,Marlene,University Medical Center Freiburg,DE,ReMember-CA3,LS5
+ERC-2025-ADG,BECCHIO,Cristina,University Medical Center Hamburg-Eppendorf,DE,KINCODE,SH4
+ERC-2025-ADG,BOEHM,Thomas,Max Planck Society,DE,ImmunoPlast,LS6
+ERC-2025-ADG,BRÉARD,Andrea,University of Erlangen- Nuremberg (FAU),DE,C-STICS,SH6
+ERC-2025-ADG,CARELL,Thomas,University of Munich (LMU),DE,RFrag,PE5
+ERC-2025-ADG,CLEMENTI,Cecilia,Free University of Berlin,DE,ProDyGe,PE4
+ERC-2025-ADG,ESCHER,Beate,Helmholtz Centre for Environmental Research - UFZ,DE,ToxSick,LS7
+ERC-2025-ADG,FURLONG,Eileen,European Molecular Biology Laboratory,DE,LEAPS,LS2
+ERC-2025-ADG,GARGIULO,Gaetano,Max Delbrück Center for Molecular Medicine in the Helmholtz Association,DE,MOIRA,LS4
+ERC-2025-ADG,GIZON,Laurent,Max Planck Society,DE,INSIDE,PE9
+ERC-2025-ADG,GRAMANN,Klaus,Technical University of Berlin,DE,URBRAIN,SH7
+ERC-2025-ADG,GREINACHER,Andreas,University Medicine Greifswald,DE,PROTECT,LS7
+ERC-2025-ADG,GRILL,Stephan,Max Planck Society,DE,SDSF,PE3
+ERC-2025-ADG,HAMPRECHT,Fred,University of Heidelberg,DE,LearningOFDFT,PE4
+ERC-2025-ADG,HERZSCHUH,Ulrike,Alfred Wegener Institute for Polar and Marine Research,DE,plantExtinct,PE10
+ERC-2025-ADG,KERSCHENSTEIN ER,Martin,University of Munich (LMU),DE,TACO,LS5
+ERC-2025-ADG,KÖHLER,Claudia,Max Planck Society,DE,GRAFT,LS9
+ERC-2025-ADG,KOMATSU,Eiichiro,Max Planck Society,DE,NewPhysCMB,PE9
+ERC-2025-ADG,KUKLA,Quill Rebecca,Leibniz University Hannover,DE,TERRAINS,SH5
+ERC-2025-ADG,LEMKE,Edward,University of Mainz,DE,MShapeM,LS9
+ERC-2025-ADG,MAGGIO,Martina,Saarland University,DE,SCARF,PE6
+ERC-2025-ADG,MAJUMDAR,Rupak,Max Planck Society,DE,Pascal,PE6
+ERC-2025-ADG,MASCHEK,Dominik,"Romano-germanic Central Museum, Leibniz Research Institute for Archeology",DE,ConstruEnS,SH6
+ERC-2025-ADG,MEYER- LINDENBERG,Andreas,Central Institute for Mental Health,DE,HOTHEAD,LS5
+ERC-2025-ADG,NEWIG,Jens,Lüneburg University,DE,GAPS,SH7
+ERC-2025-ADG,NEY THORNTON,Alyssa,University of Munich (LMU),DE,MetaQ,SH5
+ERC-2025-ADG,OHLER,Uwe,Max Delbrück Center for Molecular Medicine in the Helmholtz Association,DE,TRANS-DECODE,LS2
+ERC-2025-ADG,PETERS,Krisztian,DESY,DE,SONAR,PE2
+ERC-2025-ADG,PINK,Johanna,Albert-Ludwigs-University Freiburg,DE,TabA,SH5
+ERC-2025-ADG,RUBEN,Mario,Karlsruhe Institute of Technology,DE,HILBERT MOLECULES,PE5
+ERC-2025-ADG,RUBIO- FERNANDEZ,Paula,Max Planck Society,DE,COMMON_GROU ND,SH4
+ERC-2025-ADG,RUßMANN,Christoph,HAWK University of Applied Sciences and Arts,DE,FEMTOMICS,PE4
+ERC-2025-ADG,SAUR,Dieter,German Cancer Research Centre,DE,Evoke-PDAC,LS6
+ERC-2025-ADG,SAVOY,Benedicte,Technical University of Berlin,DE,REMAPP,SH8
+ERC-2025-ADG,SCHULENBURG,Hinrich,The University of Kiel,DE,CrypticBenefits,LS8
+ERC-2025-ADG,SCHULZ,Christof,University of Duisburg- Essen,DE,AEROSYN,PE8
+ERC-2025-ADG,SHISHKINA,Olga,Max Planck Society,DE,CoSMiC,PE8
+ERC-2025-ADG,SMITH,Matthew,University of Bonn,DE,EthicoTech,PE6
+ERC-2025-ADG,STIEWE,Thorsten,University of Marburg,DE,TP53in4D,LS4
+ERC-2025-ADG,SUYU,Sherry,Technical University of Munich,DE,LENS-ON-FIRE,PE9
+ERC-2025-ADG,TELEMAN,Aurelio,German Cancer Research Centre,DE,AdenoRegulate,LS3
+ERC-2025-ADG,WALLNER,Anton,Helmholtz-Zentrum Dresden-Rossendorf,DE,SUPREME,PE2
+ERC-2025-ADG,WALTHER,Andreas,University of Mainz,DE,ProtoEco,PE5
+ERC-2025-ADG,WEITENBERG,Christof,Technical University of Dortmund,DE,InToCold,PE2
+ERC-2025-ADG,MAILAND,Niels,The Danish Cancer Society,DK,HistoneBio,LS1
+ERC-2025-ADG,MØLLER,Anders,Aarhus University,DK,ProSec,PE6
+ERC-2025-ADG,PESSAH,Martin Elias,University of Copenhagen,DK,BBH-in-MHD-Disk,PE9
+ERC-2025-ADG,PONTE,Stefano,Copenhagen Business School,DK,GreenWorlds,SH7
+ERC-2025-ADG,RADUTOIU,Simona,Aarhus University,DK,ProMIC,LS9
+ERC-2025-ADG,RANDO,Oliver,University of Copenhagen,DK,EpiSignal,LS4
+ERC-2025-ADG,SCHAEFFER,Merlin,University of Copenhagen,DK,CONTESDIS,SH3
+ERC-2025-ADG,CANBAKAL,Saffet Hulya,Greek Foundation for Research and Technology,EL,GINIE,SH6
+ERC-2025-ADG,KHAJAVIKHAN,Mercedeh,"Institute of Plasma Physics, University of Crete",EL,EnBright,PE2
+ERC-2025-ADG,PAPADIMITRIOU,Christos,Athena - Research and Innovation Center,EL,NEAGT,PE6
+ERC-2025-ADG,ALBESA-JOVÉ,David,Basque Biophysics Foundation,ES,T6S-PoreMech,LS6
+ERC-2025-ADG,BATLLE,Eduard,Institute for Research in Biomedicine,ES,plastic_CRC,LS7
+ERC-2025-ADG,CELIÀ TERRASSA,Antoni,Hospital del Mar Medical Research Institute,ES,PLASTWIRE,LS7
+ERC-2025-ADG,COPEMAN,Jacob,University of Santiago de Compostela,ES,GuruAI,SH8
+ERC-2025-ADG,CUETO,Elias,University of Zaragoza,ES,PHYSIA,PE8
+ERC-2025-ADG,DE LA TORRE,Ignacio,Spanish National Research Council (CSIC),ES,ERCEHA,SH6
+ERC-2025-ADG,ESCALONA,Julio,Spanish National Research Council (CSIC),ES,LivCad,SH6
+ERC-2025-ADG,FORSYTH,Maria,University of the Basque Country,ES,POLARIS,PE11
+ERC-2025-ADG,HONEY-ROSÉS,Jordi,Autonomous University of Barcelona,ES,BEAM,SH7
+ERC-2025-ADG,IBÁÑEZ,Juan,Spanish National Research Council (CSIC),ES,HIDTECH,SH6
+ERC-2025-ADG,LAU,Chun Ning,Donostia International Physics Center,ES,TNT,PE3
+ERC-2025-ADG,LE MENS,Gael,Pompeu Fabra University,ES,ABDICATE,SH3
+ERC-2025-ADG,LOZANO,Angel,Pompeu Fabra University,ES,ARTBAND,PE7
+ERC-2025-ADG,LÜSCHER,Christian,Spanish National Research Council (CSIC),ES,VARIANT,LS5
+ERC-2025-ADG,MARTÍ,Elisa,Spanish National Research Council (CSIC),ES,SpinaLogic,LS5
+ERC-2025-ADG,MATHUR,Savita,The Institute of Astrophysics of the Canary Islands (IAC),ES,MELODY,PE9
+ERC-2025-ADG,MELNICK,Ari,Josep Carreras Leukaemia Foundation,ES,X-SeLECT,LS2
+ERC-2025-ADG,MENENDEZ DE LA PRIDA,Liset,Spanish National Research Council (CSIC),ES,DYNAMEM,LS5
+ERC-2025-ADG,NOTREDAME,Cedric,Centre for Genomic Regulation,ES,Embedomics,LS2
+ERC-2025-ADG,PARCET,Javier,Spanish National Research Council (CSIC),ES,SMARP,PE1
+ERC-2025-ADG,PAUSAS,Juli,Spanish National Research Council (CSIC),ES,FireShifts,LS8
+ERC-2025-ADG,PRIETO,Pilar,Pompeu Fabra University,ES,PROSODY-SENSES,SH4
+ERC-2025-ADG,RITORT,Felix,University of Barcelona,ES,HEAT,PE3
+ERC-2025-ADG,RODRIGUEZ- VIEJO,Javier,Catalan Institute of Nanotechnology,ES,GLASSPIKE,PE11
+ERC-2025-ADG,SENATORE,Maria Ximena,Spanish National Research Council (CSIC),ES,AWAY,SH6
+ERC-2025-ADG,SERRANO PUBUL,Luis,Centre for Genomic Regulation,ES,SafeDelivery,LS9
+ERC-2025-ADG,VICENT,Maria Jesus,Príncipe Felipe Research Center,ES,MORPHEUS,PE11
+ERC-2025-ADG,WEINBERGER,Florian,Spanish National Cardiovascular Research Centre,ES,CARDIOSWITCH,LS4
+ERC-2025-ADG,YAZDANI,Ali,The Institute of Photonic Sciences,ES,FRAQTION,PE3
+ERC-2025-ADG,FOSTER,Adam,Aalto University,FI,ARCADE,PE11
+ERC-2025-ADG,KHANINA,Olesya,University of Helsinki,FI,UCHANGE,SH4
+ERC-2025-ADG,MÄHÖNEN,Ari Pekka,University of Helsinki,FI,WOODIER,LS3
+ERC-2025-ADG,MÄKINEN,Taija,University of Helsinki,FI,REFLAME,LS4
+ERC-2025-ADG,OKSANEN,Jani,Aalto University,FI,v-TPX,PE11
+ERC-2025-ADG,RISSANEN,Matti,University of Helsinki,FI,EXACT,PE10
+ERC-2025-ADG,SUOMELA,Jukka,Aalto University,FI,DistQuant,PE6
+ERC-2025-ADG,VUORINEN,Aleksi,University of Helsinki,FI,StellarQCD,PE2
+ERC-2025-ADG,ADAMCZEWSKI,Boris,National Center for Scientific Research (CNRS),FR,METIS,PE1
+ERC-2025-ADG,BABIN,Marcel,National Center for Scientific Research (CNRS),FR,TWIL-ICE,PE10
+ERC-2025-ADG,BACH,Francis,National Institute for Research in Computer Science and Automatic Control (INRIA),FR,TOURMALET,PE6
+ERC-2025-ADG,BAYER,Emmanuelle,National Center for Scientific Research (CNRS),FR,ER-CONNECT,LS3
+ERC-2025-ADG,BELIN,Pascal,Aix-Marseille University,FR,EVOICE,SH4
+ERC-2025-ADG,BOVE,Livia,National Center for Scientific Research (CNRS),FR,HYDRA,PE4
+ERC-2025-ADG,CREMINELLI,Paolo,UNESCO,FR,BestLobe,PE2
+ERC-2025-ADG,DAËRON,Mathieu,National Center for Scientific Research (CNRS),FR,TONIC,PE10
+ERC-2025-ADG,DAUCHY,Serge,National Center for Scientific Research (CNRS),FR,FoLC,SH2
+ERC-2025-ADG,GARCIA MUÑOZ,Antonio,French Alternative Energies and Atomic Energy Commission (CEA),FR,Exo-RARE,PE9
+ERC-2025-ADG,GIRAUD,Tatiana,National Center for Scientific Research (CNRS),FR,DEGENSEX,LS8
+ERC-2025-ADG,HALTER,Fabien,University of Orleans,FR,SILEX,PE8
+ERC-2025-ADG,HELLWIG,Christian,Toulouse School of Economics,FR,WELFARE,SH1
+ERC-2025-ADG,HERMINE,Olivier,University of Paris,FR,TARGET-SCD,LS7
+ERC-2025-ADG,LAPIDOT,Elad,University of Lille,FR,REFEUJ,SH5
+ERC-2025-ADG,OLIVIER,Tercieux,National Center for Scientific Research (CNRS),FR,DYMAP,SH1
+ERC-2025-ADG,PAPOTTI,Paolo,EURECOM,FR,GENESIS,PE6
+ERC-2025-ADG,PILLONI,Vincent,National Center for Scientific Research (CNRS),FR,MOMO,PE1
+ERC-2025-ADG,POIBEAU,Thierry,National Center for Scientific Research (CNRS),FR,CANON,SH5
+ERC-2025-ADG,POTMA,Eric,National Center for Scientific Research (CNRS),FR,MetaCARS,PE4
+ERC-2025-ADG,REGUERA,Juan,National Institute of Health and Medical Research (INSERM),FR,CHIKO,LS1
+ERC-2025-ADG,RETHORE,Julien,National Center for Scientific Research (CNRS),FR,MASSTICK,PE8
+ERC-2025-ADG,RICHARD,Nicolas,National Center for Scientific Research (CNRS),FR,Feral Engines,SH3
+ERC-2025-ADG,SACEPE,Benjamin,National Center for Scientific Research (CNRS),FR,SUPERHall,PE3
+ERC-2025-ADG,SHAPIRO,Nikolai,National Center for Scientific Research (CNRS),FR,DeepMagmaWaves,PE10
+ERC-2025-ADG,STANZIANI,Alessandro,National Center for Scientific Research (CNRS),FR,dataempire,SH6
+ERC-2025-ADG,CUSACK,Rhodri,Trinity College Dublin,IE,InfantNeuroAI,SH4
+ERC-2025-ADG,FERMANIS,Porscha,University College Dublin,IE,PanAsia,SH5
+ERC-2025-ADG,JOHNSON,Rory,University College Dublin,IE,REVOLVER,LS2
+ERC-2025-ADG,LAYTE,Richard,Trinity College Dublin,IE,FLOURISH,SH3
+ERC-2025-ADG,O'MULLANE,Anthony,University College Dublin,IE,ALMERS,PE4
+ERC-2025-ADG,DOR,Yuval,The Hebrew University of Jerusalem,IL,T1Dstarted,LS4
+ERC-2025-ADG,GEPSTEIN,Lior,Technion - Israel Institute of Technology,IL,OptoPrintRhythm,LS4
+ERC-2025-ADG,KUSHNIR,Doron,Weizmann Institute of Science,IL,SNAP3D,PE9
+ERC-2025-ADG,SCHWARTZ,Schraga,Weizmann Institute of Science,IL,EpiPalette,LS9
+ERC-2025-ADG,SOREK,Rotem,Weizmann Institute of Science,IL,ImmuneTIRs,LS2
+ERC-2025-ADG,YIZHAR,Ofer,Weizmann Institute of Science,IL,NEST,LS5
+ERC-2025-ADG,AASSVE,Arnstein,Bocconi University,IT,ForeverYoung,SH7
+ERC-2025-ADG,ANDRIULLI,Francesco,Polytechnic University of Turin,IT,TESSERHACK,PE7
+ERC-2025-ADG,BAGLIONI,Daniele,Ca' Foscari University of Venice,IT,ConScrIt,SH5
+ERC-2025-ADG,BOVE,Vincenzo,IMT School for Advanced Studies Lucca,IT,SOS,SH2
+ERC-2025-ADG,CAVALIERE,Paola,University of Milan,IT,INCLUDE-MHPSS,SH3
+ERC-2025-ADG,DALAI,Marco,University of Brescia,IT,ZENIT,PE7
+ERC-2025-ADG,DELFANTI,Alessandro,University of Bologna,IT,GenLab,SH3
+ERC-2025-ADG,DUMBSER,Michael,University of Trento,IT,SOPHOS,PE1
+ERC-2025-ADG,GIORDANO,Carmen,Polytechnic of Milan,IT,ANDROMEDA,PE8
+ERC-2025-ADG,GUARDONE,Alberto,Polytechnic of Milan,IT,ExtrA,PE8
+ERC-2025-ADG,KAJASTE- RUDNITSKI,Anna,University of Pavia,IT,BRAINY,LS7
+ERC-2025-ADG,LENCI,Alessandro,University of Pisa,IT,CLIMB,SH4
+ERC-2025-ADG,MALAVASI,Lorenzo,University of Pavia,IT,SPOTLIGHT,PE11
+ERC-2025-ADG,MUSARRA,Antonio,Sapienza University of Rome,IT,SABIR,SH6
+ERC-2025-ADG,PAPALEO,Francesco,Italian Institute of Technology,IT,EmotionalBrainS,LS5
+ERC-2025-ADG,PONTIL,Massimiliano,Italian Institute of Technology,IT,LEO,PE6
+ERC-2025-ADG,RIALL,Lucy,European University Institute,IT,MIGRANT-COLONIALISM,SH6
+ERC-2025-ADG,TORSI,Luisa,University of Bari,IT,DIPNET,PE11
+ERC-2025-ADG,VICINI,Alessandro,University of Milan,IT,QuantumFronTiers,PE2
+ERC-2025-ADG,ESPOSITO,Massimiliano,University of Luxembourg,LU,EOS,PE5
+ERC-2025-ADG,INIGUEZ,Jorge,Luxembourg Institute of Science and Technology,LU,FERROTWIST,PE11
+ERC-2025-ADG,ALONI,Maria,University of Amsterdam,NL,NIHILPLUS,SH4
+ERC-2025-ADG,BIERMANN,Frank,Utrecht University,NL,PLURIPOL,SH7
+ERC-2025-ADG,BRONNENBERG,Bart,Tilburg University,NL,FoodEnvironment,SH1
+ERC-2025-ADG,BROUNS,Stan,Delft University of Technology,NL,REDQUEEN,LS6
+ERC-2025-ADG,CHUVA DE SOUSA LOPES,Susana,Leiden University Medical Center (LUMC),NL,dOvary,LS7
+ERC-2025-ADG,EGGENHUISEN,Joris,Utrecht University,NL,DEEP-FLUX,PE10
+ERC-2025-ADG,HUCK,Wilhelm,Radboud University Nijmegen,NL,MolCompute,PE4
+ERC-2025-ADG,JADDOE,Vincent,Erasmus Medical Center Rotterdam,NL,PreconceptionOrigin s,LS7
+ERC-2025-ADG,KATER,Arnon,Stichting Amsterdam UMC,NL,SPARC,LS7
+ERC-2025-ADG,KEYSERS,Christian,Royal Netherlands Academy of Arts and Sciences,NL,HarmAversion,LS5
+ERC-2025-ADG,KOOPMANS,Bert,Eindhoven University of Technology,NL,TOP DESIGN,PE3
+ERC-2025-ADG,LEIJTEN,Jeroen,University of Twente,NL,VitaliTE,PE11
+ERC-2025-ADG,MARTEIJN,Jurgen,Erasmus Medical Center Rotterdam,NL,GeneGuard,LS1
+ERC-2025-ADG,MULDER,Willem,Eindhoven University of Technology,NL,DEFLAME,LS7
+ERC-2025-ADG,PEPPELENBOSC H,Maikel,Erasmus Medical Center Rotterdam,NL,PRECISE-PANC,LS7
+ERC-2025-ADG,POPOVIC,Mladen,University of Groningen,NL,TRACINGSCRIBES,SH5
+ERC-2025-ADG,ROJO,Juan,VU Amsterdam,NL,UNICORN,PE2
+ERC-2025-ADG,SCARANO,Fulvio,Delft University of Technology,NL,AEROSQIN,PE8
+ERC-2025-ADG,STEELE,Gary,Delft University of Technology,NL,QTORSION,PE2
+ERC-2025-ADG,VAN DER HOFSTAD,Remco,Eindhoven University of Technology,NL,Dynamics.oRG,PE1
+ERC-2025-ADG,VAN DER MEER,Devaraj,University of Twente,NL,ImPhaC,PE8
+ERC-2025-ADG,VAN TUBERGEN,Frank,Royal Netherlands Academy of Arts and Sciences,NL,Co-Alpha,SH3
+ERC-2025-ADG,ARNESEN,Thomas,University of Bergen,NO,NterSwitch,LS1
+ERC-2025-ADG,CORANDER,Jukka,University of Oslo,NO,ACES,LS8
+ERC-2025-ADG,KOTSADAM,Andreas,Ragnar Frisch Centre for Economic Research,NO,PEACE,SH1
+ERC-2025-ADG,MILETIC,Hrvoje,University of Bergen,NO,NEURO-GENE,LS7
+ERC-2025-ADG,PIETIKAINEN,Sari,UiT: The Arctic University of Norway,NO,RiverPulse,SH3
+ERC-2025-ADG,TUNGODDEN,Bertil,Norwegian School of Economics,NO,FAIRMARKETS,SH1
+ERC-2025-ADG,KREMENS,Karolina,University of Wroclaw,PL,crimPROfem,SH2
+ERC-2025-ADG,ROMEIRA,Bruno,International Iberian Nanotechnology Laboratory,PT,LightSensorAI,PE7
+ERC-2025-ADG,SOARES,Miguel,Gulbenkian Institute For Molecular Medicine,PT,KILLBILL,LS6
+ERC-2025-ADG,PARVULESCU,Anca,Babes-Bolyai University,RO,RORIENT,SH5
+ERC-2025-ADG,STAN,Lavinia,Lucian Blaga University of Sibiu,RO,MULTIPAST,SH2
+ERC-2025-ADG,ANDERSSON,Dan,Uppsala University,SE,EVOHR,LS8
+ERC-2025-ADG,BORBAS,Eszter,Uppsala University,SE,ReImagiN2,PE5
+ERC-2025-ADG,CHAPRON,Guillaume,Swedish University of Agricultural Sciences,SE,ConservationFailures,SH7
+ERC-2025-ADG,FALKENBERG,Maria,University of Gothenburg,SE,MITOLOOP,LS1
+ERC-2025-ADG,GEMZELL DANIELSSON,Kristina,Karolinska Institute,SE,INSPIRE,LS7
+ERC-2025-ADG,HELLEDAY,Thomas,Karolinska Institute,SE,RECODE,LS7
+ERC-2025-ADG,HULTMAN,Lisa,Uppsala University,SE,WARCRIMES,SH2
+ERC-2025-ADG,KAILA,Ville,Stockholm University,SE,bioEnergetic,PE4
+ERC-2025-ADG,LINDVALL,Johannes,University of Gothenburg,SE,OCCPOL,SH2
+ERC-2025-ADG,MUZAKA,Valbona,Uppsala University,SE,Health-Wealth,SH2
+ERC-2025-ADG,PETZOLD,Katja,Uppsala University,SE,DynaMech,LS1
+ERC-2025-ADG,ZNIDARIC,Marko,University of Ljubljana,SI,NUMBS,PE2
+ERC-2025-ADG,CARKOGLU,Ali,Koc University,TR,EMERGEPOL,SH2
+ERC-2025-ADG,ADAMS,David,Genome Research Limited,UK,REBALANCE,LS4
+ERC-2025-ADG,ANDERSON,Harry,University of Oxford,UK,QUANTUM-RING,PE5
+ERC-2025-ADG,ATKINSON,Rowland,University of Sheffield,UK,OLIGARCITIES,SH7
+ERC-2025-ADG,BAYER,Arend,University of Edinburgh,UK,AlgaeFromCats,PE1
+ERC-2025-ADG,BENDING,Gary,University of Warwick,UK,RHYTHMS,LS8
+ERC-2025-ADG,BUCKLING,Angus,University of Exeter,UK,PhageMatter,LS8
+ERC-2025-ADG,BURGESS,Neil,University College London,UK,GENERATIVE-MP,SH4
+ERC-2025-ADG,CASELLI,Francesco,London School of Economics and Political Science,UK,CompCoopCaps,SH1
+ERC-2025-ADG,CHEN,Zhengming,University of Oxford,UK,PANORAMA,LS7
+ERC-2025-ADG,CHHOWALLA,Manish,University of Cambridge,UK,TOPCONNECT,PE11
+ERC-2025-ADG,CLERCKX,Bruno,"Imperial College of Science, Technology and Medicine",UK,CoCoMiNe,PE7
+ERC-2025-ADG,COOKE,Ryan,Durham University,UK,BBNREDUX,PE9
+ERC-2025-ADG,CRITCHLEY,Hugo,University of Sussex,UK,EQUIPUAR,SH4
+ERC-2025-ADG,DA SILVA LOPES,Teresa,University of York,UK,RISK-LABS,SH6
+ERC-2025-ADG,DAVIS,Jason,University of Oxford,UK,WATERGATING,PE4
+ERC-2025-ADG,DEEG,Max,Cardiff University,UK,TIDAL,SH5
+ERC-2025-ADG,FAULKNER,Daniel,University of Liverpool,UK,PhysiQuake,PE10
+ERC-2025-ADG,FLETCHER,Leigh,University of Leicester,UK,JWSTVoyager,PE9
+ERC-2025-ADG,FOSTER,Gavin Lee,University of Southampton,UK,UNLOCK,PE10
+ERC-2025-ADG,GELLER,Markham,University College London,UK,BabPharmacy,SH5
+ERC-2025-ADG,GORBACHEV,Roman,University of Manchester,UK,ATOMSTEP,PE3
+ERC-2025-ADG,GORDON,Neve,Queen Mary University of London,UK,HEAL,SH2
+ERC-2025-ADG,GREEN,Ben,University of Oxford,UK,ACHOFAINT,PE1
+ERC-2025-ADG,GROTE,Hartmut,Cardiff University,UK,SPI-QG,PE2
+ERC-2025-ADG,HARRISON,Richard John,University of Cambridge,UK,MINGLE,PE10
+ERC-2025-ADG,HENNING,Michelle,University of Liverpool,UK,ExtractiveSeeing,SH8
+ERC-2025-ADG,HOFER,Sonja,University College London,UK,PredictErrorCircuit,LS5
+ERC-2025-ADG,HOOK,Isobel,Lancaster University,UK,Sparkles,PE9
+ERC-2025-ADG,HORNBY,Emma,University of Bristol,UK,Anonymous Agency,SH8
+ERC-2025-ADG,HOUGHTON,Hugh,University of Birmingham,UK,EXEGENT,SH5
+ERC-2025-ADG,HUTCHINSON,John,The Royal Veterinary College,UK,CROCOLOCOEVO,LS8
+ERC-2025-ADG,JACKSON,Andrew,University of Edinburgh,UK,Grow2Age,LS3
+ERC-2025-ADG,JAMES,Elizabeth,University of Sussex,UK,MosaicsMove,SH6
+ERC-2025-ADG,KELLY,Tobias,University of Edinburgh,UK,PRIDET,SH8
+ERC-2025-ADG,KING,Anthony,University of Exeter,UK,GENERAL-AI,SH2
+ERC-2025-ADG,KLASSEN,Robert,University of Oxford,UK,TEACHFORCE,SH3
+ERC-2025-ADG,KOUTSOUPIAS,Elias,University of Oxford,UK,FRAMED,PE6
+ERC-2025-ADG,KRAUSS,Thomas,University of York,UK,TOUCHLESS,PE7
+ERC-2025-ADG,LAMBERT,Craig,University of Southampton,UK,UMW,SH6
+ERC-2025-ADG,LYNTERIS,Christos,University of St Andrews,UK,ZooB4B,SH6
+ERC-2025-ADG,MA,Wenbo,Sainsbury Laboratory,UK,sRNA-Defense,LS9
+ERC-2025-ADG,MACCHIAVELLO,Rocco,London School of Economics and Political Science,UK,Follow,SH1
+ERC-2025-ADG,NITSCHKE,Jonathan,University of Cambridge,UK,JumboCapsules,PE5
+ERC-2025-ADG,NUSSEY,Daniel H,University of Edinburgh,UK,ECOAGE,LS8
+ERC-2025-ADG,PAPAYANNOPO ULOS,Venizelos,The Francis Crick Institute,UK,NeutroPaint,LS6
+ERC-2025-ADG,PATEL,Ketan,University of Oxford,UK,FORCE,LS4
+ERC-2025-ADG,PENA,Vlad,Institute of Cancer Research - Royal Cancer Hospital,UK,COSPLICE,LS1
+ERC-2025-ADG,PETRONGOLO,Barbara,University of Oxford,UK,GENTALENT,SH1
+ERC-2025-ADG,PFEIFER,Marion,Newcastle University,UK,TIF-CER,SH7
+ERC-2025-ADG,RAYFIELD,Emily,University of Bristol,UK,MAMEVOL,LS8
+ERC-2025-ADG,ROSSEINSKY,Matthew,University of Liverpool,UK,MaterED,PE5
+ERC-2025-ADG,SCHULTING,Rick,University of Oxford,UK,IGAPP,SH6
+ERC-2025-ADG,SCOTT,Alex,University of Oxford,UK,GELS,PE1
+ERC-2025-ADG,SHEA,Nicholas,University of London,UK,FoundAgent,SH5
+ERC-2025-ADG,SIMION,Mona,University of Oxford,UK,AI-KNOW,SH5
+ERC-2025-ADG,STARESINA,Bernhard,University of Oxford,UK,MemOnto,SH4
+ERC-2025-ADG,TURCHYN,Alexandra,University of Cambridge,UK,BASCARB,PE10
+ERC-2025-ADG,WATKINS,Kate,University of Oxford,UK,STUTTER,SH4
+ERC-2025-ADG,WEIDNER,Martin,University of Oxford,UK,HOTMAP,SH1
+ERC-2025-ADG,WIEDENMANN,Jorg,University of Southampton,UK,SYMBIOLINK,LS8
+ERC-2025-ADG,YURCHENKO,Sergey,University College London,UK,ExomAll,PE9
+ERC-2025-ADG,ZAYATS,Anatoly,King's College London,UK,iSPINN,PE7

@@ -30,8 +30,21 @@ def test_countries_in_year_respects_open_and_string_years() -> None:
         {"start": "", "end": "", "institution": {"country": "DE"}},
         {"start": 2020},
     ]
-    assert openreview.countries_in_year(history, 2017) == {"CH", "DE"}
-    assert openreview.countries_in_year(history, 2024) == {"US", "DE"}
+    # The open-ended DE entry has no start year, so later entries supersede it.
+    assert openreview.countries_in_year(history, 2017) == {"CH"}
+    assert openreview.countries_in_year(history, 2024) == {"US"}
+    assert openreview.countries_in_year([history[2]], 2024) == {"DE"}
+
+
+def test_countries_in_year_drops_stale_open_entries() -> None:
+    history = [
+        {"start": 2012, "institution": {"country": "CH"}},  # degree never closed
+        {"start": 2020, "institution": {"country": "US"}},
+        {"start": 2018, "end": 2025, "institution": {"country": "GB"}},
+    ]
+    # Open-ended entries count only if no active entry started later; closed ones always count.
+    assert openreview.countries_in_year(history, 2024) == {"US", "GB"}
+    assert openreview.countries_in_year(history, 2016) == {"CH"}
 
 
 def note(

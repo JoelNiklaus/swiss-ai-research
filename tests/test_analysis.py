@@ -5,6 +5,15 @@ from scipy.stats import chi2
 from swiss_ai import analysis
 
 
+def fake_researchers() -> pd.DataFrame:
+    """2,000 researchers everywhere except Israel, which MSTI does not cover."""
+    places = [c for c in analysis.ALL_PLACES if c != "IL"]
+    return pd.DataFrame(
+        {"researchers_fte": 2000.0, "researchers_year": 2024},
+        index=pd.Index(places, name="country"),
+    )
+
+
 @pytest.fixture
 def toy() -> tuple[pd.DataFrame, pd.DataFrame]:
     """Two venue-years; CH writes one of four CVPR papers and wins the single CVPR award."""
@@ -95,10 +104,13 @@ def test_per_capita(
     papers, credit = toy
     population = pd.Series(1e6, index=list(analysis.ALL_PLACES))
     monkeypatch.setattr(analysis, "population", lambda: population)
+    monkeypatch.setattr(analysis, "researchers", fake_researchers)
     df = analysis.per_capita(papers, credit).set_index("country")
     assert df.loc["US", "papers"] == pytest.approx(2.5)
     assert df.loc["US", "share"] == pytest.approx(0.5)
     assert df.loc["CH", "papers_per_million"] == pytest.approx(0.5)
+    assert df.loc["CH", "papers_per_1k_researchers"] == pytest.approx(0.25)
+    assert pd.isna(df.loc["IL", "papers_per_1k_researchers"])
     assert df.loc["SE", "papers"] == 0
     assert df.loc["HK", "papers"] == 0
 
@@ -147,6 +159,7 @@ def test_main_writes_outputs(
     monkeypatch.setattr(
         analysis, "population", lambda: pd.Series(1e6, index=list(analysis.ALL_PLACES))
     )
+    monkeypatch.setattr(analysis, "researchers", fake_researchers)
     for name in ("PARTICIPATION", "PER_CAPITA", "AWARD_RATIOS", "CITIZEN_WINNERS"):
         monkeypatch.setattr(analysis, name, tmp_path / f"{name}.csv")
     analysis.main()

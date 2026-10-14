@@ -176,14 +176,29 @@ def institution_country(institution: dict) -> str:
 
 
 def countries_in_year(history: list[dict], year: int) -> set[str]:
-    """Countries of all positions held in `year`; open start or end years count as unbounded."""
-    countries = set()
+    """Countries of the positions held in `year`.
+
+    Entries with an end year count while start <= year <= end. Entries without an end year
+    are often stale (a degree or a former job never closed in the profile), so an open-ended
+    entry only counts if no active entry started later. Missing start years count as 0.
+    """
+    active = []
     for entry in history:
+        if "institution" not in entry:
+            continue
         # Years are usually ints, occasionally strings like "2014" or "".
         start = int(entry["start"]) if "start" in entry and entry["start"] else 0
-        end = int(entry["end"]) if "end" in entry and entry["end"] else 9999
-        if start <= year <= end and "institution" in entry:
-            countries.add(institution_country(entry["institution"]))
+        end = int(entry["end"]) if "end" in entry and entry["end"] else None
+        if start <= year and (end is None or year <= end):
+            active.append((start, end, entry["institution"]))
+    if not active:
+        return set()
+    latest = max(start for start, _, _ in active)
+    countries = {
+        institution_country(institution)
+        for start, end, institution in active
+        if end is not None or start == latest
+    }
     return countries - {""}
 
 

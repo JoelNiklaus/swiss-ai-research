@@ -1,4 +1,4 @@
-"""Comparison countries and their populations from the World Bank."""
+"""Comparison countries, their populations (World Bank) and researcher counts (OECD MSTI)."""
 
 from functools import cache
 
@@ -60,3 +60,43 @@ def population() -> pd.Series:
     POPULATION_CACHE.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(POPULATION_CACHE, index=False)
     return df.set_index("country").population
+
+
+MSTI = (
+    "https://sdmx.oecd.org/public/rest/data/OECD.STI.STP,DSD_MSTI@DF_MSTI,1.3/"
+    "{codes}.A.T_RS.FTE.."
+)
+MSTI_FIRST_YEAR = 2018
+RESEARCHERS_CACHE = CACHE / "oecd_msti_researchers.csv"
+
+
+@cache
+def researchers() -> pd.DataFrame:
+    """Latest total researchers (full-time equivalents) per ISO2 code from OECD MSTI.
+
+    MSTI has no total for Israel, the UK (none since 2018) or Hong Kong, so they are missing.
+
+    Returns:
+        One row per place with `researchers_fte` and the `researchers_year` it refers to.
+    """
+    if not RESEARCHERS_CACHE.exists():
+        url = MSTI.format(codes="+".join(ALL_ISO3))
+        params = {
+            "startPeriod": MSTI_FIRST_YEAR,
+            "dimensionAtObservation": "AllDimensions",
+            "format": "csvfilewithlabels",
+        }
+        response = httpx.get(url, params=params, timeout=120).raise_for_status()
+        RESEARCHERS_CACHE.parent.mkdir(parents=True, exist_ok=True)
+        RESEARCHERS_CACHE.write_text(response.text)
+    df = pd.read_csv(RESEARCHERS_CACHE, keep_default_na=False)
+    df = df[(df.TRANSFORMATION == "_Z") & (df.OBS_VALUE != "")]
+    latest = df.sort_values("TIME_PERIOD").groupby("REF_AREA").tail(1)
+    iso2 = {iso3: code for code, (iso3, _) in ALL_PLACES.items()}
+    return pd.DataFrame(
+        {
+            "researchers_fte": latest.OBS_VALUE.astype(float).to_numpy(),
+            "researchers_year": latest.TIME_PERIOD.astype(int).to_numpy(),
+        },
+        index=latest.REF_AREA.map(iso2).rename("country"),
+    )

@@ -60,3 +60,24 @@ def test_iso3_lists() -> None:
     assert len(countries.ALL_ISO3) == len(countries.ALL_PLACES)
     assert "HKG" in countries.ALL_ISO3
     assert "HKG" not in countries.ISO3
+
+
+def test_researchers_keeps_latest_untransformed_value(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    cache_path = tmp_path / "msti.csv"
+    pd.DataFrame(
+        {
+            "REF_AREA": ["CHE", "CHE", "CHE", "DEU"],
+            "TRANSFORMATION": ["_Z", "_Z", "GY", "_Z"],
+            "TIME_PERIOD": [2022, 2023, 2023, 2024],
+            "OBS_VALUE": ["50000", "54013", "1.5", "513100"],
+        }
+    ).to_csv(cache_path, index=False)
+    monkeypatch.setattr(countries, "RESEARCHERS_CACHE", cache_path)
+    countries.researchers.cache_clear()
+    df = countries.researchers()
+    countries.researchers.cache_clear()
+    assert df.loc["CH", "researchers_fte"] == 54013
+    assert df.loc["CH", "researchers_year"] == 2023
+    assert df.loc["DE", "researchers_fte"] == 513100
