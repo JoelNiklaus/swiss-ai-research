@@ -1,0 +1,20 @@
+measure,stage,region,value,unit,period,notes,source_url
+pre_money_valuation,Seed,Europe,7.02,USD millions,2025 to 30 September,Median; excludes biotech and pharma,https://www.stateofeuropeantech.com/chapters/investment-levels
+pre_money_valuation,Seed,United States,16.85,USD millions,2025 to 30 September,Median; excludes biotech and pharma,https://www.stateofeuropeantech.com/chapters/investment-levels
+pre_money_valuation,Series A,Europe,32.12,USD millions,2025 to 30 September,Median; excludes biotech and pharma,https://www.stateofeuropeantech.com/chapters/investment-levels
+pre_money_valuation,Series A,United States,51.65,USD millions,2025 to 30 September,Median; excludes biotech and pharma,https://www.stateofeuropeantech.com/chapters/investment-levels
+pre_money_valuation,Series B,Europe,103.04,USD millions,2025 to 30 September,Median; excludes biotech and pharma,https://www.stateofeuropeantech.com/chapters/investment-levels
+pre_money_valuation,Series B,United States,149.29,USD millions,2025 to 30 September,Median; excludes biotech and pharma,https://www.stateofeuropeantech.com/chapters/investment-levels
+pre_money_valuation,Series C,Europe,211.09,USD millions,2025 to 30 September,Median; excludes biotech and pharma,https://www.stateofeuropeantech.com/chapters/investment-levels
+pre_money_valuation,Series C,United States,376.87,USD millions,2025 to 30 September,Median; excludes biotech and pharma,https://www.stateofeuropeantech.com/chapters/investment-levels
+round_size,Seed,Europe,2.0,USD millions,2025 to 30 September,"Median of all rounds; excludes biotech, debt, lending capital and grants",https://www.stateofeuropeantech.com/chapters/investment-levels
+round_size,Series A,Europe,11.51,USD millions,2025 to 30 September,"Median of all rounds; excludes biotech, debt, lending capital and grants",https://www.stateofeuropeantech.com/chapters/investment-levels
+round_size,Series B,Europe,29.58,USD millions,2025 to 30 September,"Median of all rounds; excludes biotech, debt, lending capital and grants",https://www.stateofeuropeantech.com/chapters/investment-levels
+round_size,Series C,Europe,50.0,USD millions,2025 to 30 September,"Median of all rounds; excludes biotech, debt, lending capital and grants",https://www.stateofeuropeantech.com/chapters/investment-levels
+round_size_vs_us,Seed,Europe,0.50,share of US median,2025 to 30 September,European median round as a share of the US median round,https://www.stateofeuropeantech.com/chapters/investment-levels
+round_size_vs_us,Series A,Europe,0.77,share of US median,2025 to 30 September,European median round as a share of the US median round,https://www.stateofeuropeantech.com/chapters/investment-levels
+round_size_vs_us,Series B,Europe,0.79,share of US median,2025 to 30 September,European median round as a share of the US median round,https://www.stateofeuropeantech.com/chapters/investment-levels
+round_size_vs_us,Series C,Europe,0.67,share of US median,2025 to 30 September,European median round as a share of the US median round,https://www.stateofeuropeantech.com/chapters/investment-levels
+established_round_size_vs_us,Seed,Europe,1.23,share of US median,2025 to 30 September,Median round led by 130 established European investors as a share of the overall US median,https://www.stateofeuropeantech.com/chapters/investment-levels
+established_round_size_vs_us,Series A,Europe,1.25,share of US median,2025 to 30 September,Median round led by 130 established European investors as a share of the overall US median,https://www.stateofeuropeantech.com/chapters/investment-levels
+established_round_size_vs_us,Series B,Europe,1.09,share of US median,2025 to 30 September,Median round led by 130 established European investors as a share of the overall US median,https://www.stateofeuropeantech.com/chapters/investment-levels

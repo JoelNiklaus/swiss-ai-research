@@ -1,9 +1,10 @@
-"""Render the four blog figures as PNGs into blog/figures/."""
+"""Render the blog figures and the square social-media figure as PNGs into blog/figures/."""
 
 import logging
 
 import pandas as pd
 import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 
 from swiss_ai.analysis import (
     AWARD_RATIOS,
@@ -17,6 +18,7 @@ from swiss_ai.citizenship import FUNNEL
 from swiss_ai.countries import ALL_PLACES
 from swiss_ai.investment import INVESTMENT
 from swiss_ai.paths import FIGURES
+from swiss_ai.vc_terms import VC_TERMS
 
 log = logging.getLogger(__name__)
 for noisy in ("kaleido", "choreographer"):
@@ -357,10 +359,60 @@ def social_figure() -> go.Figure:
     )
 
 
+# Stages shown in the venture-terms figure: where Swiss AI startups decide where to build.
+VC_STAGES = ["Seed", "Series A"]
+
+
+def vc_terms_figure() -> go.Figure:
+    """Median seed and Series A valuations (left) and round sizes (right), Europe against the US."""
+    df = pd.read_csv(VC_TERMS).set_index("stage").loc[VC_STAGES]
+    fig = make_subplots(
+        rows=1,
+        cols=2,
+        subplot_titles=["Median pre-money valuation", "Median round size"],
+        horizontal_spacing=0.1,
+    )
+    panels = [("eu_pre_money", "us_pre_money"), ("eu_round", "us_round")]
+    for col, (eu, us) in enumerate(panels, start=1):
+        for region, column, color in (
+            ("Europe", eu, SWISS_RED),
+            ("United States", us, GREY),
+        ):
+            fig.add_trace(
+                go.Bar(
+                    x=df.index,
+                    y=df[column],
+                    name=region,
+                    marker_color=color,
+                    text=[f"${v:.1f}M" for v in df[column]],
+                    textposition="outside",
+                    textfont={"size": 14},
+                    cliponaxis=False,
+                    showlegend=col == 1,
+                ),
+                row=1,
+                col=col,
+            )
+    fig.update_yaxes(showticklabels=False, showline=False, ticks="")
+    return fig.update_layout(
+        **LAYOUT,
+        title={
+            "text": "US startups raise more money at higher valuations than European startups",
+            "subtitle": {
+                "text": "Median seed and Series A rounds in 2025, USD millions"
+            },
+        },
+        barmode="group",
+        legend={"orientation": "h", "x": 0, "y": -0.12},
+        margin={"t": 130, "b": 80},
+    )
+
+
 FIGURES_BY_NAME = {
     "participation_per_capita": participation_figure,
     "award_ratios": award_ratio_figure,
     "transfer": transfer_figure,
+    "vc_terms": vc_terms_figure,
     "swiss_students": funnel_figure,
     "social_research_vs_money": social_figure,
 }

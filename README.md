@@ -24,6 +24,7 @@ Run the modules in this order with `uv run python -m swiss_ai.<module>`:
 | `attribution` | the four tables above                           | (log only: coverage and award matching)                           |
 | `analysis`    | the four tables above, World Bank population    | `participation*.csv`, `award_ratios.csv`, `citizen_winners.csv`   |
 | `investment`  | AI Index 2026 chart data (`data/raw/ai_index`)  | `investment.csv`                                                  |
+| `vc_terms`    | Atomico State of European Tech 2025 (`data/hand_collected/vc_terms_europe_us.csv`) | `vc_terms.csv`                    |
 | `funding`     | CORDIS bulk JSON, SNSF Data Portal              | `erc_by_country.csv`, `snsf_computer_science.csv`                 |
 | `citizenship` | BFS PxWeb API, OECD SDMX API                    | `citizenship_funnel.csv`, `doctoral_mobility.csv`                 |
 | `spinoffs`    | Venture Kick counts, ETH and EPFL 2025 reports  | `venture_kick_by_institution.csv`, `university_ventures_2025.csv` |

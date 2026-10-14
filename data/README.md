@@ -32,6 +32,8 @@ configs:
   data_files: hand_collected/erc_swiss_nationals.csv
 - config_name: investment
   data_files: investment.csv
+- config_name: vc_terms
+  data_files: vc_terms.csv
 - config_name: swiss_students
   data_files: citizenship_funnel.csv
 - config_name: professors_by_citizenship
@@ -66,6 +68,7 @@ Data behind the blog post "Switzerland Does Top AI Research, but Too Little of I
 | `erc_by_country.csv` | `funding` | ERC Starting, Consolidator, Advanced and Synergy Grants by host country and call year from CORDIS. |
 | `snsf_computer_science.csv` | `funding` | SNSF grants in information technology per year. |
 | `investment.csv` | `investment` | AI Index 2026 private AI investment (Quid) and AI talent (Zeki) per country. |
+| `vc_terms.csv` | `vc_terms` | Median pre-money valuation and round size by stage in Europe (including Switzerland) and the US in 2025, with the implied share of the company sold. |
 | `citizenship_funnel.csv`, `doctoral_mobility.csv` | `citizenship` | BFS students and staff in the exact sciences by level and citizenship; OECD internationally mobile doctoral students. |
 | `university_ventures_2025.csv`, `venture_kick_by_institution.csv` | `spinoffs` | ETH and EPFL 2025 venture figures and Venture Kick counts by institution. |
 | `hand_collected/erc_swiss_nationals.csv` | hand-collected | Swiss-national vs Swiss-hosted ERC grantees per call, read from the ERC per-call statistics (2013-2020, 2025). |
@@ -73,6 +76,7 @@ Data behind the blog post "Switzerland Does Top AI Research, but Too Little of I
 | `hand_collected/professors_by_citizenship.csv` | hand-collected | Professors by citizenship at ETH Zurich, EPFL and all Swiss universities (BFS Basistabellen, 2010 and 2025). |
 | `hand_collected/swiss_ai_exits.csv` | hand-collected | 49 acquisitions, asset deals and mergers of Swiss AI startups 2010-2026 with acquirer country; 9 rows are flagged borderline in `notes`. |
 | `hand_collected/swiss_ai_startups.csv`, `swiss_ai_startup_founders.csv` | hand-collected | The 28 best-funded AI startups founded in Switzerland, their headquarters, and each founder's Swiss citizenship from the commercial register (SHAB/Zefix). |
+| `hand_collected/vc_terms_europe_us.csv` | hand-collected | Chart data of Atomico's State of European Tech 2025 (Dealroom, to 30 September 2025): median valuations and round sizes by stage, Europe against the US. |
 | `raw/ai_index/` | input | Unmodified AI Index 2026 chart data (CC BY-ND 4.0). |
 
 ## Licenses and sources

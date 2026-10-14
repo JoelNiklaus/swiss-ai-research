@@ -58,7 +58,17 @@ def inputs(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
     monkeypatch.setattr(figures, "PER_CAPITA", tmp_path / "capita.csv")
     monkeypatch.setattr(figures, "AWARD_RATIOS", tmp_path / "ratios.csv")
     monkeypatch.setattr(figures, "INVESTMENT", tmp_path / "investment.csv")
+    pd.DataFrame(
+        {
+            "stage": ["Seed", "Series A"],
+            "eu_pre_money": [7.0, 32.1],
+            "us_pre_money": [16.9, 51.6],
+            "eu_round": [2.0, 11.5],
+            "us_round": [4.0, 14.9],
+        }
+    ).to_csv(tmp_path / "vc_terms.csv", index=False)
     monkeypatch.setattr(figures, "FUNNEL", tmp_path / "funnel.csv")
+    monkeypatch.setattr(figures, "VC_TERMS", tmp_path / "vc_terms.csv")
     return tmp_path
 
 
@@ -113,3 +123,11 @@ def test_social_figure_matches_countries_by_name(inputs: Path) -> None:
     assert list(scatter.y) == [523]
     assert list(scatter.text) == ["<b>Switzerland</b>"]
     assert list(scatter.marker.color) == [figures.SWISS_RED]
+
+
+def test_vc_terms_figure_pairs_europe_with_us(inputs: Path) -> None:
+    fig = figures.vc_terms_figure()
+    assert [t.name for t in fig.data] == ["Europe", "United States"] * 2
+    assert list(fig.data[0].y) == [7.0, 32.1]
+    assert list(fig.data[3].text) == ["$4.0M", "$14.9M"]
+    assert [t.showlegend for t in fig.data] == [True, True, False, False]
