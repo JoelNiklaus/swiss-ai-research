@@ -1,10 +1,10 @@
 ---
-title: "Switzerland Does Top AI Research. Too Little of It Stays."
+title: "Switzerland Does Top AI Research. Too Little of It Stays"
 authors:
 - user: joelniklaus
 ---
 
-# Switzerland Does Top AI Research. Too Little of It Stays.
+# Switzerland Does Top AI Research. Too Little of It Stays
 
 **TL;DR:** From 2023 to 2025, Swiss institutions wrote 2.1% of the main-track papers at the top 11 AI conferences, 138 per million residents. Among places with more than a million residents, only Singapore and Hong Kong produce more. Israel attracts 7.5 times as much private AI investment per AI author, and 34 of 40 documented acquisitions of Swiss AI startups went to foreign buyers. Since 2010, Swiss master's students in the exact sciences have more than doubled, while Swiss doctoral students fell by 15%.
 
