@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+.ruff_cache/
+.pytest_cache/
+.coverage
+data/cache/
+# Local working files, not part of the published project
+PLAN.md
+style/
+scripts/

@@ -1,0 +1,290 @@
+"""Render the four blog figures as PNGs into blog/figures/."""
+
+import logging
+
+import pandas as pd
+import plotly.graph_objects as go
+
+from swiss_ai.analysis import (
+    AWARD_RATIOS,
+    PER_CAPITA,
+    PER_CAPITA_YEARS,
+    SMALL_PEERS,
+    SMALL_PEERS_LABEL,
+)
+from swiss_ai.attribution import FIRST_YEAR
+from swiss_ai.citizenship import FUNNEL
+from swiss_ai.countries import ALL_PLACES
+from swiss_ai.investment import INVESTMENT
+from swiss_ai.paths import FIGURES
+
+log = logging.getLogger(__name__)
+for noisy in ("kaleido", "choreographer"):
+    logging.getLogger(noisy).setLevel(logging.WARNING)
+
+SWISS_RED = "#D52B1E"
+SWISS_TINT = "rgba(213, 43, 30, 0.10)"
+GREY = "#9AA0A6"
+DARK = "#3C4043"
+LAYOUT = {
+    "template": "simple_white",
+    "font": {"family": "Inter, Arial", "size": 15},
+    "width": 900,
+    "height": 520,
+}
+# Countries and pooled groups shown in the award figure, below the two Swiss rows.
+RATIO_GROUPS = ["IL", "GB", "US", "DE", SMALL_PEERS_LABEL, "SG", "CN"]
+FUNNEL_BASE_YEAR = FIRST_YEAR
+# (stage, citizenship column, legend label, colour, dash, width)
+FUNNEL_LINES = [
+    ("BSc", "swiss", "Swiss bachelor's students", GREY, "solid", 2),
+    ("MSc", "swiss", "Swiss master's students", DARK, "solid", 2),
+    ("PhD", "swiss", "Swiss doctoral students", SWISS_RED, "solid", 4),
+    ("PhD", "foreign", "Foreign doctoral students", SWISS_RED, "dot", 2),
+]
+# Scatter labels that would otherwise overlap a neighbour or the plot edge.
+LABEL_POSITIONS = {
+    "Germany": "bottom center",
+    "Canada": "top left",
+    "Sweden": "bottom center",
+    "Switzerland": "top left",
+}
+
+
+def name(code: str) -> str:
+    """Country name for an ISO2 code, or the group label itself."""
+    if code == SMALL_PEERS_LABEL:
+        return f"{code} ({', '.join(SMALL_PEERS)})"
+    return ALL_PLACES[code][1] if code in ALL_PLACES else code
+
+
+def colors(labels: list[str]) -> list[str]:
+    """Highlight Switzerland in red, everything else grey."""
+    return [SWISS_RED if label in ("CH", "Switzerland") else GREY for label in labels]
+
+
+def participation_figure() -> go.Figure:
+    """Fractional main-track papers per million residents, comparison places."""
+    df = pd.read_csv(PER_CAPITA, keep_default_na=False).sort_values(
+        "papers_per_million"
+    )
+    fig = go.Figure(
+        go.Bar(
+            x=df.papers_per_million,
+            y=df.country.map(name),
+            orientation="h",
+            marker_color=colors(df.country.tolist()),
+            text=df.papers_per_million.round(0).astype(int),
+            textposition="outside",
+        )
+    )
+    years = f"{PER_CAPITA_YEARS.start}-{PER_CAPITA_YEARS.stop - 1}"
+    return fig.update_layout(
+        **LAYOUT | {"height": 600},
+        title={
+            "text": f"Main-track papers at the top 11 AI conferences per million residents, {years}",
+            "subtitle": {
+                "text": "Each paper's credit is split equally among its authors with a known country"
+            },
+        },
+        xaxis_title="Papers per million residents",
+        margin={"t": 90},
+    )
+
+
+def award_rows() -> pd.DataFrame:
+    """Rows of the award figure, top to bottom: Switzerland, Switzerland without the
+    Cotterell group, then the other groups by fractional ratio."""
+    df = pd.read_csv(AWARD_RATIOS, keep_default_na=False)
+    swiss = df[df.group == "CH"].set_index("variant")
+    others = (
+        df[(df.variant == "all") & df.group.isin(RATIO_GROUPS)]
+        .sort_values("ratio_frac", ascending=False)
+        .assign(label=lambda d: d.group.map(name))
+    )
+    top = pd.DataFrame(
+        [
+            swiss.loc["all"].to_dict() | {"label": "<b>Switzerland</b>"},
+            swiss.loc["without Cotterell group"].to_dict()
+            | {"label": "<b>Switzerland</b> without Cotterell group"},
+        ]
+    )
+    return pd.concat([top, others], ignore_index=True)
+
+
+def award_ratio_figure() -> go.Figure:
+    """Observed over expected award papers, fractional and any-author, with 95% intervals."""
+    df = award_rows()
+    n = len(df)
+    position = pd.Series(range(n - 1, -1, -1), index=df.index, dtype=float)
+    fig = go.Figure()
+    # Shade the two Swiss rows.
+    fig.add_shape(
+        type="rect",
+        xref="paper",
+        x0=0,
+        x1=1,
+        y0=n - 2.5,
+        y1=n - 0.5,
+        fillcolor=SWISS_TINT,
+        line_width=0,
+        layer="below",
+    )
+    fig.add_trace(
+        go.Scatter(
+            x=[1, 1],
+            y=[-0.6, n - 0.4],
+            mode="lines",
+            line={"dash": "dash", "color": GREY, "width": 2},
+            name="Ratio of 1: awards match the paper share",
+        )
+    )
+    for measure, label, offset, symbol, color in [
+        ("frac", "Fractional credit (author share)", 0.15, "circle", DARK),
+        ("any", "Any author from the country", -0.15, "diamond-open", SWISS_RED),
+    ]:
+        ratio = df[f"ratio_{measure}"]
+        fig.add_trace(
+            go.Scatter(
+                x=ratio,
+                y=position + offset,
+                mode="markers",
+                name=label,
+                marker={
+                    "symbol": symbol,
+                    "size": 11,
+                    "color": color,
+                    "line": {"width": 2, "color": color},
+                },
+                error_x={
+                    "type": "data",
+                    "symmetric": False,
+                    "array": df[f"ratio_{measure}_high"] - ratio,
+                    "arrayminus": ratio - df[f"ratio_{measure}_low"],
+                    "color": color,
+                    "thickness": 1.5,
+                    "width": 4,
+                },
+            )
+        )
+    awards = int(df.awards.iloc[0])
+    return fig.update_layout(
+        **LAYOUT | {"height": 640},
+        title={
+            "text": f"Best-paper awards relative to participation, {FIRST_YEAR}-2026",
+            "subtitle": {
+                "text": f"Observed award papers divided by the number expected from each "
+                f"venue-year's paper share ({awards} awards)"
+            },
+        },
+        xaxis={"title": "Observed / expected award papers", "range": [0, 3]},
+        yaxis={
+            "tickvals": position.tolist(),
+            "ticktext": df.label.tolist(),
+            "range": [-0.6, n - 0.4],
+            "showline": False,
+            "ticks": "",
+        },
+        legend={
+            "orientation": "h",
+            "x": 0.5,
+            "xanchor": "center",
+            "y": -0.14,
+            "yanchor": "top",
+        },
+        margin={"t": 90, "b": 150},
+    )
+
+
+def transfer_figure() -> go.Figure:
+    """AI authors per capita (Zeki) against private AI investment per AI author (Quid)."""
+    df = pd.read_csv(INVESTMENT).dropna(subset=["investment_per_author_2013_2025"])
+    fig = go.Figure(
+        go.Scatter(
+            x=df.authors_per_100k,
+            y=df.investment_per_author_2013_2025 / 1e6,
+            mode="markers+text",
+            text=df.country,
+            textposition=[
+                LABEL_POSITIONS[c] if c in LABEL_POSITIONS else "top center"
+                for c in df.country
+            ],
+            marker={"size": 13, "color": colors(df.country.tolist())},
+        )
+    )
+    return fig.update_layout(
+        **LAYOUT | {"height": 560},
+        title={
+            "text": "AI talent density against private AI investment per AI author",
+            "subtitle": {
+                "text": "Private AI investment 2013-2025 (Quid) divided by AI authors and "
+                "inventors in 2025 (Zeki), from the AI Index 2026"
+            },
+        },
+        xaxis={
+            "title": "AI authors and inventors per 100k residents, 2025",
+            "range": [15, 118],
+        },
+        yaxis={
+            "title": "Investment per AI author (USD millions)",
+            "range": [0, 4],
+        },
+        showlegend=False,
+        margin={"t": 90},
+    )
+
+
+def funnel_figure() -> go.Figure:
+    """Swiss and foreign exact-sciences students by level, indexed to FUNNEL_BASE_YEAR."""
+    df = pd.read_csv(FUNNEL)
+    df = df[
+        (df.institution == "All Swiss universities") & (df.year >= FUNNEL_BASE_YEAR)
+    ]
+    latest = int(df.year.max())
+    fig = go.Figure()
+    for stage, column, label, color, dash, width in FUNNEL_LINES:
+        series = df[df.stage == stage].set_index("year")[column].sort_index()
+        start, end = series.loc[FUNNEL_BASE_YEAR], series.loc[latest]
+        fig.add_trace(
+            go.Scatter(
+                x=series.index,
+                y=series / start * 100,
+                name=f"{label} ({start:,.0f} to {end:,.0f})",
+                mode="lines",
+                line={"dash": dash, "color": color, "width": width},
+            )
+        )
+    fig.add_hline(y=100, line_color=GREY, line_width=1)
+    return fig.update_layout(
+        **LAYOUT | {"height": 560},
+        title={
+            "text": f"Students in the exact sciences at Swiss universities, {FUNNEL_BASE_YEAR} = 100",
+            "subtitle": {
+                "text": "Computer science, mathematics, physics and related fields, by citizenship (BFS)"
+            },
+        },
+        yaxis_title=f"Headcount relative to {FUNNEL_BASE_YEAR}",
+        legend={"x": 0.01, "y": 0.99, "xanchor": "left", "yanchor": "top"},
+        margin={"t": 90},
+    )
+
+
+FIGURES_BY_NAME = {
+    "participation_per_capita": participation_figure,
+    "award_ratios": award_ratio_figure,
+    "transfer": transfer_figure,
+    "swiss_students": funnel_figure,
+}
+
+
+def main() -> None:
+    logging.basicConfig(level=logging.INFO, format="%(message)s")
+    FIGURES.mkdir(parents=True, exist_ok=True)
+    for figure_name, build in FIGURES_BY_NAME.items():
+        path = FIGURES / f"{figure_name}.png"
+        build().write_image(path, scale=2)
+        log.info(f"Wrote {path}")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,11 @@
+Year,Company,Type,Cost_Billions
+2022,OpenAI,Unattributed,0.416
+2023,Anthropic,Unattributed,0.285
+2024,Anthropic,Unattributed,1
+2024,Anthropic,R&D,1.5
+2024,OpenAI,R&D,4
+2025,Anthropic,R&D,4.1
+2025,OpenAI,R&D,8.3
+2024,OpenAI,Inference,1.8
+2025,Anthropic,Inference,2.7
+2025,OpenAI,Inference,8

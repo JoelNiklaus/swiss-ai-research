@@ -1,0 +1,49 @@
+name,status,nationality,evidence,source_url
+Olivier Bachem,confirmed_swiss,Swiss,"ETH thesis 'Sampling for Large-Scale Clustering': 'born on 11.03.1990, citizen of Zurich ZH'",https://exa.ai/library/publication/2m334jp83tq
+Matthias Stürmer,confirmed_swiss,Swiss/German,"ETH Diss. 18630 (2009): 'Citizen of Pfaeffikon ZH, Switzerland and Germany'",http://stuermer.ch/blog/documents/Stuermer_2009_HowFirmsMakeFriends.pdf
+Daniel Kuettel,confirmed_swiss,Swiss,"ETH thesis: 'citizen of Gersau, Switzerland'",https://www.research-collection.ethz.ch/server/api/core/bitstreams/d58e1daa-78dd-4e6e-8ca0-c204e212b1f3/content
+Julien Pilet,confirmed_swiss,Swiss,EPFL thesis 4192 (2008): 'de nationalité suisse et originaire de Rossinière (VD)',https://exa.ai/library/publication/xpydrr98nqx
+Pascal Fua,confirmed_swiss,French/Swiss,French and Swiss dual citizen per Wikipedia and UNIL Swiss elites database (confirmed by user),swiss_ai_awards/raw notes column
+Stefan Leutenegger,confirmed_swiss,Swiss/Slovenian,2014 ETH PhD thesis: 'citizen of Switzerland and Slovenia'; works at Imperial/TUM/ETH,swiss_ai_awards/raw notes column
+Rico Sennrich,confirmed_swiss,Swiss,German Wikipedia: 'Schweizer Computerlinguist' (confirmed by user),swiss_ai_awards/raw notes column
+Joel Niklaus,confirmed_swiss,Swiss,PhD thesis lists place of origin Müntschemier BE (confirmed by user),swiss_ai_awards/raw notes column
+Florian Tramèr,confirmed_swiss,Swiss,Wikidata 'Swiss computer scientist'; 'originally from Switzerland'; EPFL BSc/MSc (confirmed by user),swiss_ai_awards/raw notes column
+Sebastian Borgeaud,probable_swiss,Swiss/German (inferred),MAD Podcast: 'my dad is from Switzerland and my mom is from Germany'; moved to Switzerland at 7; Swiss Matura at Swiss School of Rome. Citizenship by descent likely but not stated,https://www.mattturck.com/podcast/deepmind-gemini-3-lead-what-comes-after-infinite-data
+Emmanuel Abbe,probable_swiss,Swiss (inferred),RTS: 'Né à Lausanne'; Le Temps calls him 'le Lausannois'; EPFL MSc 2003. Citizenship not stated,https://www.rts.ch/audio-podcast/2026/audio/emmanuel-abbe-dans-les-coulisses-d-une-ia-de-plus-en-plus-autonome-29242717.html
+Leandro von Werra,probable_swiss,Swiss (inferred),von Werra is an old Leuk (Valais) Burgergeschlecht; ETH physics BSc/MSc 2011-2018; lives in Bern. Citizenship not stated,https://www.aasm.ch/fonds/agvog/index.php?action=tdm&lang=fr&tdmref=vw_tdm
+Annette Rios,probable_swiss,Swiss (inferred),LinkedIn: 'Swiss German/German - Native or bilingual proficiency'; UZH studies 2003-2011 and PhD 2015. Citizenship not stated,https://linkedin.com/in/annette-rios-964037113
+Mario Geiger,unknown,,"EPFL physics BSc/MSc 2012-2017, PhD 2021 (TH9260, title page has no nationality); now NVIDIA Lausanne. No citizenship evidence found",
+Mathias Müller,unknown,,UZH PhD 2021; Promotionsliste Nov 2021 omits Heimatort. No citizenship evidence found,
+Sarah Ebling,unknown,,UZH PhD 2016; studied in Zurich and Heidelberg. No citizenship evidence found,
+Petr Hruby,unknown,,ETH thesis title page omits citizenship; born 1997. No evidence found,
+Veton Matoshi,unknown,,Studied at LMU Munich; Bern University of Applied Sciences. No citizenship evidence found,
+Clara Meister,unknown,,"ETH PhD 2024, Stanford BSc/MSc; thesis title page not found",
+Mario Lucic,not_swiss,Croatian,ETH thesis: 'citizen of Croatia',https://exa.ai/library/publication/xt6mt55srb3
+Stefan Bauer,not_swiss,German,ETH thesis: 'citizen of the Federal Republic of Germany',https://www.research-collection.ethz.ch/server/api/core/bitstreams/96cf100a-7087-4fbb-aa45-47ae7176fa5a/content
+Francesco Locatello,not_swiss,Italian,ETH thesis: 'citizen of Italy',https://ar5iv.labs.arxiv.org/html/2111.13693
+Bastian Leibe,not_swiss,German,ETH thesis: 'citizen of Germany',http://vision.rwth-aachen.de/media/papers/leibe-phdthesis-print.pdf
+Martin Müller,not_swiss,Austrian,ETH Diss. 11006: 'citizen of Austria',http://webdocs.cs.ualberta.ca/~mmueller/ps/th11006.pdf
+Florian Pommerening,not_swiss,German,"Basel thesis: 'aus Tübingen, Deutschland'",https://ai.dmi.unibas.ch/papers/pommerening-dissertation.pdf
+Jendrik Seipp,not_swiss,German,"Basel thesis: 'aus Frankenberg (Eder), Deutschland'",https://ai.dmi.unibas.ch/papers/seipp-phd2018.pdf
+Daniel Paleka,not_swiss,Croatian,"'I'm from Zadar, Croatia'; IMO 2014-2016 for Croatia",https://danielpaleka.com/trivia
+Tom Schaul,not_swiss,Luxembourgish,IMO 2000 for Luxembourg; grew up in Luxembourg,https://bariz.org/imo/participants/6076
+Maxime Guillaume Kayser,not_swiss,Luxembourgish (inferred),'I grew up in Luxembourg'; TUM BSc,https://www.bdi.ox.ac.uk/Team/maxime-kayser
+Tomas Pfister,not_swiss,Finnish,National service at Univ. Oulu; native Finnish,http://videolectures.net/authors/tomas_pfister
+Chris Wendler,not_swiss,Austrian (inferred),Innsbruck BSc/MSc; native German,https://linkedin.com/in/wendlerc
+Martin Vögele,not_swiss,German (inferred),"Konstanz, Stuttgart, Frankfurt degrees",https://martinvoegele.github.io/cv
+Riccardo De Santi,not_swiss,Italian,Politecnico di Milano; TEDxBattipaglia describes him as a promise of Italy who moved to Switzerland,
+Kevin Rizk,not_swiss,Lebanese (inferred),"French baccalaureate at Collège Saint Joseph Antoura, Lebanon",https://linkedin.com/in/kevin-rizk-0840a5166
+Robert West,not_swiss,German (inferred),TU München Diplom; Stanford thesis acknowledges parents Waltraut and Helmuth,http://infolab.stanford.edu/~west1
+Antoine Bosselut,not_swiss,Canadian/American (inferred),"McGill and UW; at EPFL only since 2021, too recent for naturalization",
+Raphael Rubino,not_swiss,French,IdRef authority record 'Pays: France'; PhD Avignon 2011,https://www.idref.fr/172390621
+Ryan Cotterell,not_swiss,American,American per CSV notes,swiss_ai_awards/raw notes column
+Nicolas Flammarion,not_swiss,French,French per CSV notes,swiss_ai_awards/raw notes column
+Vincent Lepetit,not_swiss,French,French per CSV notes,swiss_ai_awards/raw notes column
+Gunnar Rätsch,not_swiss,German,German per CSV notes,swiss_ai_awards/raw notes column
+Bernhard Schölkopf,not_swiss,German,German per CSV notes,swiss_ai_awards/raw notes column
+Sylvain Gelly,not_swiss,French,French per CSV notes,swiss_ai_awards/raw notes column
+Vittorio Ferrari,not_swiss,Italian,Italian per CSV notes,swiss_ai_awards/raw notes column
+Boi Faltings,not_swiss,German,"UNIL Swiss elites database: 'Nationalité: Allemande', born 1960 in Gelsenkirchen (database snapshot as of 2000; English Wikipedia calls him a 'Swiss professor', which describes his job, and no naturalization record was found)",https://www2.unil.ch/elitessuisses/personne.php?id=79445
+Luca Mouchel,unknown,,EPFL BSc/MSc 2020-2026; secondary school at Ermitage International School (France) and Lycée Français de Shanghai; native English/French/Italian. No citizenship evidence found,https://linkedin.com/in/lucamouchel
+Debjit Paul,not_swiss,Indian (inferred),"B.Tech GuruNanak Institute of Technology (India), MSc Saarland, PhD Heidelberg; EPFL postdoc 2022-2024 only",https://debjitpaul.github.io/assets/pdf/CV_Debjit_Paul.pdf
+Shaobo Cui,not_swiss,Chinese (inferred),"BSc Beihang, MSc Tsinghua, PhD EPFL; now at SJTU as a recipient of China's national young-talent program (国家高层次青年人才)",https://shaobo.info/

@@ -1,0 +1,155 @@
+Category,year,funding_in_billions_USD
+AI agents,2024,0.0015
+AI agents,2025,8.023158931
+AI infrastructure/models/research/governance*,2018,0.0288
+AI infrastructure/models/research/governance*,2019,0.224618114
+AI infrastructure/models/research/governance*,2020,1.061630005
+AI infrastructure/models/research/governance*,2021,0.491348985
+AI infrastructure/models/research/governance*,2022,0.121435142
+AI infrastructure/models/research/governance*,2023,10.40020055
+AI infrastructure/models/research/governance*,2024,37.27128627
+AI infrastructure/models/research/governance*,2025,143.2237639
+AV,2018,0.569479898
+AV,2019,0.701030623
+AV,2020,2.480000357
+AV,2021,2.848868285
+AV,2022,2.216105063
+AV,2023,2.714477022
+AV,2024,9.426366229
+AV,2025,7.942960444
+Accounting/finance,2025,2.586509905
+Biotech,2025,4.840507214
+Cloud computing,2025,10.30948055
+"Creative, music, video content",2018,0.642429604
+"Creative, music, video content",2019,0.672772411
+"Creative, music, video content",2020,0.990410706
+"Creative, music, video content",2021,3.416566459
+"Creative, music, video content",2022,1.782759998
+"Creative, music, video content",2023,1.318923138
+"Creative, music, video content",2024,0.748473975
+"Creative, music, video content",2025,4.188109218
+"Cybersecurity, data protection",2018,0.179897268
+"Cybersecurity, data protection",2019,0.453713189
+"Cybersecurity, data protection",2020,0.902353474
+"Cybersecurity, data protection",2021,0.853451353
+"Cybersecurity, data protection",2022,1.025907388
+"Cybersecurity, data protection",2023,0.852195916
+"Cybersecurity, data protection",2024,3.733714874
+"Cybersecurity, data protection",2025,8.421489905
+"Data management, processing",2018,1.108462743
+"Data management, processing",2019,2.097260746
+"Data management, processing",2020,2.225874574
+"Data management, processing",2021,6.516718969
+"Data management, processing",2022,4.911705532
+"Data management, processing",2023,5.489236471
+"Data management, processing",2024,16.58964939
+"Data management, processing",2025,31.58369672
+Defense,2024,0.605691598
+Defense,2025,5.299308438
+Drones,2018,0.128502079
+Drones,2019,0.176057925
+Drones,2020,0.241573172
+Drones,2021,2.201033302
+Drones,2022,4.224564092
+Drones,2023,0.956289845
+Drones,2024,2.579738317
+Drones,2025,1.424248738
+Ed tech,2018,2.583793796
+Ed tech,2019,0.960497143
+Ed tech,2020,2.371549854
+Ed tech,2021,2.237837636
+Ed tech,2022,1.527040838
+Ed tech,2023,1.240451899
+Ed tech,2024,0.965170712
+Ed tech,2025,1.43586625
+Energy management,2024,0.0075
+Energy management,2025,4.641061827
+Entertainment,2018,0.238599055
+Entertainment,2019,0.154839273
+Entertainment,2020,0.157625086
+Entertainment,2021,0.712822996
+Entertainment,2022,0.347922086
+Entertainment,2023,0.497129215
+Entertainment,2024,0.37724978
+Entertainment,2025,3.656731119
+Fintech,2018,0.392277973
+Fintech,2019,0.809782797
+Fintech,2020,1.151205094
+Fintech,2021,2.745706481
+Fintech,2022,2.117779866
+Fintech,2023,2.126519025
+Fintech,2024,6.880099165
+Fintech,2025,6.516605141
+HR tech,2018,0.161208633
+HR tech,2019,0.201931083
+HR tech,2020,0.319278503
+HR tech,2021,0.647566603
+HR tech,2022,0.576494056
+HR tech,2023,0.175057868
+HR tech,2024,0.670353984
+HR tech,2025,2.187908841
+IoT,2018,0.119813081
+IoT,2019,0.058943391
+IoT,2020,0.149486831
+IoT,2021,0.263865644
+IoT,2022,0.642624348
+IoT,2023,0.068209405
+IoT,2024,0.840282684
+IoT,2025,14.62597507
+Legal tech,2018,0.376670058
+Legal tech,2019,1.045234299
+Legal tech,2020,0.494615139
+Legal tech,2021,1.273941501
+Legal tech,2022,2.021668726
+Legal tech,2023,8.754116719
+Legal tech,2024,0.679508284
+Legal tech,2025,3.79487792
+"Marketing, digital ads",2018,0.177443068
+"Marketing, digital ads",2019,0.264057234
+"Marketing, digital ads",2020,0.523529781
+"Marketing, digital ads",2021,0.773365881
+"Marketing, digital ads",2022,1.109443433
+"Marketing, digital ads",2023,1.198622814
+"Marketing, digital ads",2024,1.596854185
+"Marketing, digital ads",2025,2.50882042
+Medical and healthcare,2018,1.043354722
+Medical and healthcare,2019,2.205863507
+Medical and healthcare,2020,5.172568896
+Medical and healthcare,2021,11.45933427
+Medical and healthcare,2022,9.178438742
+Medical and healthcare,2023,4.192175837
+Medical and healthcare,2024,10.99168916
+Medical and healthcare,2025,11.74813776
+Pharmaceutical,2025,10.58469885
+Quantum computing,2018,0.06642192
+Quantum computing,2019,0.159026367
+Quantum computing,2020,0.331591505
+Quantum computing,2021,0.572572768
+Quantum computing,2022,0.749425995
+Quantum computing,2023,1.969307472
+Quantum computing,2024,0.961302301
+Quantum computing,2025,3.114514138
+Retail,2018,0.155025541
+Retail,2019,0.131421406
+Retail,2020,0.607579586
+Retail,2021,0.780097622
+Retail,2022,0.94183731
+Retail,2023,0.669304524
+Retail,2024,1.171704249
+Retail,2025,4.103613397
+Robotics,2018,0.017214811
+Robotics,2019,0.00708
+Robotics,2020,0.014999996
+Robotics,2021,0.208353838
+Robotics,2022,0.129999993
+Robotics,2023,0.195583705
+Robotics,2024,3.288515919
+Robotics,2025,7.841289596
+Semiconductors,2018,0.291749929
+Semiconductors,2019,0.613417934
+Semiconductors,2020,1.616398947
+Semiconductors,2021,2.227948334
+Semiconductors,2022,2.648006164
+Semiconductors,2023,1.663431119
+Semiconductors,2024,5.527567999
+Semiconductors,2025,4.395554807

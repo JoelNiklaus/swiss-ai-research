@@ -1,0 +1,13 @@
+since,award_papers,winners,status,observed,baseline,expected,p_at_least_observed
+2010,555,2490,confirmed,7,world population (7.4M Swiss citizens incl. abroad / 8.23B),2.238338192419825,0.00815272009009577
+2010,555,2490,confirmed,7,OECD + China population (7.4M / 2.81B),6.557295373665481,0.4824788710484417
+2010,555,2490,confirmed,7,"world researchers, all fields (55k / 8.85M)",14.94,0.9920724470108396
+2010,555,2490,confirmed + probable,11,world population (7.4M Swiss citizens incl. abroad / 8.23B),2.238338192419825,2.311786942406738e-05
+2010,555,2490,confirmed + probable,11,OECD + China population (7.4M / 2.81B),6.557295373665481,0.07008394972734358
+2010,555,2490,confirmed + probable,11,"world researchers, all fields (55k / 8.85M)",14.94,0.8785896606613736
+0,665,2703,confirmed,9,world population (7.4M Swiss citizens incl. abroad / 8.23B),2.429810495626822,0.0009384204887981248
+0,665,2703,confirmed,9,OECD + China population (7.4M / 2.81B),7.118220640569396,0.28644704187227943
+0,665,2703,confirmed,9,"world researchers, all fields (55k / 8.85M)",16.218,0.9804880369708782
+0,665,2703,confirmed + probable,13,world population (7.4M Swiss citizens incl. abroad / 8.23B),2.429810495626822,1.7558507012850766e-06
+0,665,2703,confirmed + probable,13,OECD + China population (7.4M / 2.81B),7.118220640569396,0.030248299076495323
+0,665,2703,confirmed + probable,13,"world researchers, all fields (55k / 8.85M)",16.218,0.8209036515033827
