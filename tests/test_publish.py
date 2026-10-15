@@ -34,8 +34,11 @@ def test_publish_sets_requested_visibility(
     assert url.endswith(publish.REPO_ID)
     calls = dict(api.calls)
     assert calls["update_repo_settings"]["private"] is private
-    assert "cache/**" in calls["upload_folder"]["ignore_patterns"]
-    assert calls["upload_folder"]["repo_type"] == "dataset"
+    data, figures = [kwargs for name, kwargs in api.calls if name == "upload_folder"]
+    assert "cache/**" in data["ignore_patterns"]
+    assert data["repo_type"] == figures["repo_type"] == "dataset"
+    assert figures["folder_path"] == publish.FIGURES
+    assert figures["path_in_repo"] == "figures"
 
 
 def test_publish_keeps_visibility_by_default(api: FakeApi) -> None:

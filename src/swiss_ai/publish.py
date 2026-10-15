@@ -1,8 +1,9 @@
-"""Upload `data/` (without the API caches) to the Hugging Face Hub as a dataset.
+"""Upload `data/` (without the API caches) and the blog figures to the Hugging Face Hub as a dataset.
 
 `data/README.md` is the dataset card. A new dataset starts private. Re-uploads keep the current
 visibility unless `--visibility public` or `--visibility private` is passed. An `HF_TOKEN` in `.env`
-takes precedence over the token stored by `hf auth login`.
+takes precedence over the token stored by `hf auth login`. The figures go to `figures/`, where the
+Hugging Face article embeds them from.
 """
 
 import argparse
@@ -11,7 +12,7 @@ import logging
 from dotenv import load_dotenv
 from huggingface_hub import HfApi
 
-from swiss_ai.paths import DATA, ROOT
+from swiss_ai.paths import DATA, FIGURES, ROOT
 
 log = logging.getLogger(__name__)
 
@@ -40,6 +41,14 @@ def publish(visibility: str | None = None) -> str:
         repo_type="dataset",
         ignore_patterns=IGNORE,
         commit_message="Update data tables",
+    )
+    api.upload_folder(
+        folder_path=FIGURES,
+        path_in_repo="figures",
+        repo_id=REPO_ID,
+        repo_type="dataset",
+        allow_patterns=["*.png"],
+        commit_message="Update blog figures",
     )
     return f"https://huggingface.co/datasets/{REPO_ID}"
 

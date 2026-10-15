@@ -77,6 +77,7 @@ Data behind the blog post "Switzerland Does Top AI Research, but Too Little of I
 | `hand_collected/swiss_ai_exits.csv` | hand-collected | 49 acquisitions, asset deals and mergers of Swiss AI startups 2010-2026 with acquirer country; 9 rows are flagged borderline in `notes`. |
 | `hand_collected/swiss_ai_startups.csv`, `swiss_ai_startup_founders.csv` | hand-collected | The 28 best-funded AI startups founded in Switzerland, their headquarters, and each founder's Swiss citizenship from the commercial register (SHAB/Zefix). |
 | `hand_collected/vc_terms_europe_us.csv` | hand-collected | Chart data of Atomico's State of European Tech 2025 (Dealroom, to 30 September 2025): median valuations and round sizes by stage, Europe against the US. |
+| `figures/` | `figures` | The blog post's figures as PNG (uploaded from `blog/figures/`). |
 | `raw/ai_index/` | input | Unmodified AI Index 2026 chart data (CC BY-ND 4.0). |
 
 ## Licenses and sources
