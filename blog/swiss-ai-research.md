@@ -45,7 +45,7 @@ In the [AI Index 2026](https://hai.stanford.edu/ai-index), Switzerland has the m
   <figcaption>Figure 3: AI authors and inventors per 100,000 residents in 2025 (Zeki) against private AI investment from 2013 to 2025 per AI author (Quid), from the AI Index 2026 public data. Countries without both values are not shown.</figcaption>
 </figure>
 
-From 2013 to 2025, Switzerland raised $474,000 of private AI investment per AI author, against $3.57M in Israel and $3.43M in the US. Per resident, Israel raised $1,859 and Switzerland $523, still ahead of the UK ($492) and Germany ($205). Israel's figures partly reflect defence links and US investors, and Zeki's Swiss count includes researchers at the Zurich offices of US companies.
+From 2013 to 2025, Switzerland raised $474,000 of private AI investment per AI author, against $3.57M in Israel and $3.43M in the US. Per resident, Israel raised $1,859, the US $2,227 and Switzerland $523, still ahead of the UK ($492) and Germany ($205). Israel's figures partly reflect defence links and US investors, and Zeki's Swiss count includes researchers at the Zurich offices of US companies.
 
 Company formation is not the bottleneck: in 2025, ETH Zurich recognised 46 new ventures and EPFL launched a record 39 startups ([ETH](https://ethz.ch/en/news-and-events/eth-news/news/2026/02/mm-more-new-companies-founded-new-regulations-new-accelerator.html), [Startupticker](https://www.startupticker.ch/en/news/epfl-startups-celebrate-record-2025)). The growth money mostly comes from abroad: since 2015, Swiss investors supplied 21% of the capital raised by Swiss scale-ups and US investors 36% ([Swiss Startup Radar 2025/26](https://www.startupticker.ch/assets/files/StartupRadar25_26.pdf)).
 
@@ -87,7 +87,7 @@ Fourth, bring more Swiss master's students into machine learning doctorates, for
 
 Switzerland already pays for the research. It should keep more of what the research produces.
 
-The code is on [GitHub](https://github.com/JoelNiklaus/swiss-ai-research) and the data, including the hand-collected award, acquisition and founder tables with their sources, is on the [Hugging Face Hub](https://huggingface.co/datasets/joelniklaus/swiss-ai-research). Thanks to the teams behind OpenAlex, OpenReview, DBLP, Paper Copilot and the AI Index for their open data.
+The code is on [GitHub](https://github.com/JoelNiklaus/swiss-ai-research) and the data, including the hand-collected award, acquisition and founder tables with their sources, is on the [Hugging Face Hub](https://huggingface.co/datasets/joelniklaus/swiss-ai-research). Thanks to Andrés Marafioti for useful feedback, and to the teams behind OpenAlex, OpenReview, DBLP, Paper Copilot and the AI Index for their open data.
 
 ## Limitations
 
