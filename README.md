@@ -1,6 +1,6 @@
 # Swiss AI research: output, awards, investment and talent
 
-Code and data behind the blog post [Switzerland Does Top AI Research, but Too Little of It Stays](blog/swiss-ai-research.md). The pipeline measures how many main-track papers Swiss institutions write at the top 11 AI conferences (CVPR, ICCV, ECCV, ACL, EMNLP, NAACL, COLM, NeurIPS, ICML, ICLR, AAAI), how many best-paper awards they win relative to that, how many ERC grants and how much private AI investment Switzerland attracts, and how many Swiss citizens study and do doctorates in the exact sciences.
+Code and data behind the blog post [Switzerland Does Top AI Research, but Too Little of It Stays](https://huggingface.co/blog/joelniklaus/swiss-ai-research) (source: [`blog/swiss-ai-research.md`](blog/swiss-ai-research.md)). The pipeline measures how many main-track papers Swiss institutions write at the top 11 AI conferences (CVPR, ICCV, ECCV, ACL, EMNLP, NAACL, COLM, NeurIPS, ICML, ICLR, AAAI), how many best-paper awards they win relative to that, how many ERC grants and how much private AI investment Switzerland attracts, and how many Swiss citizens study and do doctorates in the exact sciences.
 
 ## Setup
 
