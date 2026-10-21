@@ -184,3 +184,12 @@ def test_variants_partition_years() -> None:
     assert masks["without the post author's papers"] == [True, False]
     assert masks["without ACL/EMNLP outstanding 2021+"] == [True, False]
     assert masks["2010-2022"] == [True, False]
+
+
+def test_observed_vs_expected_keys_and_zero_expectation() -> None:
+    row = analysis.observed_vs_expected(4, 2.0, suffix="_any")
+    assert row["ratio_any"] == pytest.approx(2.0)
+    assert row["ratio_any_low"] < 2.0 < row["ratio_any_high"]
+    empty = analysis.observed_vs_expected(0, 0.0)
+    assert pd.isna(empty["ratio"])
+    assert pd.isna(empty["ratio_high"])

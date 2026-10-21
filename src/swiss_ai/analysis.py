@@ -102,6 +102,29 @@ def poisson_interval(observed: float, alpha: float = 0.05) -> tuple[float, float
     return lower, gamma.ppf(1 - alpha / 2, observed + 1)
 
 
+def observed_vs_expected(observed: float, expected: float, suffix: str = "") -> dict:
+    """Observed and expected counts, their ratio and a 95% Poisson interval on the ratio.
+
+    The ratio is NaN when nothing is expected (a group without papers in the relevant
+    venue-years), since there is nothing to compare with.
+
+    Args:
+        observed: Observed count (may be fractional).
+        expected: Expected count.
+        suffix: Appended to every key, e.g. "_frac" gives observed_frac and ratio_frac_low.
+    """
+    low, high = poisson_interval(observed)
+    # Divide (rather than multiply by 1 / expected) so ratios match plain division exactly.
+    expected_or_nan = expected if expected else float("nan")
+    return {
+        f"observed{suffix}": observed,
+        f"expected{suffix}": expected,
+        f"ratio{suffix}": observed / expected_or_nan,
+        f"ratio{suffix}_low": low / expected_or_nan,
+        f"ratio{suffix}_high": high / expected_or_nan,
+    }
+
+
 def award_ratios(
     awards: pd.DataFrame, shares: pd.DataFrame, credit: pd.DataFrame
 ) -> pd.DataFrame:
@@ -128,16 +151,11 @@ def award_ratios(
     for group, members in GROUPS.items():
         row = {"group": group, "awards": len(awards)}
         for measure, share in [("frac", "frac_share"), ("any", "any_share")]:
-            obs = observed[measure].reindex(members, fill_value=0).sum()
-            exp = expected[share].reindex(members, fill_value=0).sum()
-            low, high = poisson_interval(obs)
-            row |= {
-                f"observed_{measure}": obs,
-                f"expected_{measure}": exp,
-                f"ratio_{measure}": obs / exp,
-                f"ratio_{measure}_low": low / exp,
-                f"ratio_{measure}_high": high / exp,
-            }
+            row |= observed_vs_expected(
+                observed[measure].reindex(members, fill_value=0).sum(),
+                expected[share].reindex(members, fill_value=0).sum(),
+                suffix=f"_{measure}",
+            )
         rows.append(row)
     return pd.DataFrame(rows)
 

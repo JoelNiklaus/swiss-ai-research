@@ -19,7 +19,7 @@ def work(wid: str, total: int, by_year: dict[int, int]) -> dict:
 def test_five_year_citations_window() -> None:
     w = work("W1", 30, {2018: 1, 2019: 2, 2022: 4, 2023: 8})
     assert citations.five_year_citations(w, 2018) == 7  # 2018-2022
-    assert pd.isna(citations.five_year_citations(w, 2015))
+    assert pd.isna(citations.five_year_citations(w, citations.FIVE_YEAR_FIRST - 1))
 
 
 def test_rank_within_venue_year_marks_top_tenth() -> None:
@@ -31,12 +31,26 @@ def test_rank_within_venue_year_marks_top_tenth() -> None:
             "cited_by_count": list(range(20)) + [5],
         }
     )
-    ranked = citations.rank_within_venue_year(df).set_index("paper_id")
+    ranked = citations.rank_within_venue_year(df, "cited_by_count").set_index(
+        "paper_id"
+    )
     assert (
         ranked.top_cited.sum() == 3
     )  # the two most cited ACL papers and the lone CVPR one
     assert ranked.loc["p19", "percentile"] == pytest.approx(1.0)
     assert not ranked.loc["p17", "top_cited"]
+
+
+def test_rank_within_venue_year_drops_missing_values() -> None:
+    df = pd.DataFrame(
+        {
+            "paper_id": ["a", "b"],
+            "venue": ["ACL", "ACL"],
+            "year": [2014, 2014],
+            "cites_5y": [3.0, float("nan")],
+        }
+    )
+    assert citations.rank_within_venue_year(df, "cites_5y").paper_id.tolist() == ["a"]
 
 
 def test_citation_ratios_mirror_award_ratios() -> None:
@@ -58,6 +72,7 @@ def test_citation_ratios_mirror_award_ratios() -> None:
     )
     ratios = citations.citation_ratios(cites, credit).set_index("group")
     ch = ratios.loc["CH"]
+    assert ch.top_cited_papers == 1
     assert ch.observed_frac == pytest.approx(0.5)
     assert ch.expected_frac == pytest.approx(0.125)
     assert ch.ratio_any == pytest.approx(4.0)
@@ -86,7 +101,7 @@ def test_fetch_citations(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> Non
         {
             "paper_id": ["k1", "k2", "k3"],
             "venue": ["ACL"] * 3,
-            "year": [2018, 2012, 2018],
+            "year": [2018, 2011, 2018],
         }
     )
     out = citations.fetch_citations(papers).set_index("paper_id")

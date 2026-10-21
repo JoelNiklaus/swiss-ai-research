@@ -11,7 +11,7 @@ import logging
 
 import pandas as pd
 
-from swiss_ai.analysis import poisson_interval
+from swiss_ai.analysis import observed_vs_expected
 from swiss_ai.attribution import FIRST_YEAR, load_papers, match_awards
 from swiss_ai.countries import COUNTRIES
 from swiss_ai.paths import DATA
@@ -78,10 +78,6 @@ def collaboration_ratios(
     for country in COUNTRIES:
         for team in ("domestic", "international"):
             key = (country, team)
-            obs = observed.get(key, 0)
-            # A group without papers in any award venue-year has no expectation to compare with.
-            exp = expected.get(key, 0.0) or float("nan")
-            low, high = poisson_interval(obs)
             rows.append(
                 {
                     "country": country,
@@ -89,12 +85,8 @@ def collaboration_ratios(
                     "papers": totals.get(key, 0),
                     "share_of_country_papers": totals.get(key, 0)
                     / country_totals.get(country, float("nan")),
-                    "observed": obs,
-                    "expected": exp,
-                    "ratio": obs / exp,
-                    "ratio_low": low / exp,
-                    "ratio_high": high / exp,
                 }
+                | observed_vs_expected(observed.get(key, 0), expected.get(key, 0.0))
             )
     return pd.DataFrame(rows)
 

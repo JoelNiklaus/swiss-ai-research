@@ -55,11 +55,17 @@ def prior_table() -> pd.DataFrame:
 
     Returns:
         One row per place in ALL_PLACES, sorted by all-science articles per million.
+
+    Raises:
+        ValueError: If a place is missing from the OpenAlex all-science counts.
     """
     places = list(ALL_PLACES)
-    counts = pd.DataFrame(
-        {level: openalex_counts(f) for level, f in LEVELS.items()}
-    ).reindex(places)
+    counts = pd.DataFrame({level: openalex_counts(f) for level, f in LEVELS.items()})
+    # group_by returns the 200 largest countries; every comparison place must be among them.
+    missing = sorted(set(places) - set(counts.all_science.dropna().index))
+    if missing:
+        raise ValueError(f"OpenAlex all-science counts lack {missing}")
+    counts = counts.reindex(places)
     counts["top_conferences"] = top_conference_counts().reindex(places)
     per_million = counts.div(population().reindex(places), axis=0) * 1e6
     out = per_million.add_suffix("_per_million")

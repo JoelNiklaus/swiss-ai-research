@@ -10,10 +10,14 @@ from swiss_ai import science_prior
 def fake_sources(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
     def fake_get(entity: str, params: dict) -> dict:
         scale = 10 if science_prior.TOP_1_PERCENT in params["filter"] else 1
+        counts = dict.fromkeys(science_prior.ALL_PLACES, 1000) | {
+            "CH": 2000,
+            "US": 30000,
+        }
         return {
             "group_by": [
-                {"key": "https://openalex.org/countries/CH", "count": 2000 // scale},
-                {"key": "https://openalex.org/countries/US", "count": 30000 // scale},
+                {"key": f"https://openalex.org/countries/{c}", "count": n // scale}
+                for c, n in counts.items()
             ]
         }
 
@@ -36,7 +40,8 @@ def fake_sources(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
 
 def test_openalex_counts_parse_country_keys(fake_sources: Path) -> None:
     counts = science_prior.openalex_counts(science_prior.BASE_FILTER)
-    assert counts.to_dict() == {"CH": 2000, "US": 30000}
+    assert counts["CH"] == 2000
+    assert counts["US"] == 30000
 
 
 def test_top_conference_counts_use_window_and_any_author(fake_sources: Path) -> None:
@@ -53,7 +58,18 @@ def test_prior_table(fake_sources: Path) -> None:
     assert ch.top_conferences_per_million == pytest.approx(20)
     assert ch.top_conference_papers_per_1k_articles == pytest.approx(10)
     assert df.index[0] == "US"
-    assert pd.isna(df.loc["DE", "all_science_per_million"])
+    assert pd.isna(df.loc["DE", "top_conferences_per_million"])
+
+
+def test_prior_table_fails_on_missing_place(
+    fake_sources: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    def partial_get(entity: str, params: dict) -> dict:
+        return {"group_by": [{"key": "https://openalex.org/countries/CH", "count": 5}]}
+
+    monkeypatch.setattr(science_prior, "get", partial_get)
+    with pytest.raises(ValueError, match="lack"):
+        science_prior.prior_table()
 
 
 def test_main_writes_table(fake_sources: Path, monkeypatch: pytest.MonkeyPatch) -> None:
