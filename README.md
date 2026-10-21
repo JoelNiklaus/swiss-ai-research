@@ -23,6 +23,9 @@ Run the modules in this order with `uv run python -m swiss_ai.<module>`:
 | `openalex`    | OpenAlex API                                    | `authorships.csv.gz`, `openalex_matches.csv`                      |
 | `attribution` | the four tables above                           | (log only: coverage and award matching)                           |
 | `analysis`    | the four tables above, World Bank population    | `participation*.csv`, `award_ratios.csv`, `citizen_winners.csv`   |
+| `science_prior` | OpenAlex `group_by` counts, `participation.csv` | `science_prior.csv` (articles per resident, overall and AI) |
+| `collaboration` | the four paper tables | `collaboration_awards.csv` (award ratios of domestic vs international papers) |
+| `citations`   | OpenAlex API (citation counts)                  | `citations.csv.gz`, `citation_ratios.csv`, `award_citations.csv`  |
 | `investment`  | AI Index 2026 chart data (`data/raw/ai_index`)  | `investment.csv`                                                  |
 | `vc_terms`    | Atomico State of European Tech 2025 (`data/hand_collected/vc_terms_europe_us.csv`) | `vc_terms.csv`                    |
 | `funding`     | CORDIS bulk JSON, SNSF Data Portal              | `erc_by_country.csv`, `snsf_computer_science.csv`                 |

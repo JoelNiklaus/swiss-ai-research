@@ -30,6 +30,14 @@ configs:
   data_files: erc_by_country.csv
 - config_name: erc_swiss_nationals
   data_files: hand_collected/erc_swiss_nationals.csv
+- config_name: science_prior
+  data_files: science_prior.csv
+- config_name: collaboration_awards
+  data_files: collaboration_awards.csv
+- config_name: citations
+  data_files: citations.csv.gz
+- config_name: citation_ratios
+  data_files: citation_ratios.csv
 - config_name: investment
   data_files: investment.csv
 - config_name: vc_terms
@@ -67,6 +75,9 @@ Data behind the blog post ["Switzerland Does Top AI Research, but Too Little of 
 | `papercopilot_crosscheck.csv`, `papercopilot_countries.csv` | `crosscheck` | Pipeline country shares next to Paper Copilot's independent affiliation data for ICLR, ICML and NeurIPS 2023-2025. |
 | `erc_by_country.csv` | `funding` | ERC Starting, Consolidator, Advanced and Synergy Grants by host country and call year from CORDIS. |
 | `snsf_computer_science.csv` | `funding` | SNSF grants in information technology per year. |
+| `science_prior.csv` | `science_prior` | OpenAlex articles 2023-2025 per million residents (all, top 1% cited, AI topics) next to top 11 AI conference papers, full counting. |
+| `collaboration_awards.csv` | `collaboration` | Observed vs expected awards for each country's domestic and international papers. |
+| `citations.csv.gz`, `citation_ratios.csv`, `award_citations.csv` | `citations` | OpenAlex citations of DBLP-listed papers 2010-2021, ranked within venue-year; top 10% cited papers per country vs expectation; citation rank of award papers. |
 | `investment.csv` | `investment` | AI Index 2026 private AI investment (Quid) and AI talent (Zeki) per country. |
 | `vc_terms.csv` | `vc_terms` | Median pre-money valuation and round size by stage in Europe (including Switzerland) and the US in 2025, with the implied share of the company sold. |
 | `citizenship_funnel.csv`, `doctoral_mobility.csv` | `citizenship` | BFS students and staff in the exact sciences by level and citizenship; OECD internationally mobile doctoral students. |

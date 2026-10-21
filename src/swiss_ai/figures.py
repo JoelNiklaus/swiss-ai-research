@@ -45,11 +45,13 @@ FUNNEL_LINES = [
     ("PhD", "foreign", "Foreign doctoral students", SWISS_RED, "dot", 2),
 ]
 # Scatter labels that would otherwise overlap a neighbour or the plot edge.
-LABEL_POSITIONS = {
+TRANSFER_LABELS = {
+    "Switzerland": "bottom center",
+    "Israel": "top center",
+    "United States": "middle right",
+    "United Kingdom": "top right",
     "Germany": "bottom center",
-    "Canada": "top left",
-    "Sweden": "bottom center",
-    "Switzerland": "top left",
+    "Sweden": "top center",
 }
 
 
@@ -198,38 +200,59 @@ def award_ratio_figure() -> go.Figure:
     )
 
 
+def research_money() -> pd.DataFrame:
+    """Top AI conference papers and private AI investment per resident, by country name.
+
+    Papers are fractional main-track papers per million residents in PER_CAPITA_YEARS; investment
+    is Quid's 2013-2025 total per resident. Only countries with both values are kept.
+    """
+    papers = pd.read_csv(PER_CAPITA, keep_default_na=False)
+    papers = papers.assign(country=papers.country.map(name))
+    money = pd.read_csv(INVESTMENT).dropna(subset=["investment_per_capita_2013_2025"])
+    return papers.merge(money, on="country")
+
+
+# Canada (37 papers per million, $474 per resident) would sit on top of the UK marker.
+TRANSFER_LEFT_OUT = ["Canada"]
+
+
 def transfer_figure() -> go.Figure:
-    """AI authors per capita (Zeki) against private AI investment per AI author (Quid)."""
-    df = pd.read_csv(INVESTMENT).dropna(subset=["investment_per_author_2013_2025"])
+    """Top AI conference papers per resident against private AI investment per resident."""
+    df = research_money()
+    df = df[~df.country.isin(TRANSFER_LEFT_OUT)]
     fig = go.Figure(
         go.Scatter(
-            x=df.authors_per_100k,
-            y=df.investment_per_author_2013_2025 / 1e6,
+            x=df.papers_per_million,
+            y=df.investment_per_capita_2013_2025,
             mode="markers+text",
             text=df.country,
             textposition=[
-                LABEL_POSITIONS[c] if c in LABEL_POSITIONS else "top center"
+                TRANSFER_LABELS[c] if c in TRANSFER_LABELS else "top center"
                 for c in df.country
             ],
             marker={"size": 13, "color": colors(df.country.tolist())},
+            cliponaxis=False,
         )
     )
+    years = f"{PER_CAPITA_YEARS.start}-{PER_CAPITA_YEARS.stop - 1}"
     return fig.update_layout(
         **LAYOUT | {"height": 560},
         title={
-            "text": "AI talent density against private AI investment per AI author",
+            "text": "Switzerland writes many top AI papers per resident but raises little AI money",
             "subtitle": {
-                "text": "Private AI investment 2013-2025 (Quid) divided by AI authors and "
-                "inventors in 2025 (Zeki), from the AI Index 2026"
+                "text": f"Main-track papers at the top 11 AI conferences, {years}, against "
+                "private AI investment 2013-2025 (Quid, AI Index 2026)"
             },
         },
         xaxis={
-            "title": "AI authors and inventors per 100k residents, 2025",
-            "range": [15, 118],
+            "title": f"Top AI conference papers per million residents, {years}",
+            "range": [0, 320],
         },
         yaxis={
-            "title": "Investment per AI author (USD millions)",
-            "range": [0, 4],
+            "title": "Private AI investment per resident (USD)",
+            "range": [0, 2400],
+            "dtick": 500,
+            "tickformat": ",",
         },
         showlegend=False,
         margin={"t": 90},
@@ -293,10 +316,7 @@ SOCIAL_LABELS = {
 
 def social_figure() -> go.Figure:
     """Papers per resident against private AI investment per resident, for a phone screen."""
-    papers = pd.read_csv(PER_CAPITA, keep_default_na=False)
-    papers = papers.assign(country=papers.country.map(name))
-    money = pd.read_csv(INVESTMENT).dropna(subset=["investment_per_capita_2013_2025"])
-    df = papers.merge(money, on="country")
+    df = research_money()
     labels = [
         f"<b>{c}</b>" if c in ("Switzerland", "Israel") else c for c in df.country
     ]

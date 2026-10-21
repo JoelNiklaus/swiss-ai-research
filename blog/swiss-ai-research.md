@@ -8,6 +8,8 @@ authors:
 
 **TL;DR:** From 2023 to 2025, Swiss institutions wrote 138 main-track papers per million residents at the top 11 AI conferences. Among places with more than a million residents, only Singapore and Hong Kong wrote more. Less of it turns into Swiss companies and Swiss researchers: Israel attracts 3.6 times as much private AI investment per resident, European startups (Swiss ones included) raise seed rounds at less than half the US valuation, and 34 of 40 documented acquisitions of Swiss AI startups went to foreign buyers. Since 2010, Swiss master's students in the exact sciences have more than doubled, while Swiss doctoral students fell by 15%.
 
+*Updated on 20 October 2026: after reader feedback, the post now compares AI with science overall, splits the award record by team composition, adds citations as a second quality signal, and Figure 3 shows investment per resident.*
+
 When our FinePhrase paper won an outstanding paper award at COLM 2026, I wondered how many of these awards go to researchers in Switzerland. With federal research cuts coming in 2027, the question grew: how much of Switzerland's AI research turns into Swiss companies and Swiss researchers?
 
 To find out, I collected every main-track paper and best-paper award since 2010 at the top 11 AI conferences (CVPR, ICCV, ECCV, ACL, EMNLP, NAACL, COLM, NeurIPS, ICML, ICLR and AAAI) and compared them with investment, acquisition and enrolment data.
@@ -23,6 +25,8 @@ Figure 1 splits each paper's credit equally among its authors with a known count
 
 Swiss institutions wrote 1,240 of 60,337 main-track papers from 2023 to 2025, or 138 per million residents. Only Singapore (288) and Hong Kong (236) wrote more; Israel (72), the US (53) and Germany (26) wrote far less. Per researcher, Switzerland wrote 23 papers per 1,000 full-time researchers ([OECD MSTI](https://data-explorer.oecd.org/)), behind Singapore (35) but twice the US (10).
 
+Part of this lead reflects Swiss science in general. Counting every journal and proceedings article in [OpenAlex](https://openalex.org/), with a paper counted for each country among its authors, Switzerland wrote more articles per resident from 2023 to 2025 than any other country compared (17,200 per million, 2.9 times the US rate). Top AI conferences are a Swiss strength beyond that: for every 1,000 scientific articles, Swiss authors wrote 16.5 papers at the top 11 AI conferences, about as many as Israel (16.3) and more than the US (13.2), but far behind Singapore (59) and Hong Kong (50). Denmark, Sweden, Finland and the Netherlands come closest to Switzerland in science overall, yet write only 3 to 5 top AI conference papers per 1,000 articles.
+
 Awards are a weaker signal. Figure 2 compares each country's award papers with what its paper share at the same venue and year predicts.
 
 <figure>
@@ -32,20 +36,24 @@ Awards are a weaker signal. Figure 2 compares each country's award papers with w
 
 Swiss institutions appear on 35 award papers where their paper share predicts 19.7, a ratio of 1.8 (95% interval 1.2 to 2.5), or 1.5 (0.9 to 2.5) with fractional credit. Ryan Cotterell's group at ETH Zurich has 8 of the 35, and without it both intervals include 1. The US, the UK, Germany and Israel also sit above 1, because China wins far fewer awards than its paper share predicts. The Swiss award record is suggestive rather than established.
 
+Most of the Swiss excess comes from papers with co-authors abroad. Since 2010, 1,365 of the 6,025 papers with Swiss authors had only authors based in Switzerland; they won 6 awards where their share predicts 4.6 (ratio 1.3, interval 0.5 to 2.8). Papers with co-authors in other countries won 29 against 15.1 (1.9, interval 1.3 to 2.8).
+
+Citations tell a more modest story. For the 53,572 papers from 2010 to 2021 that OpenAlex covers (the OpenReview years of ICLR and NeurIPS are missing), I ranked each paper's citations within its conference and year. Papers with Swiss authors are in the top 10% as often as their share predicts (194 against 202, ratio 0.96, interval 0.83 to 1.11), and the same holds for citations in the first five years. Chinese papers, which win half the awards their share predicts, are in the top 10% more often (1.23). Award papers are cited more than others: a third of the 201 award papers from those years are in the top 10% of their conference and year, though one in six is below the median. Over the same papers, Swiss institutions won 7 awards against 5.4 expected; most Swiss awards came after 2022, too recently for citations to tell.
+
 European Research Council (ERC) grants show the strength more clearly. In the 2014 to 2020 calls, Swiss institutions hosted 52 grants per million residents, against 35 for Israel and 14 for Germany ([CORDIS](https://cordis.europa.eu/)). After being shut out of most 2021 to 2024 calls ([SERI](https://sbfi.admin.ch/en/funding-for-mono-beneficiary-projects-under-2021-2024-horizon-package)), Swiss hosts won 92 Starting, Consolidator and Advanced Grants in the 2025 calls, more than in any year from 2015 to 2020 ([ERC](https://erc.europa.eu/news-events/news/erc-2025-advanced-grants-results)).
 
 The question is how much of that research turns into Swiss companies.
 
 ## Swiss AI startups raise little money and are often sold abroad
 
-In the [AI Index 2026](https://hai.stanford.edu/ai-index), Switzerland has the most AI authors and inventors per capita of the 21 countries in Zeki's data (about 110 per 100,000 residents, tied with Singapore), but Figure 3 shows how little private AI investment each of them attracts.
+Figure 3 sets the papers per resident from Figure 1 against private AI investment per resident from the [AI Index 2026](https://hai.stanford.edu/ai-index) (Quid).
 
 <figure>
-  <img src="figures/transfer.png" alt="Scatter of AI authors per 100,000 residents against private AI investment per AI author, with Switzerland far right and low">
-  <figcaption>Figure 3: AI authors and inventors per 100,000 residents in 2025 (Zeki) against private AI investment from 2013 to 2025 per AI author (Quid), from the AI Index 2026 public data. Countries without both values are not shown.</figcaption>
+  <img src="figures/transfer.png" alt="Scatter of top AI conference papers per million residents against private AI investment per resident, with Switzerland far right and low">
+  <figcaption>Figure 3: Main-track papers at the top 11 AI conferences per million residents, 2023 to 2025 (as in Figure 1), against private AI investment per resident, 2013 to 2025 (Quid, AI Index 2026 public data). The AI Index lists investment only for its top 15 countries. Canada (37 papers per million, $474 per resident) is left out because its marker would cover the UK.</figcaption>
 </figure>
 
-From 2013 to 2025, Switzerland raised $474,000 of private AI investment per AI author, against $3.57M in Israel and $3.43M in the US. Per resident, Israel raised $1,859, the US $2,227 and Switzerland $523, still ahead of the UK ($492) and Germany ($205). Israel's figures partly reflect defence links and US investors, and Zeki's Swiss count includes researchers at the Zurich offices of US companies.
+From 2013 to 2025, Switzerland raised $523 of private AI investment per resident, against $1,859 in Israel and $2,227 in the US, and about as much as the UK ($492). The AI Index also counts AI authors and inventors (Zeki), where Switzerland ranks first per capita among 21 countries; per AI author and inventor, Switzerland raised $474,000, against $3.57M in Israel and $3.43M in the US. Israel's figures partly reflect defence links and US investors, and Zeki's Swiss count includes researchers at the Zurich offices of US companies.
 
 Company formation is not the bottleneck: in 2025, ETH Zurich recognised 46 new ventures and EPFL launched a record 39 startups ([ETH](https://ethz.ch/en/news-and-events/eth-news/news/2026/02/mm-more-new-companies-founded-new-regulations-new-accelerator.html), [Startupticker](https://www.startupticker.ch/en/news/epfl-startups-celebrate-record-2025)). The growth money mostly comes from abroad: since 2015, Swiss investors supplied 21% of the capital raised by Swiss scale-ups and US investors 36% ([Swiss Startup Radar 2025/26](https://www.startupticker.ch/assets/files/StartupRadar25_26.pdf)).
 
@@ -87,7 +95,7 @@ Fourth, bring more Swiss master's students into machine learning doctorates, for
 
 Switzerland already pays for the research. It should keep more of what the research produces.
 
-The code is on [GitHub](https://github.com/JoelNiklaus/swiss-ai-research) and the data, including the hand-collected award, acquisition and founder tables with their sources, is on the [Hugging Face Hub](https://huggingface.co/datasets/joelniklaus/swiss-ai-research). Thanks to Andrés Marafioti for useful feedback, and to the teams behind OpenAlex, OpenReview, DBLP, Paper Copilot and the AI Index for their open data.
+The code is on [GitHub](https://github.com/JoelNiklaus/swiss-ai-research) and the data, including the hand-collected award, acquisition and founder tables with their sources, is on the [Hugging Face Hub](https://huggingface.co/datasets/joelniklaus/swiss-ai-research). Thanks to Andrés Marafioti and Emma Scharfmann for useful feedback, and to the teams behind OpenAlex, OpenReview, DBLP, Paper Copilot and the AI Index for their open data.
 
 ## Limitations
 
