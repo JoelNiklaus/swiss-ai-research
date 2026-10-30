@@ -40,6 +40,8 @@ configs:
   data_files: citations.csv.gz
 - config_name: citation_ratios
   data_files: citation_ratios.csv
+- config_name: award_citation_summary
+  data_files: award_citation_summary.csv
 - config_name: investment
   data_files: investment.csv
 - config_name: vc_terms
@@ -80,6 +82,7 @@ Data behind the blog post ["Switzerland Does Top AI Research, but Too Little of 
 | `snsf_computer_science.csv` | `funding` | SNSF grants in information technology per year. |
 | `science_prior.csv` | `science_prior` | OpenAlex articles 2023-2025 per million residents (all, top 1% cited, AI topics) next to top 11 AI conference papers, full counting. |
 | `collaboration_awards.csv` | `collaboration` | Observed vs expected awards for each country's domestic and international papers. |
+| `award_citation_summary.csv` | `citations` | Where award papers 2010-2021 rank by citations in their conference and year (median percentile, shares in the top 1%, 10% and 25%, share below the median), overall and by award type, field and Swiss affiliation, for citations so far and in the first five years. |
 | `citations.csv.gz`, `citation_ratios.csv`, `award_citations.csv` | `citations` | OpenAlex citations of DBLP-listed papers 2010-2021, ranked within venue-year; top 10% cited papers per country vs expectation, for citations so far and in the first five years (`measure`); citation rank of award papers. |
 | `investment.csv` | `investment` | AI Index 2026 private AI investment (Quid) and AI talent (Zeki) per country. |
 | `vc_terms.csv` | `vc_terms` | Median pre-money valuation and round size by stage in Europe (including Switzerland) and the US in 2025, with the implied share of the company sold. |

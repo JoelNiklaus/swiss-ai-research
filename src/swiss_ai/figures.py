@@ -19,6 +19,7 @@ from swiss_ai.collaboration import COLLABORATION
 from swiss_ai.countries import ALL_PLACES
 from swiss_ai.investment import INVESTMENT
 from swiss_ai.paths import FIGURES
+from swiss_ai.science_prior import SCIENCE_PRIOR
 from swiss_ai.vc_terms import VC_TERMS
 
 log = logging.getLogger(__name__)
@@ -380,6 +381,53 @@ def social_figure() -> go.Figure:
     )
 
 
+def social_ai_share_figure() -> go.Figure:
+    """Top AI conference papers per 1,000 scientific articles by country, for a phone screen."""
+    df = pd.read_csv(SCIENCE_PRIOR).sort_values(
+        "top_conference_papers_per_1k_articles", ascending=False
+    )
+    values = df.top_conference_papers_per_1k_articles
+    names = [name(c) for c in df.country]
+    fig = go.Figure(
+        go.Bar(
+            y=names,
+            x=values.tolist(),
+            orientation="h",
+            marker_color=colors(names),
+            # Whole numbers for the two leaders, one decimal where countries are close.
+            text=[f"{v:.0f}" if v >= 20 else f"{v:.1f}" for v in values],
+            textposition="outside",
+            textfont={"size": 26},
+            cliponaxis=False,
+        )
+    )
+    layout = SOCIAL_LAYOUT | {"margin": {"t": 250, "b": 40, "l": 230, "r": 60}}
+    return fig.update_layout(
+        **layout,
+        title={
+            "text": "Beyond strong science, Switzerland<br>stands out in AI research",
+            "font": {"size": 42},
+            "x": 0.03,
+            "y": 0.95,
+            "yanchor": "top",
+            "subtitle": {
+                "text": "Top AI conference papers per 1,000 scientific articles, "
+                f"{PER_CAPITA_YEARS.start}-{PER_CAPITA_YEARS.stop - 1}",
+                "font": {"size": 26},
+            },
+        },
+        showlegend=False,
+        bargap=0.25,
+        xaxis={"visible": False, "range": [0, values.max() * 1.15]},
+        yaxis={
+            "autorange": "reversed",
+            "ticks": "",
+            "showline": False,
+            "tickfont": {"size": 26},
+        },
+    )
+
+
 # Row labels of the team-composition figure, in the order of collaboration_awards.csv teams.
 TEAM_LABELS = {
     "domestic": "Only Swiss-based<br>authors",
@@ -495,6 +543,7 @@ FIGURES_BY_NAME = {
     "swiss_students": funnel_figure,
     "social_research_vs_money": social_figure,
     "social_team_awards": social_team_awards_figure,
+    "social_ai_share": social_ai_share_figure,
 }
 
 

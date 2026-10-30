@@ -11,7 +11,9 @@ venue-year so that paper age drops out:
 
 A paper is top-cited when fewer than TOP_SHARE of its venue-year are cited more. The country
 ratio treats top-cited papers exactly like award papers in `analysis.award_ratios`: observed
-top-cited papers against what the country's share of the venue-year's papers predicts.
+top-cited papers against what the country's share of the venue-year's papers predicts. For the
+award papers themselves, `award_citation_summary` reports where they rank in their venue-year,
+overall and by award type, field and Swiss affiliation.
 """
 
 import logging
@@ -30,12 +32,27 @@ log = logging.getLogger(__name__)
 CITATIONS = DATA / "citations.csv.gz"
 CITATION_RATIOS = DATA / "citation_ratios.csv"
 AWARD_CITATIONS = DATA / "award_citations.csv"
+AWARD_CITATION_SUMMARY = DATA / "award_citation_summary.csv"
 LAST_YEAR = 2021
 FIVE_YEAR_FIRST = 2012
 TOP_SHARE = 0.10
 MEASURES = {"so_far": "cited_by_count", "first_five_years": "cites_5y"}
 FIELDS = "id,publication_year,cited_by_count,counts_by_year"
 THREADS = 8
+# Field of each venue, for the award-citation summary.
+FIELDS_BY_VENUE = {
+    "CVPR": "vision",
+    "ICCV": "vision",
+    "ECCV": "vision",
+    "ACL": "language",
+    "EMNLP": "language",
+    "NAACL": "language",
+    "NeurIPS": "machine learning",
+    "ICML": "machine learning",
+    "ICLR": "machine learning",
+    "COLM": "language",
+    "AAAI": "AAAI",
+}
 
 
 def fetch_batch(ids: list[str]) -> list[dict]:
@@ -83,16 +100,21 @@ def fetch_citations(papers: pd.DataFrame) -> pd.DataFrame:
 
 
 def rank_within_venue_year(citations: pd.DataFrame, column: str) -> pd.DataFrame:
-    """Percentile (0 to 1, ties averaged) and top-cited flag by `column`, per venue-year.
+    """Rank papers by `column` within each venue-year.
 
-    Rows where `column` is missing are dropped.
+    Adds `percentile` (0 to 1, ties averaged), `cited_more_share` (the share of the venue-year's
+    papers cited more) and `top_cited` (cited_more_share below TOP_SHARE). Rows where `column`
+    is missing are dropped.
     """
     citations = citations.dropna(subset=[column])
     groups = citations.groupby(["venue", "year"])[column]
-    cited_more = groups.rank(ascending=False, method="min") - 1
+    cited_more = (groups.rank(ascending=False, method="min") - 1) / groups.transform(
+        "size"
+    )
     return citations.assign(
         percentile=groups.rank(pct=True, method="average"),
-        top_cited=cited_more < TOP_SHARE * groups.transform("size"),
+        cited_more_share=cited_more,
+        top_cited=cited_more < TOP_SHARE,
     )
 
 
@@ -127,20 +149,73 @@ def citation_ratios(ranked: pd.DataFrame, credit: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
-def award_citations(ranked: pd.DataFrame, awards: pd.DataFrame) -> pd.DataFrame:
-    """Citation counts and rank of each award paper that has citation data."""
-    cols = [
-        "paper_id",
-        "venue",
-        "year",
-        "cited_by_count",
-        "cites_5y",
-        "percentile",
-        "top_cited",
-    ]
-    return awards[["paper_id", "award_type", "has_swiss_institution"]].merge(
-        ranked[cols]
+def award_citations(citations: pd.DataFrame, awards: pd.DataFrame) -> pd.DataFrame:
+    """Citation counts and venue-year rank of each award paper, for both measures.
+
+    Args:
+        citations: Output of `fetch_citations` (not ranked).
+        awards: Matched award papers with paper_id, award_type and has_swiss_institution.
+
+    Returns:
+        One row per award paper with citations: counts, `percentile`, `cited_more_share` and
+        `top_cited` for citations so far, and the same with a `_5y` suffix for the first five
+        years (NaN for papers before FIVE_YEAR_FIRST).
+    """
+    rank_cols = ["percentile", "cited_more_share", "top_cited"]
+    so_far = rank_within_venue_year(citations, MEASURES["so_far"])
+    five = rank_within_venue_year(citations, MEASURES["first_five_years"])
+    five = five[["paper_id", *rank_cols]].rename(
+        columns=lambda c: f"{c}_5y" if c in rank_cols else c
     )
+    cols = ["paper_id", "venue", "year", "cited_by_count", "cites_5y", *rank_cols]
+    return (
+        awards[["paper_id", "award_type", "has_swiss_institution"]]
+        .merge(so_far[cols])
+        .merge(five, how="left")
+    )
+
+
+def award_citation_summary(awarded: pd.DataFrame) -> pd.DataFrame:
+    """Where award papers rank by citations in their venue-year, by measure and group.
+
+    Groups: all, best and outstanding awards, each field in FIELDS_BY_VENUE, and papers with a
+    Swiss institution. By chance, an award paper lands in the top 10% with probability 0.1 and
+    below the median with probability 0.5.
+
+    Returns:
+        One row per measure and group with n, median_percentile, share_top_1, share_top_10,
+        share_top_25, share_below_median and most_cited (award papers no paper of their
+        venue-year out-cites).
+    """
+    groups = {
+        "all": awarded.venue.notna(),
+        "best award": awarded.award_type == "best",
+        "outstanding award": awarded.award_type == "outstanding",
+        **{
+            field: awarded.venue.map(FIELDS_BY_VENUE) == field
+            for field in dict.fromkeys(FIELDS_BY_VENUE.values())
+        },
+        "Swiss institution": awarded.has_swiss_institution.astype(bool),
+    }
+    rows = []
+    for measure, suffix in (("so_far", ""), ("first_five_years", "_5y")):
+        for group, mask in groups.items():
+            df = awarded[mask].dropna(subset=[f"percentile{suffix}"])
+            cited_more = df[f"cited_more_share{suffix}"]
+            rows.append(
+                {
+                    "measure": measure,
+                    "group": group,
+                    "n": len(df),
+                    "median_percentile": df[f"percentile{suffix}"].median(),
+                    "share_top_1": (cited_more < 0.01).mean(),
+                    "share_top_10": (cited_more < 0.10).mean(),
+                    "share_top_25": (cited_more < 0.25).mean(),
+                    "share_below_median": (df[f"percentile{suffix}"] < 0.5).mean(),
+                    "most_cited": int((cited_more == 0).sum()),
+                }
+            )
+    return pd.DataFrame(rows)
 
 
 def main() -> None:
@@ -181,13 +256,12 @@ def main() -> None:
         f"Top {TOP_SHARE:.0%} cited papers per group:\n{ratios[cols].round(2).to_string(index=False)}"
     )
 
-    awarded = award_citations(so_far, match_awards(papers))
+    awarded = award_citations(citations, match_awards(papers))
     awarded.to_csv(AWARD_CITATIONS, index=False)
+    summary = award_citation_summary(awarded)
+    summary.to_csv(AWARD_CITATION_SUMMARY, index=False)
     log.info(
-        f"{len(awarded)} award papers: median citation percentile "
-        f"{awarded.percentile.median():.2f}, {awarded.top_cited.mean():.0%} in the top "
-        f"{TOP_SHARE:.0%} of their venue-year, {(awarded.percentile < 0.5).mean():.0%} below "
-        "the median"
+        f"Award papers by citation rank:\n{summary.round(3).to_string(index=False)}"
     )
 
 

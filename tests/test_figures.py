@@ -76,6 +76,13 @@ def inputs(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
         }
     ).to_csv(tmp_path / "collab.csv", index=False)
     monkeypatch.setattr(figures, "COLLABORATION", tmp_path / "collab.csv")
+    pd.DataFrame(
+        {
+            "country": ["US", "CH", "SG", "DK"],
+            "top_conference_papers_per_1k_articles": [13.2, 16.5, 59.1, 4.6],
+        }
+    ).to_csv(tmp_path / "prior.csv", index=False)
+    monkeypatch.setattr(figures, "SCIENCE_PRIOR", tmp_path / "prior.csv")
     monkeypatch.setattr(figures, "FUNNEL", tmp_path / "funnel.csv")
     monkeypatch.setattr(figures, "VC_TERMS", tmp_path / "vc_terms.csv")
     return tmp_path
@@ -150,3 +157,12 @@ def test_social_team_awards_pairs_observed_with_expected(inputs: Path) -> None:
     assert list(won.x) == [7, 29]
     assert list(expected.text) == ["4.7", "15.5"]
     assert not fig.layout.annotations
+
+
+def test_social_ai_share_sorts_bars_and_highlights_switzerland(inputs: Path) -> None:
+    bar = figures.social_ai_share_figure().data[0]
+    assert list(bar.y) == ["Singapore", "Switzerland", "United States", "Denmark"]
+    assert list(bar.x) == [59.1, 16.5, 13.2, 4.6]
+    assert list(bar.text) == ["59", "16.5", "13.2", "4.6"]
+    assert bar.marker.color[1] == figures.SWISS_RED
+    assert bar.marker.color[0] == figures.GREY

@@ -112,21 +112,67 @@ def test_fetch_citations(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> Non
     assert "k3" not in out.index
 
 
-def test_award_citations_keep_award_columns() -> None:
+def test_rank_within_venue_year_reports_share_cited_more() -> None:
+    df = pd.DataFrame(
+        {
+            "paper_id": list("abcd"),
+            "venue": ["ACL"] * 4,
+            "year": [2018] * 4,
+            "cited_by_count": [10, 5, 5, 1],
+        }
+    )
+    ranked = citations.rank_within_venue_year(df, "cited_by_count")
+    assert ranked.cited_more_share.tolist() == [0.0, 0.25, 0.25, 0.75]
+
+
+def test_award_citations_rank_both_measures() -> None:
     cites = pd.DataFrame(
         {
-            "paper_id": ["a", "b"],
-            "venue": ["ACL", "ACL"],
-            "year": [2018, 2018],
-            "cited_by_count": [10, 1],
-            "cites_5y": [5, 1],
-            "percentile": [1.0, 0.5],
-            "top_cited": [True, False],
+            "paper_id": ["a", "b", "c", "d"],
+            "venue": ["ACL"] * 4,
+            "year": [2018] * 4,
+            "cited_by_count": [10, 20, 1, 5],
+            "cites_5y": [8, 2, 1, float("nan")],
         }
     )
     awards = pd.DataFrame(
-        {"paper_id": ["a"], "award_type": ["best"], "has_swiss_institution": [True]}
+        {
+            "paper_id": ["a"],
+            "conference": ["ACL"],
+            "award_type": ["best"],
+            "has_swiss_institution": [True],
+        }
     )
-    out = citations.award_citations(cites, awards)
-    assert out.percentile.tolist() == [1.0]
-    assert out.has_swiss_institution.tolist() == [True]
+    out = citations.award_citations(cites, awards).iloc[0]
+    assert out.cited_more_share == pytest.approx(0.25)
+    # Five-year counts rank among the three papers that have them; "a" leads.
+    assert out.cited_more_share_5y == 0
+    assert out.percentile_5y == 1.0
+    assert out.has_swiss_institution
+
+
+def test_award_citation_summary_by_group() -> None:
+    awarded = pd.DataFrame(
+        {
+            "venue": ["CVPR", "ACL", "ACL", "ICML"],
+            "award_type": ["best", "best", "outstanding", "outstanding"],
+            "has_swiss_institution": [True, False, False, False],
+            "percentile": [1.0, 0.95, 0.3, 0.6],
+            "cited_more_share": [0.0, 0.05, 0.7, 0.4],
+            "percentile_5y": [0.9, 0.8, 0.2, float("nan")],
+            "cited_more_share_5y": [0.08, 0.2, 0.8, float("nan")],
+        }
+    )
+    out = citations.award_citation_summary(awarded).set_index(["measure", "group"])
+    everything = out.loc[("so_far", "all")]
+    assert everything.n == 4
+    assert everything.median_percentile == pytest.approx(0.775)
+    assert everything.share_top_10 == pytest.approx(0.5)
+    assert everything.share_below_median == pytest.approx(0.25)
+    assert everything.most_cited == 1
+    assert out.loc[("so_far", "best award")].share_top_10 == 1.0
+    assert out.loc[("so_far", "language")].n == 2
+    assert out.loc[("so_far", "Swiss institution")].n == 1
+    # Papers without five-year counts drop out of that measure only.
+    assert out.loc[("first_five_years", "all")].n == 3
+    assert out.loc[("first_five_years", "all")].share_top_10 == pytest.approx(1 / 3)
