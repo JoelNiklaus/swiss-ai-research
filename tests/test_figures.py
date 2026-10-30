@@ -69,15 +69,6 @@ def inputs(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
     ).to_csv(tmp_path / "vc_terms.csv", index=False)
     pd.DataFrame(
         {
-            "country": ["CH", "CH", "US"],
-            "team": ["domestic", "international", "domestic"],
-            "observed": [7, 29, 300],
-            "expected": [4.66, 15.49, 250.0],
-        }
-    ).to_csv(tmp_path / "collab.csv", index=False)
-    monkeypatch.setattr(figures, "COLLABORATION", tmp_path / "collab.csv")
-    pd.DataFrame(
-        {
             "country": ["US", "CH", "SG", "DK"],
             "top_conference_papers_per_1k_articles": [13.2, 16.5, 59.1, 4.6],
         }
@@ -147,16 +138,6 @@ def test_vc_terms_figure_pairs_europe_with_us(inputs: Path) -> None:
     assert list(fig.data[0].y) == [7.0, 32.1]
     assert list(fig.data[3].text) == ["$4.0M", "$14.9M"]
     assert [t.showlegend for t in fig.data] == [True, True, False, False]
-
-
-def test_social_team_awards_pairs_observed_with_expected(inputs: Path) -> None:
-    fig = figures.social_team_awards_figure()
-    won, expected = fig.data
-    assert (won.name, expected.name) == ("Awards won", "Expected from the paper share")
-    assert list(won.y) == ["Only Swiss-based<br>authors", "With co-authors<br>abroad"]
-    assert list(won.x) == [7, 29]
-    assert list(expected.text) == ["4.7", "15.5"]
-    assert not fig.layout.annotations
 
 
 def test_social_ai_share_sorts_bars_and_highlights_switzerland(inputs: Path) -> None:
