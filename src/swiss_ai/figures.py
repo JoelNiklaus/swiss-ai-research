@@ -15,6 +15,7 @@ from swiss_ai.analysis import (
 )
 from swiss_ai.attribution import FIRST_YEAR
 from swiss_ai.citizenship import FUNNEL
+from swiss_ai.collaboration import COLLABORATION
 from swiss_ai.countries import ALL_PLACES
 from swiss_ai.investment import INVESTMENT
 from swiss_ai.paths import FIGURES
@@ -379,6 +380,64 @@ def social_figure() -> go.Figure:
     )
 
 
+# Row labels of the team-composition figure, in the order of collaboration_awards.csv teams.
+TEAM_LABELS = {
+    "domestic": "Only Swiss-based<br>authors",
+    "international": "With co-authors<br>abroad",
+}
+
+
+def social_team_awards_figure() -> go.Figure:
+    """Swiss award papers by team composition against the expected count, for a phone screen."""
+    df = pd.read_csv(COLLABORATION)
+    df = df[df.country == "CH"].set_index("team").loc[list(TEAM_LABELS)]
+    labels = list(TEAM_LABELS.values())
+    fig = go.Figure()
+    for column, label, color, fmt in (
+        ("observed", "Awards won", SWISS_RED, "{:.0f}"),
+        ("expected", "Expected from the paper share", GREY, "{:.1f}"),
+    ):
+        fig.add_trace(
+            go.Bar(
+                y=labels,
+                x=df[column].tolist(),
+                orientation="h",
+                name=label,
+                marker_color=color,
+                text=[fmt.format(v) for v in df[column]],
+                textposition="outside",
+                textfont={"size": 34},
+                cliponaxis=False,
+            )
+        )
+    # No source footer on this image, so the bottom margin only holds the legend.
+    layout = SOCIAL_LAYOUT | {"margin": {"t": 250, "b": 150, "l": 260, "r": 50}}
+    return fig.update_layout(
+        **layout,
+        title={
+            "text": "Most extra Swiss AI awards go to<br>teams with co-authors abroad",
+            "font": {"size": 42},
+            "x": 0.03,
+            "y": 0.95,
+            "yanchor": "top",
+            "subtitle": {
+                "text": f"Best-paper awards at the top 11 AI conferences, {FIRST_YEAR}-2026",
+                "font": {"size": 26},
+            },
+        },
+        barmode="group",
+        bargap=0.3,
+        xaxis={"visible": False, "range": [0, df.observed.max() * 1.18]},
+        yaxis={
+            "autorange": "reversed",
+            "ticks": "",
+            "showline": False,
+            "tickfont": {"size": 32},
+        },
+        legend={"orientation": "h", "x": -0.2, "y": -0.04, "font": {"size": 30}},
+    )
+
+
 # Stages shown in the venture-terms figure: where Swiss AI startups decide where to build.
 VC_STAGES = ["Seed", "Series A"]
 
@@ -435,6 +494,7 @@ FIGURES_BY_NAME = {
     "vc_terms": vc_terms_figure,
     "swiss_students": funnel_figure,
     "social_research_vs_money": social_figure,
+    "social_team_awards": social_team_awards_figure,
 }
 
 
