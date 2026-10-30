@@ -51,7 +51,11 @@ SWISS_RAW_AFFILIATION = re.compile(
 )
 
 
-class OpenAlexBudgetError(RuntimeError):
+class OpenAlexError(RuntimeError):
+    """Raised when OpenAlex answers with an error; the message never contains the API key."""
+
+
+class OpenAlexBudgetError(OpenAlexError):
     """Raised when OpenAlex rejects a request because the daily budget is used up."""
 
 
@@ -75,6 +79,7 @@ def get(entity: str, params: dict[str, str | int]) -> dict:
 
     Raises:
         OpenAlexBudgetError: If OpenAlex answers 429 (budget or rate limit exhausted).
+        OpenAlexError: For any other error status, without the API key in the message.
     """
     body = json.dumps({"entity": entity, **params}, sort_keys=True)
     path = OA_CACHE / f"{hashlib.sha1(body.encode()).hexdigest()}.json"
@@ -93,7 +98,12 @@ def get(entity: str, params: dict[str, str | int]) -> dict:
             f"OpenAlex budget exhausted, resets in {response.headers['x-ratelimit-reset']}s. "
             "Rerun later; cached responses are reused."
         )
-    data = response.raise_for_status().json()
+    if response.is_error:
+        # httpx's own error message includes the request URL, and with it the API key.
+        raise OpenAlexError(
+            f"OpenAlex answered {response.status_code} for /{entity} with {params}"
+        ) from None
+    data = response.json()
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data))
     return data

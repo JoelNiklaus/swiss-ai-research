@@ -91,6 +91,16 @@ def test_load_papers_takes_one_source_per_venue_year(
     monkeypatch.setattr(
         attribution, "OPENREVIEW_VENUES", {("ICLR", 2024): ("api", "id")}
     )
+    # No Anthology venue-years in this test; the third source is empty.
+    pd.DataFrame(columns=["key", "venue", "year", "title"]).to_csv(
+        tmp_path / "an_papers.csv", index=False
+    )
+    pd.DataFrame(columns=["key", "position", "countries"]).to_csv(
+        tmp_path / "an.csv", index=False
+    )
+    monkeypatch.setattr(attribution, "ANTHOLOGY_PAPERS", tmp_path / "an_papers.csv")
+    monkeypatch.setattr(attribution, "ANTHOLOGY_AUTHORSHIPS", tmp_path / "an.csv")
+    monkeypatch.setattr(attribution, "ANTHOLOGY_VENUES", {})
     papers, authorships = attribution.load_papers()
     assert sorted(papers.paper_id) == ["d1", "openreview:f1"]
     assert papers.set_index("paper_id").title["openreview:f1"] == "b paper"

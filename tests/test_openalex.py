@@ -206,6 +206,24 @@ def test_get_caches_retries_and_raises_on_budget(
         openalex.get("works", {"filter": "y"})
 
 
+def test_get_error_does_not_reveal_the_api_key(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    monkeypatch.setattr(openalex, "OA_CACHE", tmp_path)
+    monkeypatch.setattr(openalex, "api_key", lambda: "secret-key-123")
+
+    def bad_request(url: str, params: dict, **kwargs: object) -> httpx.Response:
+        request = httpx.Request("GET", url, params=params)
+        return httpx.Response(400, json={}, request=request)
+
+    monkeypatch.setattr(openalex.httpx, "get", bad_request)
+    with pytest.raises(openalex.OpenAlexError) as error:
+        openalex.get("institutions", {"search": "A*STAR"})
+    assert "400" in str(error.value)
+    assert "secret-key-123" not in str(error.value)
+    assert error.value.__cause__ is None and error.value.__suppress_context__
+
+
 def test_get_all_pages_until_short_page(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setattr(openalex, "PER_PAGE", 2)
     pages = {"*": ([1, 2], "c1"), "c1": ([3], "c2")}

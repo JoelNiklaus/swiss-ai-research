@@ -1,7 +1,8 @@
 """Attribute every main-track paper to countries and match award papers to the paper list.
 
 Each venue-year takes its paper list and author countries from one source: OpenReview where it
-covers the venue-year (profiles give country by year), otherwise DBLP papers matched to OpenAlex.
+covers the venue-year (profiles give country by year), the ACL Anthology for recent *ACL
+venue-years that DBLP lacks, otherwise DBLP papers matched to OpenAlex.
 Country credit is fractional: each author with a known country carries 1 / (known authors), split
 equally across that author's countries. A paper counts for a country in the any-author measure if
 at least one author has that country. Authors without a known country are left out, so the credit
@@ -12,6 +13,9 @@ import logging
 
 import pandas as pd
 
+from swiss_ai.anthology import AUTHORSHIPS as ANTHOLOGY_AUTHORSHIPS
+from swiss_ai.anthology import PAPERS as ANTHOLOGY_PAPERS
+from swiss_ai.anthology import VENUES as ANTHOLOGY_VENUES
 from swiss_ai.openalex import AUTHORSHIPS as OPENALEX_AUTHORSHIPS
 from swiss_ai.openalex import normalize_title
 from swiss_ai.openreview import AUTHORSHIPS as OPENREVIEW_AUTHORSHIPS
@@ -40,27 +44,31 @@ NOT_IN_DBLP = {
 
 
 def load_papers() -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Combine both sources into one paper table and one authorship table.
+    """Combine the three sources into one paper table and one authorship table.
 
     Returns:
         papers: paper_id, venue, year, title (normalized), source.
         authorships: paper_id, position, countries ("|"-joined ISO2 codes, "" if unknown).
     """
     dblp = pd.read_csv(PAPERS, keep_default_na=False)
-    on_openreview = pd.MultiIndex.from_arrays([dblp.venue, dblp.year]).isin(
-        list(OPENREVIEW_VENUES)
+    elsewhere = pd.MultiIndex.from_arrays([dblp.venue, dblp.year]).isin(
+        [*OPENREVIEW_VENUES, *ANTHOLOGY_VENUES]
     )
     dblp = (
-        dblp[~on_openreview]
-        .rename(columns={"key": "paper_id"})
-        .assign(source="openalex")
+        dblp[~elsewhere].rename(columns={"key": "paper_id"}).assign(source="openalex")
     )
     openreview = pd.read_csv(OPENREVIEW_PAPERS, keep_default_na=False)
     openreview = openreview.assign(
         paper_id="openreview:" + openreview.forum, source="openreview"
     )
+    anthology = pd.read_csv(ANTHOLOGY_PAPERS, keep_default_na=False)
+    anthology = anthology.assign(
+        paper_id="anthology:" + anthology.key, source="anthology"
+    )
     cols = ["paper_id", "venue", "year", "title", "source"]
-    papers = pd.concat([dblp[cols], openreview[cols]], ignore_index=True)
+    papers = pd.concat(
+        [dblp[cols], openreview[cols], anthology[cols]], ignore_index=True
+    )
     papers["title"] = papers.title.map(normalize_title)
 
     oa = pd.read_csv(OPENALEX_AUTHORSHIPS, keep_default_na=False).rename(
@@ -68,8 +76,10 @@ def load_papers() -> tuple[pd.DataFrame, pd.DataFrame]:
     )
     orv = pd.read_csv(OPENREVIEW_AUTHORSHIPS, keep_default_na=False)
     orv = orv.assign(paper_id="openreview:" + orv.forum)
+    an = pd.read_csv(ANTHOLOGY_AUTHORSHIPS, keep_default_na=False)
+    an = an.assign(paper_id="anthology:" + an.key)
     cols = ["paper_id", "position", "countries"]
-    authorships = pd.concat([oa[cols], orv[cols]], ignore_index=True)
+    authorships = pd.concat([oa[cols], orv[cols], an[cols]], ignore_index=True)
     # Only keep authorships of papers in the combined list (drops OpenAlex rows of OpenReview years).
     return papers, authorships[authorships.paper_id.isin(papers.paper_id)]
 

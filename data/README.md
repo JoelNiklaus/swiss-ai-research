@@ -16,6 +16,8 @@ configs:
   data_files: authorships.csv.gz
 - config_name: authorships_openreview
   data_files: openreview_authorships.csv
+- config_name: authorships_anthology
+  data_files: anthology_authorships.csv
 - config_name: participation
   data_files: participation.csv
 - config_name: participation_per_capita
@@ -64,8 +66,9 @@ Data behind the blog post ["Switzerland Does Top AI Research, but Too Little of 
 
 | File | Module | Contents |
 | --- | --- | --- |
-| `papers.csv` | `papers` | Main-track papers 2010-2026 at CVPR, ICCV, ECCV, ACL, EMNLP, NAACL, NeurIPS, ICML, ICLR and AAAI from the DBLP dump (COLM and recent OpenReview years come from `openreview_papers.csv`). |
+| `papers.csv` | `papers` | Main-track papers 2010-2026 at CVPR, ICCV, ECCV, ACL, EMNLP, NAACL, NeurIPS, ICML, ICLR and AAAI from the DBLP dump (COLM and recent OpenReview years come from `openreview_papers.csv`, EMNLP 2026 from `anthology_papers.csv`). |
 | `authorships.csv.gz` | `openalex` | One row per authorship of DBLP papers matched to OpenAlex, with countries after the Swiss raw-affiliation override. |
+| `anthology_papers.csv`, `anthology_authorships.csv` | `anthology` | EMNLP 2026 main-track papers from the ACL Anthology, with each author's Anthology affiliation, the country ROR gives it, or the OpenAlex profile country found by ORCID (`country_source`). |
 | `openreview_papers.csv`, `openreview_authorships.csv` | `openreview` | Accepted papers of ICLR 2022-2026, NeurIPS 2021-2025, ICML 2023-2026 and COLM 2024-2026, and author countries from OpenReview profile histories in the paper year. |
 | `participation.csv` | `analysis` | Fractional and any-author country shares per venue and year. |
 | `participation_per_capita.csv` | `analysis` | 2023-2025 papers per million residents (World Bank) and per 1,000 researchers (OECD MSTI). |

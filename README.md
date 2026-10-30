@@ -20,6 +20,7 @@ Run the modules in this order with `uv run python -m swiss_ai.<module>`:
 | `awards`      | `data/awards/raw/*.csv` (hand-collected)        | `awards/awards.csv`, `awards/swiss_first_authors.csv`             |
 | `papers`      | DBLP XML dump (download to `data/cache/dblp/`)  | `papers.csv` (main-track papers 2010-2026)                        |
 | `openreview`  | OpenReview API                                  | `openreview_papers.csv`, `openreview_authorships.csv`             |
+| `anthology`   | ACL Anthology XML, ROR API, OpenAlex (by ORCID) | `anthology_papers.csv`, `anthology_authorships.csv` (EMNLP 2026)  |
 | `openalex`    | OpenAlex API                                    | `authorships.csv.gz`, `openalex_matches.csv`                      |
 | `attribution` | the four tables above                           | (log only: coverage and award matching)                           |
 | `analysis`    | the four tables above, World Bank population    | `participation*.csv`, `award_ratios.csv`, `citizen_winners.csv`   |
@@ -41,8 +42,8 @@ The DBLP dump needs `dblp.xml.gz` and `dblp.dtd` from https://dblp.org/xml/ in `
 
 ## Method
 
-- **Paper lists:** OpenReview for ICLR 2022-2026, NeurIPS 2021-2025, ICML 2023-2026 and COLM 2024-2026; DBLP for everything else (DBLP does not index COLM). Main track only: no Findings, workshops, demos, industry tracks, NeurIPS Datasets & Benchmarks, or AAAI papers under 5 pages. AAAI still includes its IAAI and EAAI tracks, about 10% more papers than the official main-track count.
-- **Countries:** OpenReview venue-years use each author's profile history for the paper year; an open-ended history entry only counts if no active entry started later, because degrees and old jobs are often never closed. DBLP venue-years are matched to OpenAlex by DOI, otherwise by exact normalized title, and use the paper's affiliations, then the author's OpenAlex profile for that year. A raw affiliation naming a Swiss city overrides OpenAlex's mapping of generic Google or Meta affiliations to US headquarters (176 authorships).
+- **Paper lists:** OpenReview for ICLR 2022-2026, NeurIPS 2021-2025, ICML 2023-2026 and COLM 2024-2026; the ACL Anthology for EMNLP 2026, which DBLP had not indexed yet; DBLP for everything else (DBLP does not index COLM). Main track only: no Findings, workshops, demos, industry tracks, NeurIPS Datasets & Benchmarks, or AAAI papers under 5 pages. AAAI still includes its IAAI and EAAI tracks, about 10% more papers than the official main-track count.
+- **Countries:** OpenReview venue-years use each author's profile history for the paper year; an open-ended history entry only counts if no active entry started later, because degrees and old jobs are often never closed. EMNLP 2026 maps each Anthology affiliation string to a country with ROR (the affiliation matcher's chosen match, else organisations named exactly like the string if they share one country), splits joint affiliations on "and", and fills authors without one from their OpenAlex profile by ORCID; this covers 72% of authorships, against 94% from OpenAlex for EMNLP 2025. DBLP venue-years are matched to OpenAlex by DOI, otherwise by exact normalized title, and use the paper's affiliations, then the author's OpenAlex profile for that year. A raw affiliation naming a Swiss city overrides OpenAlex's mapping of generic Google or Meta affiliations to US headquarters (176 authorships).
 - **Cross-check:** for ICLR, ICML and NeurIPS 2023-2025, the pipeline gives Switzerland 19% more fractional papers than Paper Copilot's independent affiliation data, similar to Israel (+25%), Canada (+17%) and France (+24%); the US is 3% lower.
 - **Credit:** each author with a known country carries 1 / (known authors), split across the author's countries. The any-author measure counts papers with at least one author from a country.
 - **Per capita:** 2023-2025 papers per million residents (World Bank, 2024) and per 1,000 researchers (OECD MSTI, full-time equivalents; no total for Israel, the UK or Hong Kong) for the comparison countries plus Hong Kong, South Korea and Canada.
@@ -65,7 +66,7 @@ Award lists come from the PAMI TC award pages, the ACL Wiki, [Jeff Huang's best 
 
 - Citizenship was only checked for authors with a Swiss affiliation or a Swiss-sounding name, so the Swiss-citizen counts are lower bounds.
 - OpenAlex maps a plain "Google Research" or "Meta" affiliation to the US even for Zurich-based authors; the Swiss-city override catches only affiliations that name the city.
-- Award venue-years without a paper list are dropped (ICLR before 2017, EMNLP and NAACL 2026), as are three ACL 2024 award papers that DBLP only lists as arXiv preprints.
+- Award venue-years without a paper list are dropped (ICLR before 2017), as are three ACL 2024 award papers that DBLP only lists as arXiv preprints.
 - Some early award years are unknown (CVPR 1983 to 1993, ICML before 1999, EMNLP before 2002, EMNLP 2022 outstanding papers); see `data/awards/raw/gaps_no_award.md`.
 
 ## Data sources and licenses
