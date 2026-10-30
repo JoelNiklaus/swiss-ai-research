@@ -128,6 +128,25 @@ def test_author_countries_by_year(monkeypatch: pytest.MonkeyPatch) -> None:
     }
 
 
+def test_author_countries_by_year_by_orcid(monkeypatch: pytest.MonkeyPatch) -> None:
+    author = {
+        "id": "https://openalex.org/A1",
+        "orcid": "https://orcid.org/0000-0001",
+        "affiliations": [{"institution": {"country_code": "DE"}, "years": [2025]}],
+    }
+    calls = []
+
+    def fake_get_all(entity: str, filter_: str, select: str) -> list[dict]:
+        calls.append((entity, filter_, select))
+        return [author]
+
+    monkeypatch.setattr(openalex, "get_all", fake_get_all)
+    assert openalex.author_countries_by_year(["0000-0001"], "orcid") == {
+        "0000-0001": {2025: {"DE"}}
+    }
+    assert calls == [("authors", "orcid:0000-0001", "id,orcid,affiliations")]
+
+
 def test_search_batch_keeps_exact_titles(monkeypatch: pytest.MonkeyPatch) -> None:
     results = [
         {"title": "Deep Sets"},

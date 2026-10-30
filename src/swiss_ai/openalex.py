@@ -273,17 +273,28 @@ def authorship_rows(key: str, work: dict) -> list[dict]:
     return rows
 
 
-def author_countries_by_year(author_ids: list[str]) -> dict[str, dict[int, set[str]]]:
-    """Map OpenAlex author id to {year: countries of the institutions listed for that year}."""
+# Author lookups by key type: (filter field, selected fields, response field with the key).
+AUTHOR_KEYS = {
+    "openalex": ("ids.openalex", AUTHOR_FIELDS, "id"),
+    "orcid": ("orcid", "id,orcid,affiliations", "orcid"),
+}
+
+
+def author_countries_by_year(
+    ids: list[str], key: str = "openalex"
+) -> dict[str, dict[int, set[str]]]:
+    """Map author id to {year: countries of the institutions listed for that year}.
+
+    Args:
+        ids: OpenAlex author ids (A123) or bare ORCIDs (0000-0001-...), per `key`.
+        key: "openalex" or "orcid"; the result is keyed the same way.
+    """
+    filter_field, select, id_field = AUTHOR_KEYS[key]
     by_author: dict[str, dict[int, set[str]]] = {}
-    for i in tqdm(range(0, len(author_ids), IDS_PER_REQUEST), desc="Author batches"):
-        batch = author_ids[i : i + IDS_PER_REQUEST]
-        for author in get_all(
-            "authors", "ids.openalex:" + "|".join(batch), AUTHOR_FIELDS
-        ):
-            years = by_author.setdefault(
-                author["id"].removeprefix("https://openalex.org/"), {}
-            )
+    for i in tqdm(range(0, len(ids), IDS_PER_REQUEST), desc="Author batches"):
+        batch = ids[i : i + IDS_PER_REQUEST]
+        for author in get_all("authors", f"{filter_field}:" + "|".join(batch), select):
+            years = by_author.setdefault(author[id_field].rsplit("/", 1)[-1], {})
             for affiliation in author["affiliations"]:
                 country = affiliation["institution"]["country_code"]
                 for year in affiliation["years"]:

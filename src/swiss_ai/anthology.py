@@ -5,9 +5,8 @@ take both their paper list and their author countries from the Anthology XML ins
 source per venue-year, as for OpenReview). The XML gives each author an affiliation string and
 often an ORCID. Affiliation strings map to countries through ROR: the affiliation matcher's
 chosen match, else organisations named exactly like the string if they share one country, with
-the same Swiss-city override as for OpenAlex.
-Authors without an affiliation take the countries of their affiliation on another paper of the
-same volume, else their OpenAlex profile (found by ORCID) in the paper year or the year before.
+the same Swiss-city override as for OpenAlex. Authors without a resolved affiliation take the
+countries of their OpenAlex profile (found by ORCID) in the paper year or the year before.
 """
 
 import hashlib
@@ -25,7 +24,7 @@ from tqdm import tqdm
 
 from swiss_ai.openalex import (
     SWISS_RAW_AFFILIATION,
-    get_all,
+    author_countries_by_year,
     normalize_title,
     profile_countries,
 )
@@ -47,7 +46,6 @@ VENUES = {("EMNLP", 2026): ("2026.emnlp", "main")}
 # Joint affiliations are written "A and B"; names such as "University of Science and
 # Technology of China" contain the same word, see `affiliation_countries`.
 AND = re.compile(r"\s+and\s+")
-ORCIDS_PER_REQUEST = 50
 ROR_THREADS = 4
 RETRIES = 5
 
@@ -130,26 +128,20 @@ def affiliation_countries(
     return {country} if country else set()
 
 
-def fill_countries(
+def fill_from_orcid(
     authorships: pd.DataFrame, profiles: dict[str, dict[int, set[str]]]
 ) -> pd.DataFrame:
-    """Fill authorships without a country from the same author elsewhere, then by ORCID.
+    """Fill authorships without a country from the author's OpenAlex profile, found by ORCID.
 
     Args:
-        authorships: key, year, author_id, orcid, countries ("|"-joined) and country_source.
-        profiles: ORCID to {year: countries} from the author's OpenAlex profile.
+        authorships: year, orcid, countries ("|"-joined) and country_source.
+        profiles: ORCID to {year: countries}, from `author_countries_by_year(..., "orcid")`.
 
     Returns:
-        A copy with `countries` and `country_source` ("same_author" or "orcid_profile") filled.
+        A copy with `countries` and `country_source` ("orcid_profile") filled where the profile
+        lists the paper year or the year before.
     """
     df = authorships.copy()
-    known = df[(df.countries != "") & (df.author_id != "")]
-    by_author = known.groupby("author_id").countries.agg(
-        lambda s: "|".join(sorted({c for cs in s for c in cs.split("|")}))
-    )
-    missing = (df.countries == "") & df.author_id.isin(by_author.index)
-    df.loc[missing, "countries"] = df.loc[missing, "author_id"].map(by_author)
-    df.loc[missing, "country_source"] = "same_author"
     for idx in df.index[(df.countries == "") & df.orcid.isin(profiles)]:
         countries = profile_countries(profiles[df.at[idx, "orcid"]], df.at[idx, "year"])
         if countries:
@@ -199,8 +191,17 @@ def ror_query_text(name: str) -> str:
     return " ".join(re.sub(r'[+\-&|!(){}\[\]^"~*?:\\/]', " ", name).split())
 
 
+class RorError(RuntimeError):
+    """Raised when ROR answers with an error payload instead of organisations."""
+
+
 def ror_get(param: str, name: str) -> dict:
-    """GET the ROR organisations endpoint with `param`=`name`, cached on disk."""
+    """GET the ROR organisations endpoint with `param`=`name`, cached on disk.
+
+    Raises:
+        RorError: If ROR answers 200 with an "errors" list (for example a query syntax error);
+            such answers are not cached.
+    """
     key = name if param == "affiliation" else f"{param}:{name}"
     path = ROR_CACHE / f"{hashlib.sha1(key.encode()).hexdigest()}.json"
     if not path.exists():
@@ -211,8 +212,11 @@ def ror_get(param: str, name: str) -> dict:
                 break
             time.sleep(2**attempt * 5)
             response = httpx.get(ROR_API, params={param: name}, timeout=60)
+        data = response.raise_for_status().json()
+        if "errors" in data:
+            raise RorError(f"ROR rejected {param}={name!r}: {data['errors']}")
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(json.dumps(response.raise_for_status().json()))
+        path.write_text(json.dumps(data))
     return json.loads(path.read_text())
 
 
@@ -245,23 +249,6 @@ def ror_lookup(affiliations: list[str]) -> Callable[[str], str | None]:
     return dict(zip(names, countries, strict=True)).get
 
 
-def orcid_profiles(orcids: list[str]) -> dict[str, dict[int, set[str]]]:
-    """Map ORCID to {year: countries} from the OpenAlex author with that ORCID."""
-    profiles: dict[str, dict[int, set[str]]] = {}
-    for i in tqdm(range(0, len(orcids), ORCIDS_PER_REQUEST), desc="ORCID batches"):
-        batch = orcids[i : i + ORCIDS_PER_REQUEST]
-        for author in get_all(
-            "authors", "orcid:" + "|".join(batch), "id,orcid,affiliations"
-        ):
-            years = profiles.setdefault(author["orcid"].rsplit("/", 1)[-1], {})
-            for affiliation in author["affiliations"]:
-                country = affiliation["institution"]["country_code"]
-                for year in affiliation["years"]:
-                    if country:
-                        years.setdefault(year, set()).add(country)
-    return profiles
-
-
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(message)s")
     all_papers, all_authorships = [], []
@@ -277,9 +264,8 @@ def main() -> None:
             lambda c: "affiliation" if c else ""
         )
         missing = authorships[(authorships.countries == "") & (authorships.orcid != "")]
-        authorships = fill_countries(
-            authorships, orcid_profiles(sorted(set(missing.orcid)))
-        )
+        profiles = author_countries_by_year(sorted(set(missing.orcid)), "orcid")
+        authorships = fill_from_orcid(authorships, profiles)
         all_papers.append(papers)
         all_authorships.append(authorships)
         known = authorships.countries != ""

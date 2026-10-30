@@ -1,5 +1,6 @@
 from pathlib import Path
 
+import httpx
 import pandas as pd
 import pytest
 
@@ -124,25 +125,39 @@ def test_ror_query_text_drops_search_syntax() -> None:
     assert anthology.ror_query_text("NBD/Biblion (A*STAR)") == "NBD Biblion A STAR"
 
 
-def test_fill_countries_from_same_author_then_orcid_profile() -> None:
+def test_fill_from_orcid_uses_the_profile_near_the_paper_year() -> None:
     authors = pd.DataFrame(
         {
-            "key": ["k1", "k1", "k2", "k2", "k3"],
-            "year": [2026] * 5,
-            "author_id": ["ann", "bob", "bob", "cy", "dee"],
-            "orcid": ["", "", "", "0000-3", "0000-4"],
-            "countries": ["CH", "", "US", "", ""],
-            "country_source": ["affiliation", "", "affiliation", "", ""],
+            "year": [2026] * 4,
+            "orcid": ["0000-1", "0000-3", "0000-4", ""],
+            "countries": ["CH", "", "", ""],
+            "country_source": ["affiliation", "", "", ""],
         }
     )
-    profiles = {"0000-3": {2025: {"DE"}}, "0000-4": {2019: {"FR"}}}
-    out = anthology.fill_countries(authors, profiles).set_index(["key", "author_id"])
-    assert out.loc[("k1", "bob"), "countries"] == "US"
-    assert out.loc[("k1", "bob"), "country_source"] == "same_author"
-    assert out.loc[("k2", "cy"), "countries"] == "DE"
-    assert out.loc[("k2", "cy"), "country_source"] == "orcid_profile"
-    # A profile entry far from the paper year does not count.
-    assert out.loc[("k3", "dee"), "countries"] == ""
+    profiles = {
+        "0000-1": {2026: {"US"}},
+        "0000-3": {2025: {"DE"}},
+        "0000-4": {2019: {"FR"}},
+    }
+    out = anthology.fill_from_orcid(authors, profiles)
+    # A country from the affiliation is kept; the profile only fills missing ones.
+    assert out.countries.tolist() == ["CH", "DE", "", ""]
+    assert out.country_source.tolist() == ["affiliation", "orcid_profile", "", ""]
+
+
+def test_ror_get_rejects_error_payloads_without_caching(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    monkeypatch.setattr(anthology, "ROR_CACHE", tmp_path)
+    error = httpx.Response(
+        200,
+        json={"errors": ["Lexical error at line 1"]},
+        request=httpx.Request("GET", "https://api.ror.org"),
+    )
+    monkeypatch.setattr(anthology.httpx, "get", lambda *a, **k: error)
+    with pytest.raises(anthology.RorError, match="Lexical error"):
+        anthology.ror_get("query", "A/B")
+    assert not list(tmp_path.iterdir())
 
 
 @pytest.fixture
