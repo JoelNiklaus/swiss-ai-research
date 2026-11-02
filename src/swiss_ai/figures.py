@@ -429,67 +429,67 @@ def social_ai_share_figure() -> go.Figure:
     )
 
 
-# Citation deciles within a venue-year, from the most cited tenth to the least cited.
-DECILE_LABELS = ["Top 10%", *[f"{10 * d}-{10 * d + 10}%" for d in range(1, 10)]]
-# Award types in the citation-decile figure, with Okabe-Ito colours (no Swiss red: these are
-# not countries).
+# Award types in the citation figure, with Okabe-Ito colours (no Swiss red: these are not
+# countries).
 AWARD_TYPES = [
     ("best", "Best paper awards", "#0072B2"),
     ("outstanding", "Outstanding paper awards", "#E69F00"),
 ]
 
 
-def citation_decile_figure() -> go.Figure:
-    """Share of award papers in each citation decile of their venue-year, by award type."""
+def citation_curve_figure() -> go.Figure:
+    """Share of award papers within the top x% most cited of their venue-year, by award type."""
     df = pd.read_csv(AWARD_CITATIONS)
-    # Decile 0 holds papers fewer than 10% of their venue-year out-cite.
-    df["decile"] = (df.cited_more_share * 10).astype(int).clip(0, 9)
     fig = go.Figure()
     for award_type, label, color in AWARD_TYPES:
-        group = df[df.award_type == award_type]
-        shares = group.decile.value_counts(normalize=True).reindex(
-            range(10), fill_value=0
-        )
+        # Rank as the share of the venue-year cited more, in percent: 0 is the most cited.
+        ranks = (
+            df.loc[df.award_type == award_type, "cited_more_share"] * 100
+        ).sort_values()
+        n = len(ranks)
         fig.add_trace(
-            go.Bar(
-                x=list(range(10)),
-                y=(shares * 100).tolist(),
-                name=f"{label} ({len(group)})",
-                marker_color=color,
+            go.Scatter(
+                x=[0, *ranks, 100],
+                y=[0, *(100 * (i + 1) / n for i in range(n)), 100],
+                mode="lines",
+                line={"shape": "hv", "color": color, "width": 3},
+                name=f"{label} ({n})",
             )
         )
     fig.add_trace(
         go.Scatter(
-            # Across the whole axis, from the left edge of the first group to the right edge
-            # of the last.
-            x=[-0.5, 9.5],
-            y=[10, 10],
+            x=[0, 100],
+            y=[0, 100],
             mode="lines",
             line={"dash": "dash", "color": DARK, "width": 2},
-            name="10%: awards spread evenly over the deciles",
+            name="If awards ignored citations",
         )
     )
+    grid = {"showgrid": True, "gridcolor": "#E8EAED", "range": [0, 100], "dtick": 10}
     return fig.update_layout(
-        **LAYOUT,
+        **LAYOUT | {"height": 600},
         title={
-            "text": "Award papers cluster among the most cited papers of their conference",
+            "text": "Award papers rank high in citations, best paper awards more than "
+            "outstanding ones",
             "subtitle": {
-                "text": f"Award papers {FIRST_YEAR}-{CITATION_LAST_YEAR} by citation "
-                "decile within their conference and year (OpenAlex)"
+                "text": f"Award papers {FIRST_YEAR}-{CITATION_LAST_YEAR} within the top x% most "
+                "cited papers of their conference and year (OpenAlex)"
             },
         },
-        barmode="group",
-        bargap=0.25,
-        xaxis={
-            "title": "Citation rank within the conference and year",
-            "tickvals": list(range(10)),
-            "ticktext": DECILE_LABELS,
-            "range": [-0.5, 9.5],
-            "ticks": "",
+        xaxis=grid
+        | {
+            "title": "Citation rank within the conference and year (top x%)",
+            "ticksuffix": "%",
         },
-        yaxis={"title": "Share of award papers (%)", "rangemode": "tozero"},
-        legend={"orientation": "h", "x": 0, "y": -0.22, "yanchor": "top"},
-        margin={"t": 100, "b": 150},
+        # A little headroom so the curves stay visible where they reach 100%.
+        yaxis=grid
+        | {
+            "title": "Award papers ranked this high or higher",
+            "ticksuffix": "%",
+            "range": [0, 101.5],
+        },
+        legend={"orientation": "h", "x": 0, "y": -0.16, "yanchor": "top"},
+        margin={"t": 100, "b": 110},
     )
 
 
@@ -546,7 +546,7 @@ FIGURES_BY_NAME = {
     "participation_per_capita": participation_figure,
     "award_ratios": award_ratio_figure,
     "transfer": transfer_figure,
-    "award_citations": citation_decile_figure,
+    "award_citations": citation_curve_figure,
     "vc_terms": vc_terms_figure,
     "swiss_students": funnel_figure,
     "social_research_vs_money": social_figure,

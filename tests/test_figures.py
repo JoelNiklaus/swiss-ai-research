@@ -76,8 +76,8 @@ def inputs(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
     monkeypatch.setattr(figures, "SCIENCE_PRIOR", tmp_path / "prior.csv")
     monkeypatch.setattr(figures, "FUNNEL", tmp_path / "funnel.csv")
     monkeypatch.setattr(figures, "VC_TERMS", tmp_path / "vc_terms.csv")
-    # Award papers ranked 1st, 2nd and 4th of 10 in their venue-year, plus one in the
-    # bottom decile, and one more best award with only its rank so far.
+    # Three best paper awards near the top of their venue-year and two outstanding
+    # paper awards, one of them near the bottom.
     pd.DataFrame(
         {
             "award_type": ["best", "best", "outstanding", "outstanding", "best"],
@@ -158,18 +158,15 @@ def test_social_ai_share_sorts_bars_and_highlights_switzerland(inputs: Path) -> 
     assert bar.marker.color[0] == figures.GREY
 
 
-def test_citation_deciles_share_award_papers_by_decile(inputs: Path) -> None:
-    fig = figures.citation_decile_figure()
+def test_citation_curve_accumulates_award_papers_by_rank(inputs: Path) -> None:
+    fig = figures.citation_curve_figure()
     best, outstanding, chance = fig.data
-    assert list(best.x) == list(range(10))
-    assert list(fig.layout.xaxis.ticktext) == figures.DECILE_LABELS
-    assert len(figures.DECILE_LABELS) == 10
-    # Best awards: two of three in the top decile, one in the second.
-    assert best.y[0] == pytest.approx(200 / 3)
-    assert best.y[1] == pytest.approx(100 / 3)
-    assert sum(best.y) == pytest.approx(100)
     assert best.name == "Best paper awards (3)"
-    # Outstanding awards: one in the fourth decile, one in the last.
-    assert outstanding.y[3] == 50
-    assert outstanding.y[9] == 50
-    assert list(chance.y) == [10, 10]
+    # One step per award paper at its rank, from 0% (most cited) to 100% (least cited).
+    assert list(best.x) == pytest.approx([0, 0, 5, 10, 100])
+    assert list(best.y) == pytest.approx([0, 100 / 3, 200 / 3, 100, 100])
+    assert best.line.shape == "hv"
+    assert list(outstanding.x) == pytest.approx([0, 30, 95, 100])
+    assert list(outstanding.y) == pytest.approx([0, 50, 100, 100])
+    assert list(chance.x) == [0, 100]
+    assert list(chance.y) == [0, 100]
