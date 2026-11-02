@@ -76,6 +76,15 @@ def inputs(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
     monkeypatch.setattr(figures, "SCIENCE_PRIOR", tmp_path / "prior.csv")
     monkeypatch.setattr(figures, "FUNNEL", tmp_path / "funnel.csv")
     monkeypatch.setattr(figures, "VC_TERMS", tmp_path / "vc_terms.csv")
+    # Award papers ranked 1st, 2nd and 4th of 10 in their venue-year, plus one in the
+    # bottom decile, and one more best award with only its rank so far.
+    pd.DataFrame(
+        {
+            "award_type": ["best", "best", "outstanding", "outstanding", "best"],
+            "cited_more_share": [0.0, 0.1, 0.3, 0.95, 0.05],
+        }
+    ).to_csv(tmp_path / "award_citations.csv", index=False)
+    monkeypatch.setattr(figures, "AWARD_CITATIONS", tmp_path / "award_citations.csv")
     return tmp_path
 
 
@@ -147,3 +156,20 @@ def test_social_ai_share_sorts_bars_and_highlights_switzerland(inputs: Path) -> 
     assert list(bar.text) == ["59", "16.5", "13.2", "4.6"]
     assert bar.marker.color[1] == figures.SWISS_RED
     assert bar.marker.color[0] == figures.GREY
+
+
+def test_citation_deciles_share_award_papers_by_decile(inputs: Path) -> None:
+    fig = figures.citation_decile_figure()
+    best, outstanding, chance = fig.data
+    assert list(best.x) == list(range(10))
+    assert list(fig.layout.xaxis.ticktext) == figures.DECILE_LABELS
+    assert len(figures.DECILE_LABELS) == 10
+    # Best awards: two of three in the top decile, one in the second.
+    assert best.y[0] == pytest.approx(200 / 3)
+    assert best.y[1] == pytest.approx(100 / 3)
+    assert sum(best.y) == pytest.approx(100)
+    assert best.name == "Best paper awards (3)"
+    # Outstanding awards: one in the fourth decile, one in the last.
+    assert outstanding.y[3] == 50
+    assert outstanding.y[9] == 50
+    assert list(chance.y) == [10, 10]

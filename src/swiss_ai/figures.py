@@ -14,6 +14,8 @@ from swiss_ai.analysis import (
     SMALL_PEERS_LABEL,
 )
 from swiss_ai.attribution import FIRST_YEAR
+from swiss_ai.citations import AWARD_CITATIONS
+from swiss_ai.citations import LAST_YEAR as CITATION_LAST_YEAR
 from swiss_ai.citizenship import FUNNEL
 from swiss_ai.countries import ALL_PLACES
 from swiss_ai.investment import INVESTMENT
@@ -427,6 +429,70 @@ def social_ai_share_figure() -> go.Figure:
     )
 
 
+# Citation deciles within a venue-year, from the most cited tenth to the least cited.
+DECILE_LABELS = ["Top 10%", *[f"{10 * d}-{10 * d + 10}%" for d in range(1, 10)]]
+# Award types in the citation-decile figure, with Okabe-Ito colours (no Swiss red: these are
+# not countries).
+AWARD_TYPES = [
+    ("best", "Best paper awards", "#0072B2"),
+    ("outstanding", "Outstanding paper awards", "#E69F00"),
+]
+
+
+def citation_decile_figure() -> go.Figure:
+    """Share of award papers in each citation decile of their venue-year, by award type."""
+    df = pd.read_csv(AWARD_CITATIONS)
+    # Decile 0 holds papers fewer than 10% of their venue-year out-cite.
+    df["decile"] = (df.cited_more_share * 10).astype(int).clip(0, 9)
+    fig = go.Figure()
+    for award_type, label, color in AWARD_TYPES:
+        group = df[df.award_type == award_type]
+        shares = group.decile.value_counts(normalize=True).reindex(
+            range(10), fill_value=0
+        )
+        fig.add_trace(
+            go.Bar(
+                x=list(range(10)),
+                y=(shares * 100).tolist(),
+                name=f"{label} ({len(group)})",
+                marker_color=color,
+            )
+        )
+    fig.add_trace(
+        go.Scatter(
+            # Across the whole axis, from the left edge of the first group to the right edge
+            # of the last.
+            x=[-0.5, 9.5],
+            y=[10, 10],
+            mode="lines",
+            line={"dash": "dash", "color": DARK, "width": 2},
+            name="10%: awards spread evenly over the deciles",
+        )
+    )
+    return fig.update_layout(
+        **LAYOUT,
+        title={
+            "text": "Award papers cluster among the most cited papers of their conference",
+            "subtitle": {
+                "text": f"Award papers {FIRST_YEAR}-{CITATION_LAST_YEAR} by citation "
+                "decile within their conference and year (OpenAlex)"
+            },
+        },
+        barmode="group",
+        bargap=0.25,
+        xaxis={
+            "title": "Citation rank within the conference and year",
+            "tickvals": list(range(10)),
+            "ticktext": DECILE_LABELS,
+            "range": [-0.5, 9.5],
+            "ticks": "",
+        },
+        yaxis={"title": "Share of award papers (%)", "rangemode": "tozero"},
+        legend={"orientation": "h", "x": 0, "y": -0.22, "yanchor": "top"},
+        margin={"t": 100, "b": 150},
+    )
+
+
 # Stages shown in the venture-terms figure: where Swiss AI startups decide where to build.
 VC_STAGES = ["Seed", "Series A"]
 
@@ -480,6 +546,7 @@ FIGURES_BY_NAME = {
     "participation_per_capita": participation_figure,
     "award_ratios": award_ratio_figure,
     "transfer": transfer_figure,
+    "award_citations": citation_decile_figure,
     "vc_terms": vc_terms_figure,
     "swiss_students": funnel_figure,
     "social_research_vs_money": social_figure,
